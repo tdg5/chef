@@ -1,0 +1,15 @@
+[submodule "cookbooks/vim"]
+	path = cookbooks/vim
+	url = https://github.com/opscode-cookbooks/vim.git
+[submodule "cookbooks/tmux"]
+	path = cookbooks/tmux
+	url = https://github.com/opscode-cookbooks/tmux.git
+[submodule "cookbooks/apt"]
+	path = cookbooks/apt
+	url = https://github.com/opscode-cookbooks/apt.git
+[submodule "cookbooks/openssh"]
+	path = cookbooks/openssh
+	url = https://github.com/opscode-cookbooks/openssh.git
+[submodule "cookbooks/rvm"]
+	path = cookbooks/rvm
+	url = https://github.com/fnichol/chef-rvm.git
