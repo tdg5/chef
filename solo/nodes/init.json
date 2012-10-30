@@ -1,0 +1,7 @@
+{
+	"run_list": [
+		"role[base]",
+		"recipe[clean::init]"
+	]
+}
+
