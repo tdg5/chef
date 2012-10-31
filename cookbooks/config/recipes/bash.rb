@@ -1,9 +1,9 @@
-file "/home/#{node.user}/.bash_profile" do
+file "/home/#{node.user.username}/.bash_profile" do
 	action :delete
 end
 
-cookbook_file "/home/#{node.user}/.bashrc" do
-	group node.group
-	owner node.user
+cookbook_file "/home/#{node.user.username}/.bashrc" do
+	group node.user.group
+	owner node.user.username
 	mode 0644
 end

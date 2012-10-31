@@ -1,5 +1,5 @@
-cookbook_file "/home/#{node.user}/.tmux.conf" do
-	group node.group
-	owner node.user
+cookbook_file "/home/#{node.user.username}/.tmux.conf" do
+	group node.user.group
+	owner node.user.username
 	mode 0644
 end

@@ -5,9 +5,7 @@ run_list [
 	'recipe[rvm::user]',
 ]
 user = 'danny.guinther'
-group = 'danny.guinther'
 default_attributes({
-	'group' => group,
 	'rvm' => {
 		'branch' => 'none',
 		'rvmrc' => {
@@ -26,6 +24,10 @@ default_attributes({
 			},
 		},],
 	},
-	'user' => user,
+	'user' => {
+		'username' => user,
+		'email' => 'danny.guinther@leadkarma.com',
+		'group' => 'danny.guinther',
+	}
 })
 
