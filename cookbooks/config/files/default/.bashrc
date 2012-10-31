@@ -105,7 +105,7 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export EDITOR=vim
-export VIMRUNTIME=/usr/local/share/vim/vim73
+export VIMRUNTIME=/usr/share/vim/vim73
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 stty -ixon # enable reverse history search / enable XON/XOFF flow control
