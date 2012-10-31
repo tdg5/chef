@@ -12,4 +12,5 @@ run_list [
 		'recipe[htop]',
 		'recipe[apt]',
 		'recipe[openssh]',
+		'recipe[chrome]',
 ]
