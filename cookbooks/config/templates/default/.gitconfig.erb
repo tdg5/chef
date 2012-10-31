@@ -1,0 +1,22 @@
+[core]
+	whitespace = trailing-space,space-before-tab
+	excludesfile = /home/<%= node.user.username %>/.gitignore
+[branch]
+	autosetuprebase = always
+	autosetupmerge = true
+[branch "master"]
+	rebase = true
+[push]
+	default = tracking
+[rebase]
+	autosquash = true
+[rerere]
+	enabled = true
+[user]
+	name = Danny Guinther
+	email = <%= node.user.email %>
+[alias]
+	stat = status
+	co = checkout
+	br = branch
+	rb = rebase
