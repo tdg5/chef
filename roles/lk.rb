@@ -2,6 +2,7 @@ name 'lk'
 description 'Role for leadkarma specifics'
 run_list [
 	'role[base]',
+	'recipe[rvm::user]',
 ]
 user = 'danny.guinther'
 group = 'danny.guinther'
