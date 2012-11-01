@@ -3,9 +3,16 @@ description 'Role for leadkarma specifics'
 run_list [
 	'role[base]',
 	'recipe[rvm::user]',
+	'recipe[mysql::server]',
+	'recipe[mysql::client]'
 ]
 user = 'danny.guinther'
 default_attributes({
+	'mysql' => {
+		'server_root_password' => 'mysql',
+		'server_repl_password' => 'mysql',
+		'server_debian_password' => 'mysql'
+	},
 	'rvm' => {
 		'branch' => 'none',
 		'rvmrc' => {
