@@ -4,7 +4,8 @@ run_list [
 	'role[base]',
 	'recipe[rvm::user]',
 	'recipe[mysql::server]',
-	'recipe[mysql::client]'
+	'recipe[mysql::client]',
+	'recipe[redis::server]'
 ]
 user = 'danny.guinther'
 default_attributes({
