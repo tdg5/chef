@@ -5,7 +5,8 @@ run_list [
 	'recipe[rvm::user]',
 	'recipe[mysql::server]',
 	'recipe[mysql::client]',
-	'recipe[redis::server]'
+	'recipe[redis::server]',
+	'recipe[geoip]',
 ]
 user = 'danny.guinther'
 default_attributes({
@@ -23,7 +24,7 @@ default_attributes({
 		'user_installs' => [{
 			'user' => user,
 			'default_ruby' => '1.9.3-p286',
-			'rubies' => ['1.9.3-p286'],
+			'rubies' => ['1.9.3-p286', '1.9.3-p194'],
 			'gems' => {
 				'1.9.3-p286' => [{
 					'name' => 'chef',
