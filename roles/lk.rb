@@ -7,6 +7,7 @@ run_list [
 	'recipe[mysql::client]',
 	'recipe[redis::server]',
 	'recipe[geoip]',
+	'recipe[qt::dev]',
 ]
 user = 'danny.guinther'
 default_attributes({
