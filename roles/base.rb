@@ -13,5 +13,6 @@ run_list [
 		'recipe[apt]',
 		'recipe[openssh]',
 		'recipe[chrome]',
-		'recipe[spotify]'
+		'recipe[spotify]',
+		'recipe[pidgin]'
 ]
