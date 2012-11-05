@@ -10,7 +10,7 @@ run_list [
 	'recipe[qt::dev]',
 	'role[vm_host]',
 ]
-user = 'danny.guinther'
+user = group = 'danny.guinther'
 default_attributes({
 	'mysql' => {
 		'server_root_password' => 'mysql',
@@ -35,10 +35,15 @@ default_attributes({
 			},
 		},],
 	},
+	'vagrant' => {
+		'group' => group,
+		'ruby_string' => '1.9.3-p286',
+		'user' => user,
+	},
 	'user' => {
 		'username' => user,
 		'email' => 'danny.guinther@leadkarma.com',
-		'group' => 'danny.guinther',
+		'group' => group,
 	}
 })
 
