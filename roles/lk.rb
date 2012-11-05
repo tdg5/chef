@@ -8,6 +8,7 @@ run_list [
 	'recipe[redis::server]',
 	'recipe[geoip]',
 	'recipe[qt::dev]',
+	'role[vm_host]',
 ]
 user = 'danny.guinther'
 default_attributes({
