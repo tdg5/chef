@@ -1,6 +1,7 @@
 include_recipe 'virtualbox'
 
 user node.vagrant.user do
+	action :create
 	gid node.vagrant.group
 	shell '/bin/false'
 end
