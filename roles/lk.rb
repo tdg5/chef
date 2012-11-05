@@ -37,7 +37,6 @@ default_attributes({
 	},
 	'vagrant' => {
 		'group' => group,
-		'ruby_string' => '1.9.3-p286',
 		'user' => user,
 	},
 	'user' => {

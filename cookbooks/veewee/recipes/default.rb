@@ -1,8 +1,9 @@
 include_recipe 'vagrant'
 
 veewee_path = node.veewee.path
+veewee_ruby_string = node.veewee.ruby_string
 
-rvm_environment 'ruby-1.9.2-p320@veewee' do
+rvm_environment veewee_ruby_string do
 	action :create
 	user node.vagrant.user
 end
@@ -36,6 +37,6 @@ rvm_shell 'bundle install' do
 	action :run
 	code 'bundle install'
 	cwd veewee_path
-	ruby_string 'ruby-1.9.2-p320@veewee'
+	ruby_string veewee_ruby_string
 	user node.vagrant.user
 end
