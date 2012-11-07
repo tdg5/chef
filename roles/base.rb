@@ -14,5 +14,6 @@ run_list [
 		'recipe[openssh]',
 		'recipe[chrome]',
 		'recipe[spotify]',
-		'recipe[pidgin]'
+		'recipe[pidgin]',
+		'recipe[gnome_extensions]',
 ]
