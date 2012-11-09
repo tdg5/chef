@@ -9,6 +9,8 @@ run_list [
 	'recipe[geoip]',
 	'recipe[qt::dev]',
 	'role[vm_host]',
+	'role[design]',
+	'role[dev]',
 ]
 user = group = 'danny.guinther'
 default_attributes({
