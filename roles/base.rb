@@ -2,10 +2,8 @@ name 'base'
 description 'Base role applied to all nodes.'
 run_list [
 		'recipe[config::bash]',
-		'recipe[config::gnome-terminal]',
 		'recipe[config::git]',
 		'recipe[vim]',
-		'recipe[vim-gnome]',
 		'recipe[config::vim]',
 		'recipe[tmux]',
 		'recipe[config::tmux]',
@@ -15,5 +13,5 @@ run_list [
 		'recipe[chrome]',
 		'recipe[spotify]',
 		'recipe[pidgin]',
-		'recipe[gnome_extensions]',
+		'recipe[gnome]',
 ]
