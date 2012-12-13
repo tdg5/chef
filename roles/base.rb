@@ -3,6 +3,7 @@ description 'Base role applied to all nodes.'
 run_list [
 		'recipe[config::bash]',
 		'recipe[config::git]',
+		'recipe[config::sshagent]',
 		'recipe[vim]',
 		'recipe[config::vim]',
 		'recipe[tmux]',
