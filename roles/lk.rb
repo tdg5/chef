@@ -24,13 +24,13 @@ default_attributes({
 		'rvmrc' => {
 			'rvm_trust_rvmrcs_flag' => 1,
 		},
-		'version' => '1.16.16',
+		'version' => '1.17.2',
 		'user_installs' => [{
 			'user' => user,
-			'default_ruby' => '1.9.3-p286',
-			'rubies' => ['1.9.3-p286', '1.9.3-p194'],
+			'default_ruby' => '1.9.3-p327',
+			'rubies' => ['1.9.3-p327'],
 			'gems' => {
-				'1.9.3-p286' => [{
+				'1.9.3-p327' => [{
 					'name' => 'chef',
 					'version' => '10.14.0',
 				},],
