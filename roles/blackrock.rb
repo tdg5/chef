@@ -5,6 +5,8 @@ run_list [
 	'recipe[config::filesystem_layout]',
 	'role[design]',
 	'role[dev]',
+	'role[rvm]',
+	'role[vm_host]',
 	'recipe[audacity]',
 ]
 user = group = 'tdg5'
@@ -14,5 +16,9 @@ default_attributes({
 		'email' => 'dannyguinther@gmail.com',
 		'group' => group,
 	},
+	'vagrant' => {
+		'group' => 'rvm',
+		'user' => 'tdg5',
+	}
 })
 
