@@ -5,6 +5,7 @@ veewee_ruby_string = node.veewee.ruby_string
 
 rvm_environment veewee_ruby_string do
 	action :create
+	user node.vagrant.user if node.recipe?('rvm::user')
 end
 
 directory veewee_path do
