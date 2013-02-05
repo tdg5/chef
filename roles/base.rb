@@ -15,4 +15,5 @@ run_list [
 		'recipe[spotify]',
 		'recipe[pidgin]',
 		'recipe[gnome]',
+		'recipe[dropbox]',
 ]
