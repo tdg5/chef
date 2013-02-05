@@ -107,8 +107,8 @@ if [ -f ~/.sshagentrc ]; then
 fi
 
 # Load RVM into a shell session *as a function*
-[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm" ||
-[ -e '/etc/profile.d/rvm.sh' ] && source /etc/profile.d/rvm.sh
+{ [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"; } ||
+{ [ -e '/etc/profile.d/rvm.sh' ] && source /etc/profile.d/rvm.sh; }
 
 export EDITOR=vim
 export VIMRUNTIME=/usr/share/vim/vim73
