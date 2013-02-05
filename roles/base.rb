@@ -16,4 +16,5 @@ run_list [
 		'recipe[pidgin]',
 		'recipe[gnome]',
 		'recipe[dropbox]',
+		'recipe[ubuntuone]',
 ]
