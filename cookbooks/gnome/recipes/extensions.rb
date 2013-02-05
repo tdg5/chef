@@ -1,11 +1,12 @@
 extensions = %w[
 	alternative-status-menu@gnome-shell-extensions.gcampax.github.com
-	system-monitor@paradoxxx.zero.gmail.com
-	places-menu@gnome-shell-extensions.gcampax.github.com
-	removeaccesibility@lomegor
-	nohotcorner@azuri.free.fr
+	impatience@gfxmonk.net
 	mediaplayer@patapon.info
+	nohotcorner@azuri.free.fr
+	places-menu@gnome-shell-extensions.gcampax.github.com
 	RecentItems@bananenfisch.net
+	removeaccesibility@lomegor
+	system-monitor@paradoxxx.zero.gmail.com
 ]
 
 extensions.each do |extension|
