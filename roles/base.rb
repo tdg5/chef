@@ -18,3 +18,21 @@ run_list [
 		'recipe[dropbox]',
 		'recipe[ubuntuone]',
 ]
+default_attributes({
+	:gnome => {
+		:keybindings => {
+			'Launch Terminal' => {
+				'action' => 'x-terminal-emulator',
+				'binding' => '<Primary><Alt>t',
+			},
+			'Launch Chrome' => {
+				'action' => 'google-chrome',
+				'binding' => '<Primary><Alt>b',
+			},
+			'Launch Chrome Incognito' => {
+				'action' => 'google-chrome --incognito',
+				'binding' => '<Primary><Shift><Alt>b',
+			},
+		},
+	},
+})
