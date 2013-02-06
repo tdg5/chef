@@ -1,6 +1,7 @@
 components = %w[
 	config::gnome-terminal
 	gnome::extensions
+	gnome::disable_overlay_scrollbars
 ]
 components.push('vim-gnome') if node.recipe?('vim')
 
