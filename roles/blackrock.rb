@@ -2,6 +2,7 @@ name 'blackrock'
 description 'Role for blackrock specifics'
 run_list [
 	'role[base]',
+	'recipe[grub::blackrock]',
 	'recipe[config::filesystem_layout]',
 	'role[design]',
 	'role[dev]',
