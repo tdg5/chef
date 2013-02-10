@@ -9,6 +9,8 @@ extensions = %w[
 	system-monitor@paradoxxx.zero.gmail.com
 ]
 
+%w[gir1.2-gtop-2.0 gir1.2-networkmanager-1.0].each {|pkg| package pkg}
+
 extensions.each do |extension|
 	extension_dir = "/home/#{node.user.username}/.local/share/gnome-shell/extensions/#{extension}"
 
