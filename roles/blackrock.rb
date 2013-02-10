@@ -3,7 +3,7 @@ description 'Role for blackrock specifics'
 run_list [
 	'role[base]',
 	'recipe[grub::blackrock]',
-	'recipe[config::filesystem_layout]',
+	'recipe[filesystem_layout::blackrock]',
 	'recipe[modprobe]',
 	'role[design]',
 	'role[dev]',
