@@ -1,3 +1,5 @@
+package 'gnome-shell'
+
 components = %w[
 	config::gnome-terminal
 	gnome::extensions
