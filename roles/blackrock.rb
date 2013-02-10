@@ -4,6 +4,7 @@ run_list [
 	'role[base]',
 	'recipe[grub::blackrock]',
 	'recipe[filesystem_layout::blackrock]',
+	'recipe[vgaswitcheroo]',
 	'recipe[modprobe]',
 	'role[design]',
 	'role[dev]',
