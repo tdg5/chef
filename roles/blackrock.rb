@@ -38,9 +38,5 @@ default_attributes({
 		'email' => 'dannyguinther@gmail.com',
 		'group' => group,
 	},
-	'vagrant' => {
-		'group' => 'rvm',
-		'user' => 'tdg5',
-	}
 })
 

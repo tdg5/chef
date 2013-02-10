@@ -37,10 +37,6 @@ default_attributes({
 			},
 		},],
 	},
-	'vagrant' => {
-		'group' => group,
-		'user' => user,
-	},
 	'user' => {
 		'username' => user,
 		'email' => 'danny.guinther@leadkarma.com',
