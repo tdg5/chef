@@ -1,4 +1,4 @@
-apt_repository 'spotify' do
+apt_repository 'dropbox' do
 	components ['main', 'precise']
 	key '5044912E'
 	keyserver 'pgp.mit.edu'
