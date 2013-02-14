@@ -8,6 +8,7 @@ extensions = %w[
 	removeaccesibility@lomegor
 	system-monitor@paradoxxx.zero.gmail.com
 	antisocial-menu@cnervi.github.com
+	status-area-horizontal-spacing@mathematical.coffee.gmail.com
 ]
 
 %w[gir1.2-gtop-2.0 gir1.2-networkmanager-1.0].each {|pkg| package pkg}
