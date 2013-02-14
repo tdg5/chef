@@ -6,11 +6,13 @@ run_list [
 	'recipe[filesystem_layout::blackrock]',
 	'recipe[vgaswitcheroo]',
 	'recipe[modprobe]',
+	'role[tools]',
 	'role[design]',
 	'role[dev]',
 	'role[rvm]',
 	'role[vm_host]',
 	'recipe[audacity]',
+	'recipe[java]',
 ]
 user = group = 'tdg5'
 default_attributes({
