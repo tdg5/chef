@@ -7,6 +7,7 @@ run_list [
 	'recipe[vgaswitcheroo]',
 	'recipe[modprobe]',
 	'role[tools]',
+	'role[video]',
 	'role[design]',
 	'role[dev]',
 	'role[rvm]',
