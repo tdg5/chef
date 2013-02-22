@@ -14,11 +14,21 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 . /lib/init/vars.sh
 . /lib/lsb/init-functions
 
+status() {
+	if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
+		cat /sys/kernel/debug/vgaswitcheroo/switch
+	fi
+}
+
 case "$1" in
 	start)
 		if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
 			echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
+			status
 		fi
+	;;
+	status)
+		status
 	;;
 	restart|reload|force-reload)
 		echo "Error: argument '$1' not supported" >&2
@@ -26,8 +36,14 @@ case "$1" in
 	;;
 	stop)
 	;;
+	unstart)
+		if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
+			echo ON > /sys/kernel/debug/vgaswitcheroo/switch
+			status
+		fi
+	;;
 	*)
-		echo "Usage: $0 start|stop" >&2
+		echo "Usage: $0 start|status|stop|unstart" >&2
 		exit 3
 	;;
 esac
