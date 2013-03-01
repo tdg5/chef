@@ -14,6 +14,8 @@ run_list [
 	'role[vm_host]',
 	'recipe[audacity]',
 	'recipe[java]',
+	'recipe[modprobe::blackrock_alsa]',
+	'recipe[pulseaudio::blackrock_alsa_mixer]',
 ]
 user = group = 'tdg5'
 default_attributes({
