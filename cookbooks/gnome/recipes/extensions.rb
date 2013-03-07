@@ -1,14 +1,15 @@
 extensions = %w[
+	RecentItems@bananenfisch.net
 	alternative-status-menu@gnome-shell-extensions.gcampax.github.com
+	antisocial-menu@cnervi.github.com
+	avoidoverview@rastersoft.com
 	impatience@gfxmonk.net
 	mediaplayer@patapon.info
 	nohotcorner@azuri.free.fr
 	places-menu@gnome-shell-extensions.gcampax.github.com
-	RecentItems@bananenfisch.net
 	removeaccesibility@lomegor
-	system-monitor@paradoxxx.zero.gmail.com
-	antisocial-menu@cnervi.github.com
 	status-area-horizontal-spacing@mathematical.coffee.gmail.com
+	system-monitor@paradoxxx.zero.gmail.com
 ]
 
 %w[gir1.2-gtop-2.0 gir1.2-networkmanager-1.0].each {|pkg| package pkg}
