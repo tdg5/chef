@@ -21,29 +21,31 @@ status() {
 }
 
 case "$1" in
-	start)
+	force-reload|reload|restart|start)
 		if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
 			echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
+			logger -t vgaswitcheroo "Switch set to OFF"
 			status
+		else
+			logger -t vgaswitcheroo "Can't set switch: debugfs not available"
 		fi
 	;;
 	status)
 		status
 	;;
-	restart|reload|force-reload)
-		echo "Error: argument '$1' not supported" >&2
-		exit 3
-	;;
 	stop)
+		echo "Warning: Stop action is noop. Use unstart to set switch ON"
+		status
 	;;
 	unstart)
 		if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
 			echo ON > /sys/kernel/debug/vgaswitcheroo/switch
+			logger -t vgaswitcheroo "switch set to ON"
 			status
 		fi
 	;;
 	*)
-		echo "Usage: $0 start|status|stop|unstart" >&2
+		echo "Usage: $0 force-reload|reload|restart|start|status|stop|unstart" >&2
 		exit 3
 	;;
 esac
