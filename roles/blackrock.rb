@@ -29,9 +29,9 @@ default_attributes({
 			:rvm_trust_rvmrcs_flag => 1,
 		},
 		:version => '1.18.6',
-		:default_ruby => '1.9.3-p385',
+		:default_ruby => '1.9.3-p392',
 		:gems => {
-			'1.9.3-p385' => [{
+			'1.9.3-p392' => [{
 				:name => 'chef',
 				:version => '11.2.0',
 			}, {
