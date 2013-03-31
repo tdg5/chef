@@ -5,6 +5,7 @@ run_list [
 		'recipe[config::git]',
 		'recipe[config::sshagent]',
 		'recipe[vim]',
+		'recipe[vim_plugins]',
 		'recipe[config::vim]',
 		'recipe[tmux]',
 		'recipe[config::tmux]',
