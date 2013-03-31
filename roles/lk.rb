@@ -35,6 +35,9 @@ default_attributes({
 					'version' => '10.14.0',
 				},],
 			},
+			'global_gems' => [{
+				:name => 'gem-ctags'
+			}],
 		},],
 	},
 	'user' => {

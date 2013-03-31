@@ -36,8 +36,11 @@ default_attributes({
 				:version => '11.2.0',
 			}, {
 				:name => 'bundler'
-			}],
+			},],
 		},
+		:global_gems => [{
+			:name => 'gem-ctags',
+		}],
 	},
 	'user' => {
 		'username' => user,
