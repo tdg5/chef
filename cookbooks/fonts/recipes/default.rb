@@ -13,6 +13,13 @@ end
 
 link "#{user_fonts_dir}/ubuntuone_fonts" do
 	group node.user.group
+	notifies :run, 'bash[update_font_cache]'
 	owner node.user.username
 	to "#{home_dir}/Ubuntu One/fonts"
+end
+
+bash 'update_font_cache' do
+	action :nothing
+	code 'fc-cache -vf'
+	user 'root'
 end

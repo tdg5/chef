@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <gconf>
+	<entry name="font" mtime="1364777547" type="string">
+		<stringvalue>Ubuntu Mono for Powerline 12</stringvalue>
+	</entry>
+	<entry name="use_system_font" mtime="1364777547" type="bool" value="false"/>
 	<entry name="scrollbar_position" mtime="1351697507" type="string">
 		<stringvalue>hidden</stringvalue>
 	</entry>

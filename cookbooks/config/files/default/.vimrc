@@ -117,3 +117,5 @@ filetype indent off
 nmap <C-x><C-t> :TagbarToggle<CR>
 
 set tags=~/.ctags
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_colorscheme = 'solarized'
