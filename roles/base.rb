@@ -19,6 +19,7 @@ run_list [
 		'recipe[dropbox]',
 		'recipe[ubuntuone]',
 		'recipe[skype]',
+		'recipe[screenlets]',
 ]
 default_attributes({
 	:gnome => {
