@@ -30,7 +30,7 @@ set ttyfast
 
 set wildmenu
 set wildmode=list:longest
-set number
+set relativenumber
 set history=1000
 
 
