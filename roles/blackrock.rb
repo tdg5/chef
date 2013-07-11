@@ -16,6 +16,7 @@ run_list [
 	'recipe[java]',
 	'recipe[modprobe::blackrock_alsa]',
 	'recipe[pulseaudio::blackrock_alsa_mixer]',
+	'role[nodejs]',
 ]
 user = group = 'tdg5'
 default_attributes({
