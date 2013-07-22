@@ -12,11 +12,11 @@ user = group = 'danny'
 default_attributes({
 	'rvm' => {
 		'branch' => 'none',
-		:default_ruby => '',
-		:rubies => [
+		'default_ruby' => '',
+		'rubies' => [
 			{
-				:version => '1.9.3-p385',
-				:patch => 'falcon',
+				'version' => '1.9.3-p385',
+				'patch' => 'falcon',
 			},
 		],
 		'rvmrc' => {
