@@ -1,6 +1,7 @@
 name 'bup'
 description 'Role for bup specifics'
 run_list [
+	'recipe[lib]',
 	'role[base]',
 	'recipe[rvm]',
 	#'role[vm_host]',
