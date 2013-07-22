@@ -1,10 +1,26 @@
 #!/bin/bash -e
 
-current_user=`whoami`
-current_user_safe=`echo $current_user | sed -u 's/\./_dot_/'`
-echo "$current_user ALL=NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$current_user_safe
-sudo chmod 0440 /etc/sudoers.d/$current_user
-sudo apt-get install -y build-essential git ruby1.9.3 rubygems
-sudo gem1.9.3 install --no-ri --no-rdoc chef
-sudo mkdir -p /var/log/tdg5_chef
-sudo chown -R $current_user:$current_user /var/log/tdg5_chef
+if [ $EUID -ne 0 ]; then
+	echo "This script must be run as root" 1>&2
+	exit 1
+fi
+
+user=$SUDO_USER
+user_safe=`echo $user | sed -u 's/\./_dot_/'`
+[ -f /etc/sudoers.d/$user_safe ] || echo "$user ALL=NOPASSWD:ALL" | tee /etc/sudoers.d/$user_safe
+$(stat /etc/sudoers.d/$user_safe | sed -n '4p' | grep -q 'Access: (0440') || chmod 0440 /etc/sudoers.d/$user
+
+for pkg in git ruby1.9.3 rubygems; do
+	$(dpkg -s $pkg > /dev/null 2>&1) || apt-get install -y $pkg
+done
+
+for gem in chef; do
+	$(gem1.9.3 list --local | grep -q $gem) || gem1.9.3 install --no-ri --no-rdoc $gem
+done
+
+for user_dir in /var/log/tdg5_chef $HOME/src; do
+	[ -d $user_dir ] || mkdir -p $user_dir
+	$(ls -altrd $user_dir | grep -q "$user $user") || chown -R $user:$user $user_dir
+done
+
+[ -d $HOME/src/tdg5_chef ] || git clone https://github.com/tdg5/chef.git $HOME/src/tdg5_chef
