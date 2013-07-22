@@ -1,3 +1,5 @@
 include_recipe 'canonical_partners_repo'
 
-package 'skype'
+%w[skype-bin skype].each do |pkg|
+	package pkg
+end
