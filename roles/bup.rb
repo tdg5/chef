@@ -25,8 +25,8 @@ default_attributes({
 			},
 		],
 		:super_user => {
-			:password => 'postgresql',
-			:username => 'postgresql',
+			:password => 'postgres',
+			:username => 'postgres',
 		},
 	},
 	'rvm' => {
