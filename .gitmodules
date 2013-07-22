@@ -34,3 +34,6 @@
 [submodule "cookbooks/lib"]
 	path = cookbooks/lib
 	url = https://github.com/freewrite-cookbooks/lib.git
+[submodule "cookbooks/hostsfile"]
+	path = cookbooks/hostsfile
+	url = https://github.com/customink-webops/hostsfile.git
