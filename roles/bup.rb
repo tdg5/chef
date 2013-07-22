@@ -3,7 +3,7 @@ description 'Role for bup specifics'
 run_list [
 	'recipe[lib]',
 	'role[base]',
-	'recipe[rvm]',
+	'role[rvm]',
 	#'role[vm_host]',
 	'recipe[postgresql::server]',
 	'recipe[qt::dev]',
