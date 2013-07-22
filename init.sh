@@ -18,9 +18,9 @@ for gem in chef; do
 	$(gem1.9.3 list --local | grep -q $gem) || gem1.9.3 install --no-ri --no-rdoc $gem
 done
 
-for user_dir in /var/log/tdg5_chef $HOME/src; do
+[ -d $HOME/src/tdg5_chef ] || git clone --recursive https://github.com/tdg5/chef.git $HOME/src/tdg5_chef
+
+for user_dir in /var/log/tdg5_chef $HOME/src $HOME/src/tdg5_chef; do
 	[ -d $user_dir ] || mkdir -p $user_dir
 	$(ls -altrd $user_dir | grep -q "$user $user") || chown -R $user:$user $user_dir
 done
-
-[ -d $HOME/src/tdg5_chef ] || git clone --recursive https://github.com/tdg5/chef.git $HOME/src/tdg5_chef
