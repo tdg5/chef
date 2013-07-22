@@ -31,3 +31,6 @@
 [submodule "cookbooks/postgresql"]
 	path = cookbooks/postgresql
 	url = https://github.com/freewrite-cookbooks/postgresql.git
+[submodule "cookbooks/lib"]
+	path = cookbooks/lib
+	url = https://github.com/freewrite-cookbooks/lib.git
