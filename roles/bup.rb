@@ -9,6 +9,8 @@ run_list [
 	'recipe[qt::dev]',
 	'role[design]',
 	'role[dev]',
+	'recipe[java]',
+	'recipe[bup_wrapper]',
 ]
 user = group = 'danny'
 default_attributes({
@@ -32,6 +34,14 @@ default_attributes({
 	'rvm' => {
 		'branch' => 'none',
 		'default_ruby' => '',
+		:gems => {
+			'1.9.3-p385-falcon' => [{
+				:name => 'chef',
+				:version => '11.2.0',
+			}, {
+				:name => 'bundler'
+			},],
+		},
 		'rubies' => [
 			{
 				'version' => '1.9.3-p385',
