@@ -28,3 +28,6 @@
 [submodule "cookbooks/npm"]
 	path = cookbooks/npm
 	url = https://github.com/balbeko/chef-npm.git
+[submodule "cookbooks/postrgresql"]
+	path = cookbooks/postrgresql
+	url = https://github.com/freewrite-cookbooks/postgresql.git
