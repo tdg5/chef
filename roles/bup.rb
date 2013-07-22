@@ -4,12 +4,30 @@ run_list [
 	'role[base]',
 	'recipe[rvm]',
 	#'role[vm_host]',
+	'recipe[postgresql::server]',
 	'recipe[qt::dev]',
 	'role[design]',
 	'role[dev]',
 ]
 user = group = 'danny'
 default_attributes({
+	:postgresql => {
+		:config => {
+			:listen_addresses => 'localhost',
+		},
+		:pg_hba => [
+			{
+				:db => 'all',
+				:method => 'md5',
+				:type => 'local',
+				:user => 'postgres',
+			},
+		],
+		:super_user => {
+			:password => 'postgresql',
+			:username => 'postgresql',
+		},
+	},
 	'rvm' => {
 		'branch' => 'none',
 		'default_ruby' => '',
