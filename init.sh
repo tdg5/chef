@@ -23,4 +23,4 @@ for user_dir in /var/log/tdg5_chef $HOME/src; do
 	$(ls -altrd $user_dir | grep -q "$user $user") || chown -R $user:$user $user_dir
 done
 
-[ -d $HOME/src/tdg5_chef ] || git clone https://github.com/tdg5/chef.git $HOME/src/tdg5_chef
+[ -d $HOME/src/tdg5_chef ] || git clone --recursive https://github.com/tdg5/chef.git $HOME/src/tdg5_chef
