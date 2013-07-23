@@ -5,9 +5,6 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# Start tmux
-#[[ $TERM != "screen" ]] && tmux && exit
-
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
@@ -72,8 +69,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto -n'
     alias fgrep='fgrep --color=auto'
@@ -116,3 +111,7 @@ export VIMRUNTIME=/usr/share/vim/vim73
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 stty -ixon # enable reverse history search / enable XON/XOFF flow control
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h:\w$ \[\033[00m\]'
+
+<% node.config.bashrc.extra_sources.each do |source| %>
+[ -f <%= source %> ] && source <%= source %>
+<% end %>
