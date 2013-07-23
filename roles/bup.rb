@@ -14,18 +14,17 @@ run_list [
 ]
 user = group = 'danny'
 default_attributes({
+	:config => {
+		:bashrc => {
+			:extra_sources => [
+				'~/scripts/ec2env',
+			],
+		},
+	},
 	:postgresql => {
 		:config => {
 			:listen_addresses => 'localhost',
 		},
-		:pg_hba => [
-			{
-				:db => 'all',
-				:method => 'md5',
-				:type => 'local',
-				:user => 'postgres',
-			},
-		],
 		:super_user => {
 			:password => 'postgres',
 			:username => 'postgres',
@@ -60,3 +59,15 @@ default_attributes({
 	}
 })
 
+override_attributes({
+	:postgresql => {
+		:pg_hba => [
+			{
+				:db => 'all',
+				:method => 'md5',
+				:type => 'local',
+				:user => 'postgres',
+			},
+		],
+	},
+})
