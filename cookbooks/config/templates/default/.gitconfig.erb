@@ -8,6 +8,8 @@
 	rebase = true
 [color]
 	ui = true
+[github]
+	user = tdg5
 [push]
 	default = tracking
 [rebase]
@@ -18,7 +20,18 @@
 	name = Danny Guinther
 	email = <%= node.user.email %>
 [alias]
-	stat = status
-	co = checkout
+	amd = commit --amend --no-edit
+	amend = commit --amend
 	br = branch
+	ci = commit
+	cm = commit -m
+	co = checkout
+	get = !git pull && git submodule init && git submodule update
+	put = push origin HEAD
 	rb = rebase
+	rmbr = !sh -c "git branch -d $0 && git push origin :heads/$0 && git remote prune origin"
+	rmremote = !sh -c "git push origin :heads/$0"
+	st = status
+	stat = status
+	unci = reset --soft HEAD^
+	unstage = reset HEAD
