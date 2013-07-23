@@ -11,6 +11,7 @@ run_list [
 	'role[dev]',
 	'recipe[java]',
 	'recipe[bup_wrapper]',
+	'recipe[hipchat]',
 ]
 user = group = 'danny'
 default_attributes({
