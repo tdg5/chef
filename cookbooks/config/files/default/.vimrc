@@ -5,13 +5,8 @@ syntax on
 filetype on
 filetype plugin on
 
-highlight WhiteSpaceError ctermbg=red guibg=red
-match WhiteSpaceError /^\zs \+\|\t\+\zs \+\| \+\ze\t\|\zs\s\+$/
-autocmd ColorScheme * highlight WhiteSpaceError ctermbg=red guibg=red
-
 set background=dark
 set backspace=eol,indent,start
-" set cursorline
 set encoding=utf-8
 set grepprg=ack-grep
 set hidden
@@ -53,18 +48,21 @@ function! HasPaste()
 	endif
 endfunction
 
-" Update highlighting rules
 set list
 set listchars=tab:o-,extends:>,precedes:<
-hi SpecialKey guifg=red ctermfg=red
-hi ExtraSpace ctermbg=red guibg=red
-au BufRead,BufNew,BufNewFile *.{apl,css,erb,htm,html,js,my,pm,pl,py,rb,sh,sql,snip,xml} syn match ExtraSpace /^\zs \+\|\t\+\zs \+\| \+\ze\t\|\zs\s\+$/
+
+" Update highlighting rules
 hi SyntasticErrorLine guifg=white guibg=red
+hi SpecialKey guifg=red ctermfg=red
+hi WhiteSpaceError ctermbg=red guibg=red
+match WhiteSpaceError /\S\+\zs\s\+$/
+
 
 " The following two options will save the fold-state
 " au BufWinLeave * silent! mkview
 " au BufWinEnter * silent! loadview
 
+" Disable arrow keys in insert and normal mode
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
@@ -76,8 +74,9 @@ noremap   <Right>  <NOP>
 
 " Turn on auto indenting
 set autoindent
-set shiftwidth=5
-set tabstop=5
+set shiftwidth=2
+set tabstop=2
+set expandtab
 
 " turn on folding
 set foldenable
@@ -99,6 +98,7 @@ autocmd BufRead,BufNewFile *.rb let ruby_fold=1
 :command W w
 :command Q q
 :command Wq wq
+:command WQ wq
 
 " remap jj in insert mode to exit insert mode
 inoremap jj <Esc>
@@ -113,9 +113,6 @@ set sidescrolloff=5
 
 filetype indent off
 
-" Tagbar keybinding
-nmap <C-x><C-t> :TagbarToggle<CR>
-
-set tags=~/.ctags
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_colorscheme = 'solarized'
+" Plugin keybindings
+nmap <leader>xt :TagbarToggle<CR>
+nmap <leader>xo :CommandT<CR>

@@ -13,6 +13,8 @@ end
 include_recipe 'vim_plugins::pathogen'
 include_recipe 'vim_plugins::matchit'
 include_recipe 'vim_plugins::vim_ruby'
+include_recipe 'vim_plugins::vim_rake'
+include_recipe 'vim_plugins::vim_bundler'
 include_recipe 'vim_plugins::vim_rails'
 include_recipe 'vim_plugins::nerdcommenter'
 include_recipe 'vim_plugins::syntastic'

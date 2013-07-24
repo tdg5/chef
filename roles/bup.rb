@@ -34,14 +34,14 @@ default_attributes({
 	'rvm' => {
 		'branch' => 'none',
 		'default_ruby' => '',
-		:gems => {
-			'1.9.3-p385-falcon' => [{
-				:name => 'chef',
-				:version => '11.2.0',
-			}, {
-				:name => 'bundler'
-			},],
-		},
+		:global_gems => [{
+			:name => 'gem-ctags',
+		}, {
+			:name => 'chef',
+			:version => '11.2.0',
+		}, {
+			:name => 'bundler'
+		},],
 		'rubies' => [
 			{
 				'version' => '1.9.3-p385',
