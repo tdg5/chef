@@ -4,7 +4,7 @@ run_list [
 	'recipe[lib]',
 	'role[base]',
 	'role[rvm]',
-	#'role[vm_host]',
+	'role[vm_host]',
 	'recipe[postgresql::server]',
 	'recipe[qt::dev]',
 	'role[design]',
