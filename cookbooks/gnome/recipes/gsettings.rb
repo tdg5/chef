@@ -1,4 +1,4 @@
-gsgsettings_code = ''
+gsettings_code = ''
 node.gnome.gsettings.each do |gsetting|
   current_setting_value = `sudo -u #{node.user.username} -- gsettings get #{gsetting[:schema]} #{gsetting[:key]} 2>/dev/null`.strip
   next if current_setting_value == gsetting[:value]

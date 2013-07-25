@@ -10,7 +10,7 @@ default.gnome = {
   }, {
     :key => 'move-to-workspace-up',
     :schema => 'org.gnome.desktop.wm.keybindings',
-    :value => "['<Control><Shift><Alt>Down', '<Control><Shift><Alt>k']",
+    :value => "['<Control><Shift><Alt>Up', '<Control><Shift><Alt>k']",
   }, {
     :key => 'switch-to-workspace-up',
     :schema => 'org.gnome.desktop.wm.keybindings',
