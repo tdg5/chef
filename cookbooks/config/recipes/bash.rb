@@ -1,5 +1,6 @@
 file "/home/#{node.user.username}/.bash_profile" do
 	action :delete
+	only_if "file -e /home/#{node.user.username}.bash_profile"
 end
 
 template "/home/#{node.user.username}/.bashrc" do

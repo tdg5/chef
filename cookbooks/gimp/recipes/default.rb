@@ -6,4 +6,4 @@ apt_repository 'gimp' do
 	uri 'http://ppa.launchpad.net/otto-kesselgulasch/gimp/ubuntu'
 end
 
-%w[gimp gimp-plugin-registry gimp-resynthesizer].each { |pkg| package pkg }
+%w[gimp gimp-plugin-registry gimp-gmic].each { |pkg| package pkg }
