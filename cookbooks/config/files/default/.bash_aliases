@@ -1,8 +1,14 @@
+function chef() {
+  rvmsudo chef-solo -c ~/src/tdg5_chef/solo/solo.rb -j ~/src/tdg5_chef/solo/nodes/$1.json
+}
+
 alias aliases='vi ~/.bash_aliases'
 alias c='cd'
 alias g='git'
 alias ga='git add'
 alias gs='git status'
+alias gaa='git add -A'
+alias gcm='git commit -m'
 alias gsh='git show'
 alias ll='ls -altr'
 alias realias='source ~/.bash_aliases'
