@@ -3,6 +3,8 @@ function chef() {
 }
 
 alias aliases='vi ~/.bash_aliases'
+alias be='bundle exec'
+alias bun='bundle'
 alias c='cd'
 alias g='git'
 alias ga='git add'
@@ -11,15 +13,16 @@ alias gl='git log'
 alias gs='git status'
 alias gaa='git add -A'
 alias gcm='git commit -m'
+alias gco='git checkout'
 alias gds='git diff --staged'
 alias gsh='git show'
 alias gget='git pull'
 alias gput='git push'
+alias gback='git reset HEAD~ --soft'
 alias ll='ls -altr'
 alias realias='source ~/.bash_aliases'
 alias top10='history | awk '"'"'{a[$2 " " $3]++}END{for(i in a){print a[i] " " i}}'"'"' | sort -rn | head'
 alias up='[ $(git rev-parse --show-toplevel 2>/dev/null || echo ~) = $(pwd) ] && cd $([ $(echo ~) = $(pwd) ] && echo / || echo) || cd $(git rev-parse --show-toplevel 2>/dev/null)'
-
 
 # enable color support
 if [ -x /usr/bin/dircolors ]; then
