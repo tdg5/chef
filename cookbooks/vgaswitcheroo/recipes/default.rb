@@ -1,10 +1,12 @@
-cookbook_file '/etc/init.d/vgaswitcheroo' do
+switcheroo_path = '/etc/init.d/vgaswitcheroo'
+cookbook_file switcheroo_path do
 	group 'root'
 	mode '0755'
+	not_if "test -e #{switcheroo_path}"
 	owner 'root'
 end
 
-bash 'update-rc' do
-	code 'update-rc.d vgaswitcheroo start 20 1 2 3 4 5 . stop 20 0 1 6 .'
-	user 'root'
+service 'vgaswitcheroo' do
+	action [:enable, :start]
+	supports :status => true, :restart => true
 end
