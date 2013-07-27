@@ -2,23 +2,28 @@ function chef() {
   rvmsudo chef-solo -c ~/src/tdg5_chef/solo/solo.rb -j ~/src/tdg5_chef/solo/nodes/$1.json
 }
 
+function gimprand() {
+  x=''
+  for img in $(ls -al ~/Desktop/Maybes | grep -i jpg |  sort -R | head -n5 | awk '{print $9}'); do x="$x $img"; done; gimp $x
+}
+
 alias aliases='vi ~/.bash_aliases'
 alias be='bundle exec'
 alias bun='bundle'
 alias c='cd'
 alias g='git'
 alias ga='git add'
-alias gd='git diff'
-alias gl='git log'
-alias gs='git status'
 alias gaa='git add -A'
+alias gback='git reset HEAD~ --soft'
 alias gcm='git commit -m'
 alias gco='git checkout'
+alias gd='git diff'
 alias gds='git diff --staged'
-alias gsh='git show'
 alias gget='git pull'
+alias gl='git log'
 alias gput='git push'
-alias gback='git reset HEAD~ --soft'
+alias gs='git status'
+alias gsh='git show'
 alias ll='ls -altr'
 alias realias='source ~/.bash_aliases'
 alias top10='history | awk '"'"'{a[$2 " " $3]++}END{for(i in a){print a[i] " " i}}'"'"' | sort -rn | head'
