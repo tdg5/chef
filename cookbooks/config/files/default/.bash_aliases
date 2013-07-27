@@ -4,7 +4,9 @@ function chef() {
 
 function gimprand() {
   x=''
-  for img in $(ls -al ~/Desktop/Maybes | grep -i jpg |  sort -R | head -n5 | awk '{print $9}'); do x="$x $img"; done; gimp $x
+  [ ! -z $1 ] && n="$1" || n="5"
+  maybe_path='/home/tdg5/Pictures/maybes'
+  for img in $(ls -al $maybe_path | grep -i jpg | sort -R | head -n $n | awk '{print "'$maybe_path/'"$9}'); do x="$x $img"; done; gimp $x
 }
 
 alias aliases='vi ~/.bash_aliases'
