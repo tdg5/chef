@@ -103,7 +103,7 @@ autocmd BufRead,BufNewFile *.rb let ruby_fold=1
 :command WQ wq
 
 " remap jj in insert mode to exit insert mode
-inoremap jj <Esc>
+inoremap ;; <Esc>
 
 " use space to open folds in normal mode
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
