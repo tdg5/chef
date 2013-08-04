@@ -6,6 +6,7 @@ run_list [
 	'recipe[filesystem_layout::blackrock]',
 	'recipe[vgaswitcheroo]',
 	'recipe[modprobe]',
+	'recipe[modprobe::hid_apple]',
 	'role[tools]',
 	'role[video]',
 	'role[design]',
