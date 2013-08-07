@@ -30,11 +30,11 @@ default_attributes({
 				'binding' => '<Primary><Alt>t',
 			},
 			'Launch Chrome' => {
-				'action' => 'google-chrome',
+				'action' => 'new_chrome_with_focus',
 				'binding' => '<Primary><Alt>b',
 			},
 			'Launch Chrome Incognito' => {
-				'action' => 'google-chrome --incognito',
+				'action' => 'new_chrome_with_focus --incognito',
 				'binding' => '<Primary><Shift><Alt>b',
 			},
 		},
