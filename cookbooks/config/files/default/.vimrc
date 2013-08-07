@@ -117,4 +117,4 @@ filetype indent off
 
 " Plugin keybindings
 nmap <leader>xt :TagbarToggle<CR>
-nmap <leader>xo :CommandT<CR>
+nmap <leader>xo :CtrlP<CR>
