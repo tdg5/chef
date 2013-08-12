@@ -47,6 +47,7 @@ default_attributes({
 				'version' => '1.9.3-p385',
 				'patch' => 'falcon',
 			},
+			'2.0.0-p247',
 		],
 		'rvmrc' => {
 			'rvm_trust_rvmrcs_flag' => 1,
