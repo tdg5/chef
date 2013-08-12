@@ -118,3 +118,12 @@ filetype indent off
 " Plugin keybindings
 nmap <leader>xt :TagbarToggle<CR>
 nmap <leader>xo :CtrlP<CR>
+"
+" vim-fugitive plugin keybindings
+nmap <leader>gb :Gblame<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gd :Gdiff<CR>
+nmap <leader>gg :Ggrep 
+nmap <leader>gl :Glog<CR>
+nmap <leader>gr :Gread<CR>
+nmap <leader>gs :Gstatus<CR>
