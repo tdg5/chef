@@ -14,6 +14,14 @@ run_list [
 	'recipe[hipchat]',
 ]
 user = group = 'danny'
+global_gems = [{
+	:name => 'gem-ctags',
+}, {
+	:name => 'chef',
+	:version => '11.2.0',
+}, {
+	:name => 'bundler'
+}]
 default_attributes({
 	:config => {
 		:bashrc => {
@@ -34,14 +42,10 @@ default_attributes({
 	'rvm' => {
 		'branch' => 'none',
 		'default_ruby' => '',
-		:global_gems => [{
-			:name => 'gem-ctags',
-		}, {
-			:name => 'chef',
-			:version => '11.2.0',
-		}, {
-			:name => 'bundler'
-		},],
+    'gems' => {
+      '1.9.3-p385' => global_gems,
+      '2.0.0-p247' => global_gems,
+    },
 		'rubies' => [
 			{
 				'version' => '1.9.3-p385',
