@@ -64,6 +64,13 @@ default_attributes({
 override_attributes({
 	:postgresql => {
 		:pg_hba => [
+      {
+        :addr => '127.0.0.1/32',
+        :db => 'all',
+        :method => 'trust',
+        :type => 'host',
+        :user => 'postgres',
+      },
 			{
 				:db => 'all',
 				:method => 'md5',
