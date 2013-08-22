@@ -55,7 +55,7 @@ set listchars=tab:o-,extends:>,precedes:<
 hi SyntasticErrorLine guifg=white guibg=red
 hi SpecialKey guifg=red ctermfg=red
 hi WhiteSpaceError ctermbg=red guibg=red
-match WhiteSpaceError /^\s\+$/
+match WhiteSpaceError /^\s\+$\|\S\+\zs\s\+$/
 hi clear SignColumn
 hi clear FoldColumn
 
