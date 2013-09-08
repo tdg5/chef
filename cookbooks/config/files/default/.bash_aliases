@@ -18,6 +18,11 @@ function top_cmds() {
   history | awk '{a[$2 " " $3]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head -n $n
 }
 
+function change_pic_offsets() {
+  [ ! -z $1 ] && n="$1" || n="1"
+  for pic in $(find -name 'DSC_*.JPG' | sed 's/.\/DSC_//'); do mv DSC_${pic} DSC_${n}${pic}; done
+}
+
 alias aliases='vi ~/.bash_aliases'
 alias be='bundle exec'
 alias bun='bundle'
