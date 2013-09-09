@@ -6,8 +6,12 @@ run_list [
 	'recipe[npm]',
 	'recipe[grunt]',
 ]
+npm_version = '1.3.11'
 default_attributes({
+  :nodejs => {
+    :npm => npm_version,
+  },
 	:npm => {
-		:version => '1.2.14',
+		:version => npm_version,
 	}
 })
