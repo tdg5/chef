@@ -22,6 +22,7 @@ run_list [
     'recipe[ubuntuone]',
     'recipe[skype]',
     'recipe[screenlets]',
+    'recipe[pastie]',
 ]
 default_attributes({
   :gnome => {
