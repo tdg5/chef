@@ -78,7 +78,7 @@ override_attributes({
       },
 			{
 				:db => 'all',
-				:method => 'md5',
+				:method => 'trust',
 				:type => 'local',
 				:user => 'postgres',
 			},
