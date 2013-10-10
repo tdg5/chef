@@ -36,6 +36,7 @@ alias gback='git reset HEAD~ --soft'
 alias gamd='git commit --amend --no-edit'
 alias gamend='git commit --amend'
 alias gbr='git branch'
+alias gbrt="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gco='git checkout'
