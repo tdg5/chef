@@ -16,159 +16,120 @@
 # ssh_config(5) man page.
 
 Host *
-#   ForwardAgent no
-#   ForwardX11 no
-#   ForwardX11Trusted yes
-#   RhostsRSAAuthentication no
-#   RSAAuthentication yes
-#   PasswordAuthentication yes
-#   HostbasedAuthentication no
-#   GSSAPIAuthentication no
-#   GSSAPIDelegateCredentials no
-#   GSSAPIKeyExchange no
-#   GSSAPITrustDNS no
-#   BatchMode no
-#   CheckHostIP yes
-#   AddressFamily any
-#   ConnectTimeout 0
-#   StrictHostKeyChecking ask
-#   IdentityFile ~/.ssh/identity
-#   IdentityFile ~/.ssh/id_rsa
-#   IdentityFile ~/.ssh/id_dsa
-#   Port 22
-#   Protocol 2,1
-#   Cipher 3des
-#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc
-#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160
-#   EscapeChar ~
-#   Tunnel no
-#   TunnelDevice any:any
-#   PermitLocalCommand no
-#   VisualHostKey no
-#   ProxyCommand ssh -q -W %h:%p gateway.example.com
-	SendEnv LANG LC_*
-	HashKnownHosts yes
-	GSSAPIAuthentication yes
-	GSSAPIDelegateCredentials no
+SendEnv LANG LC_*
+HashKnownHosts yes
+GSSAPIAuthentication yes
+GSSAPIDelegateCredentials no
 
+Host github github.com
+Hostname github.com
+User git
+IdentityFile ~/.ssh/id_rsa.home
 
-	Host lk_redgod
-	ForwardAgent yes
-	Hostname gw.leadkarma.com
-	IdentityFile ~/.ssh/id_rsa.lk
-	User danny.guinther
+Host simon sim
+Hostname 192.168.1.6
+IdentityFile ~/.ssh/id_rsa.home
+User chef
+ForwardAgent yes
 
-	Host lk_s1
-	ForwardAgent yes
-	Hostname s1.leadkarma.com
-	IdentityFile ~/.ssh/id_rsa.lk
-	User danny.guinther
+Host freewrite
+ForwardAgent yes
+Hostname freewrite.org
+IdentityFile ~/.ssh/id_rsa.home
+User tdg5
 
-	Host lk
-	ForwardAgent yes
-	IdentityFile ~/.ssh/id_rsa.lk
-	LocalForward 3000 localhost:3000
-	LocalForward 8080 localhost:80
-	ProxyCommand ssh -q -W 192.168.1.162:22 lk_redgod
-	User danny.guinther
+Host theodore theo
+ForwardAgent yes
+Hostname 192.168.1.7
+IdentityFile ~/.ssh/id_rsa.home
+User chef
 
-	Host github github.com
-	Hostname github.com
-	User git
-	IdentityFile ~/.ssh/id_rsa.home
+Host theodore_remote theo_remote
+ForwardAgent yes
+IdentityFile ~/.ssh/id_rsa.home
+ProxyCommand ssh -q -W 192.168.1.7:22 simon_remote
+User chef
 
-	Host simon sim
-	Hostname 192.168.1.6
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
-	ForwardAgent yes
+Host tdg5
+Hostname tdg5.webhop.net
+IdentityFile ~/.ssh/id_rsa.home
+User chef
+ForwardAgent yes
+LocalForward 8080 localhost:80
 
-	Host simon_remote
-	ForwardAgent yes
-	Hostname tdg5.webhop.net
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
+Host britany brit
+Hostname 192.168.2.4
+IdentityFile ~/.ssh/id_rsa.home
+User chef
 
-	Host theodore theo
-	ForwardAgent yes
-	Hostname 192.168.1.7
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
+Host jeanette jean
+Hostname 192.168.2.6
+IdentityFile ~/.ssh/id_rsa.home
+User chef
 
-	Host theodore_remote theo_remote
-	ForwardAgent yes
-	IdentityFile ~/.ssh/id_rsa.home
-	ProxyCommand ssh -q -W 192.168.1.7:22 simon_remote
-	User chef
+Host eleanor elle
+ForwardAgent yes
+Hostname 192.168.2.5
+IdentityFile ~/.ssh/id_rsa.home
+User chef
 
-	Host tdg5
-	Hostname tdg5.webhop.net
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
-	ForwardAgent yes
-	LocalForward 8080 localhost:80
+Host pilot0 pi0 192.168.1.200
+ForwardAgent yes
+Hostname 192.168.1.200
+User chef
 
-	Host britany brit
-	Hostname 192.168.2.3
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
+Host pilot1 pi1 192.168.1.201
+ForwardAgent yes
+Hostname 192.168.1.201
+IdentityFile ~/.ssh/id_rsa.home
+User chef
 
-	Host jeanette jean
-	Hostname 192.168.2.4
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
+Host pilot2 pi2 192.168.1.202
+ForwardAgent yes
+Hostname 192.168.1.202
+IdentityFile ~/.ssh/id_rsa.home
+User chef
 
-	Host eleanor elle
-	ForwardAgent yes
-	Hostname 192.168.2.5
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
+Host pilot3 pi3 192.168.1.203
+ForwardAgent yes
+Hostname 192.168.1.203
+IdentityFile ~/.ssh/id_rsa.home
+User chef
 
-	Host pilot0 pi0
-	Hostname 192.168.1.200
-	User chef
+Host pilot4 pi4 192.168.1.204
+ForwardAgent yes
+Hostname 192.168.1.204
+IdentityFile ~/.ssh/id_rsa.home
+User chef
 
-	Host pilot1 pi1
-	Hostname 192.168.1.201
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
+Host pilot1_remote pi1_remote
+ForwardAgent yes
+IdentityFile ~/.ssh/id_rsa.home
+ProxyCommand ssh -q -W 192.168.1.201:22 simon_remote
+User chef
 
-	Host pilot2 pi2
-	Hostname 192.168.1.202
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
+Host pilot2_remote pi2_remote
+ForwardAgent yes
+IdentityFile ~/.ssh/id_rsa.home
+ProxyCommand ssh -q -W 192.168.1.202:22 simon_remote
+User chef
 
-	Host pilot3 pi3
-	Hostname 192.168.1.203
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
+Host pilot3_remote pi3_remote
+ForwardAgent yes
+IdentityFile ~/.ssh/id_rsa.home
+ProxyCommand ssh -q -W 192.168.1.203:22 simon_remote
+User chef
 
-	Host pilot4 pi4
-	Hostname 192.168.1.204
-	IdentityFile ~/.ssh/id_rsa.home
-	User chef
+Host pilot4_remote pi4_remote
+ForwardAgent yes
+IdentityFile ~/.ssh/id_rsa.home
+ProxyCommand ssh -q -W 192.168.1.204:22 simon_remote
+User chef
 
-	Host pilot1_remote pi1_remote
-	ForwardAgent yes
-	IdentityFile ~/.ssh/id_rsa.home
-	ProxyCommand ssh -q -W 192.168.1.201:22 simon_remote
-	User chef
-
-	Host pilot2_remote pi2_remote
-	ForwardAgent yes
-	IdentityFile ~/.ssh/id_rsa.home
-	ProxyCommand ssh -q -W 192.168.1.202:22 simon_remote
-	User chef
-
-	Host pilot3_remote pi3_remote
-	ForwardAgent yes
-	IdentityFile ~/.ssh/id_rsa.home
-	ProxyCommand ssh -q -W 192.168.1.203:22 simon_remote
-	User chef
-
-	Host pilot4_remote pi4_remote
-	ForwardAgent yes
-	IdentityFile ~/.ssh/id_rsa.home
-	ProxyCommand ssh -q -W 192.168.1.204:22 simon_remote
-	User chef
-
+Host bup
+ForwardAgent yes
+ForwardX11 yes
+Hostname 209.119.128.2
+Port 22222
+IdentityFile ~/.ssh/id_rsa.bup
+User danny
