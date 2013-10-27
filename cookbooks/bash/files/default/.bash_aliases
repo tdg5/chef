@@ -79,3 +79,22 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+# Bash completion
+__git_complete ga _git_add
+__git_complete gback _git_reset
+__git_complete gbr _git_branch
+__git_complete gco _git_checkout
+__git_complete gcp _git_cherry_pick
+__git_complete gd _git_diff
+__git_complete gg _git_grep
+__git_complete ggi _git_grep
+__git_complete gget _git_pull
+__git_complete gl _git_log
+__git_complete glv _git_log
+__git_complete gput _git_push
+__git_complete grb _git_rebase
+__git_complete gs _git_status
+__git_complete gsh _git_show
+__git_complete gst _git_stash
+__git_complete gundo _git_reset

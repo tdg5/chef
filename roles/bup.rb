@@ -24,7 +24,7 @@ global_gems = [{
 	:name => 'bundler'
 }]
 default_attributes({
-	:config => {
+	:bash => {
 		:bashrc => {
 			:extra_sources => [
 				'~/scripts/ec2env',
