@@ -130,3 +130,7 @@ nmap <leader>gs :Gstatus<CR>
 
 " prevent vim-json from hiding double quotes
 let g:vim_json_syntax_conceal = 0
+
+" mlessnau_block_shift keybindings
+vmap <C-k> :call BlockShiftUp()<CR>
+vmap <C-j> :call BlockShiftDown()<CR>
