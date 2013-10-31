@@ -23,6 +23,10 @@ function change_pic_offsets() {
   for pic in $(find -name 'DSC_*.JPG' | sed 's/.\/DSC_//'); do mv DSC_${pic} DSC_${n}${pic}; done
 }
 
+function gbrc() {
+  git branch | awk '/\*/ { print $2 }'
+}
+
 alias aliases='vi ~/.bash_aliases'
 alias be='bundle exec'
 alias bun='bundle'
