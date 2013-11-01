@@ -31,7 +31,7 @@ set history=1000
 
 " Format the statusline
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h%=\ \ \ Line:\ %l/%L:%c\ (%p%%)
-colorscheme default
+colorscheme delek
 
 " Helper Function for getting the current directory
 function! CurDir()
