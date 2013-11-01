@@ -5,6 +5,11 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Enable 256 colors
+if [ ! -z "$COLORTERM" ] && [ $COLORTERM = gnome-terminal ]; then
+  TERM=xterm-256color
+fi
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
