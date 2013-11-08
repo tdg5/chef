@@ -18,6 +18,7 @@ run_list [
 	'recipe[modprobe::blackrock_alsa]',
 	'recipe[pulseaudio::blackrock_alsa_mixer]',
 	'role[nodejs]',
+	'recipe[lastpass]',
 ]
 user = group = 'tdg5'
 default_attributes({

@@ -13,6 +13,7 @@ run_list [
 	'recipe[bup_wrapper]',
 	'recipe[hipchat]',
 	'role[nodejs]',
+  'recipe[lastpass]',
 ]
 user = group = 'danny'
 global_gems = [{
