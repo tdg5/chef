@@ -27,6 +27,21 @@ function gbrc() {
   git branch | awk '/\*/ { print $2 }'
 }
 
+function gbrd() {
+  if [ ! -z $2 ]; then
+    br1="$1"
+    br2="$2"
+  else
+    br1="$(gbrc)"
+    br2="$1"
+  fi
+  git rev-list --pretty=short $br1...$br2
+}
+
+function ggo() {
+  vim $(git grep --name-only "$@")
+}
+
 alias aliases='vi ~/.bash_aliases'
 alias be='bundle exec'
 alias bun='bundle'
@@ -56,6 +71,7 @@ alias gget='git pull'
 alias gl='git log'
 alias glv='git log --oneline --graph'
 alias gput='git push'
+alias gr='git reset'
 alias grb='git rebase'
 alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
