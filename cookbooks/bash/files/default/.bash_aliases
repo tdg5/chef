@@ -2,6 +2,10 @@ function bcd() {
   cd $(bundle show $1)
 }
 
+function cd_src() {
+  cd ~/src/$1
+}
+
 function chef() {
   rvmsudo chef-solo -c ~/src/tdg5_chef/solo/solo.rb -j ~/src/tdg5_chef/solo/nodes/$1.json
 }
