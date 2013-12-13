@@ -19,6 +19,7 @@ run_list [
 	'recipe[pulseaudio::blackrock_alsa_mixer]',
 	'role[nodejs]',
 	'recipe[lastpass]',
+  'recipe[hipchat]',
 ]
 user = group = 'tdg5'
 default_attributes({
