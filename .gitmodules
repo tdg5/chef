@@ -37,3 +37,6 @@
 [submodule "cookbooks/hostsfile"]
 	path = cookbooks/hostsfile
 	url = https://github.com/customink-webops/hostsfile.git
+[submodule "cookbooks/iptables"]
+	path = cookbooks/iptables
+	url = https://github.com/opscode-cookbooks/iptables.git
