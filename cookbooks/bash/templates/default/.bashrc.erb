@@ -92,7 +92,12 @@ fi
 { [ -e '/etc/profile.d/rvm.sh' ] && source /etc/profile.d/rvm.sh; }
 
 export EDITOR=vim
-export VIMRUNTIME=/usr/share/vim/vim73
+# export correct VIMRUNTIME depending on version
+if [ -d /usr/share/vim/vim73 ]; then
+  export VIMRUNTIME=/usr/share/vim/vim73
+elif [ -d /usr/share/vim/vim74 ]; then
+  export VIMRUNTIME=/usr/share/vim/vim74
+fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 stty -ixon # enable reverse history search / enable XON/XOFF flow control
