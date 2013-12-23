@@ -1,6 +1,7 @@
 name 'surface'
 description 'Role for surface specifics'
 run_list [
+  'recipe[modules::surface]',
   'role[base]',
   'role[tools]',
   'role[design]',
