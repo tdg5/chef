@@ -2,6 +2,7 @@ name 'surface'
 description 'Role for surface specifics'
 run_list [
   'recipe[modules::surface]',
+  'recipe[pm-utils::disable_usb_bluetooth]',
   'role[base]',
   'role[tools]',
   'role[design]',
