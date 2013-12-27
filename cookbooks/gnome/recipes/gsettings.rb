@@ -5,9 +5,8 @@ node.gnome.gsettings.each do |gsetting|
   gsettings_code += %Q[gsettings set #{gsetting[:schema]} #{gsetting[:key]} "#{gsetting[:value]}"\n]
 end
 
-unless gsettings_code.empty?
-  bash 'set_gsettings_values' do
-    code gsettings_code
-    user node.user.username
-  end
+bash 'set_gsettings_values' do
+  code gsettings_code
+  not_if { gsettings_code.empty? }
+  user node.user.username
 end
