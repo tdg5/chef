@@ -3,6 +3,7 @@ description 'Role for surface specifics'
 run_list [
   'recipe[modules::surface]',
   'recipe[pm-utils::disable_usb_bluetooth]',
+  'recipe[acpi_wakeup]',
   'role[base]',
   'role[tools]',
   'role[design]',
@@ -14,6 +15,9 @@ run_list [
 ]
 user = group = 'tdg5'
 default_attributes({
+  :acpi_wakeup => {
+    :devices => %w[EHC1 EHC2 XHC],
+  },
   :modprobe => {
     :blacklists => [
     ],

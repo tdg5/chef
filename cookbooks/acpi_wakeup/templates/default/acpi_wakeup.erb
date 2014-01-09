@@ -1,0 +1,59 @@
+<%
+  devices = node.acpi_wakeup.devices
+  devices_regexp = "(#{devices.join('|')}).*enabled"
+%>
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          acpi_wakeup
+# Required-Start:    $remote_fs $syslog $all
+# Required-Stop:     0 6
+# Default-Start:     1 2 3 4 5
+# Default-Stop:
+# Short-Description: Disable acpi wakeup for given devices
+### END INIT INFO
+
+
+DEVICES_REGEXP="<%= devices_regexp %>"
+AWK_CMD='BEGIN {FS = "\t"}; '"/$DEVICES_REGEXP/ { print \$1}"
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+. /lib/init/vars.sh
+. /lib/lsb/init-functions
+
+status() {
+  if [ -e /proc/acpi/wakeup ]; then
+    if [ ! "$(cat /proc/acpi/wakeup | awk "$AWK_CMD")" = "" ]; then
+      echo "ACPI Wakeup devices have not been set"
+      exit 1
+    else
+      echo "ACPI Wakeup devices have been set"
+      exit 0
+    fi
+  else
+    echo "/proc/acpi/wakeup is not available"
+    exit 1
+  fi
+}
+
+case "$1" in
+  force-reload|reload|restart|start)
+    if [ -e /proc/acpi/wakeup ]; then
+      ACTIVE_DEVICES=$(cat /proc/acpi/wakeup | awk "$AWK_CMD")
+      for DEVICE in $ACTIVE_DEVICES; do
+        echo $DEVICE > /proc/acpi/wakeup
+      done
+      status
+    fi
+  ;;
+  status)
+    status
+  ;;
+  stop)
+    echo "Warning: Stop action is noop."
+    status
+  ;;
+  *)
+    echo "Usage: $0 force-reload|reload|restart|start|status|stop|unstart" >&2
+    exit 3
+  ;;
+esac
