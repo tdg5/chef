@@ -32,12 +32,12 @@ default_attributes({
     :rvmrc => {
       :rvm_trust_rvmrcs_flag => 1,
     },
-    :version => '1.18.6',
-    :default_ruby => '1.9.3-p392',
+    :version => '1.25.14',
+    :default_ruby => '2.0.0-p353',
     :gems => {
-      '1.9.3-p392' => [{
+      '2.0.0-p353' => [{
         :name => 'chef',
-        :version => '11.2.0',
+        :version => '11.8.2',
       }, {
         :name => 'bundler'
       },],
@@ -45,6 +45,11 @@ default_attributes({
     :global_gems => [{
       :name => 'gem-ctags',
     }],
+    :rubies => [
+      '1.9.3-p484',
+      '2.0.0-p353',
+      '2.1.0',
+    ],
   },
   'user' => {
     'username' => user,
