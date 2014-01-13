@@ -1,42 +1,42 @@
 [submodule "cookbooks/vim"]
-	path = cookbooks/vim
-	url = https://github.com/opscode-cookbooks/vim.git
+  path = cookbooks/vim
+  url = https://github.com/opscode-cookbooks/vim.git
 [submodule "cookbooks/apt"]
-	path = cookbooks/apt
-	url = https://github.com/opscode-cookbooks/apt.git
+  path = cookbooks/apt
+  url = https://github.com/opscode-cookbooks/apt.git
 [submodule "cookbooks/openssh"]
-	path = cookbooks/openssh
-	url = https://github.com/opscode-cookbooks/openssh.git
+  path = cookbooks/openssh
+  url = https://github.com/opscode-cookbooks/openssh.git
 [submodule "cookbooks/rvm"]
-	path = cookbooks/rvm
-	url = https://github.com/fnichol/chef-rvm.git
+  path = cookbooks/rvm
+  url = https://github.com/fnichol/chef-rvm.git
 [submodule "cookbooks/mysql"]
-	path = cookbooks/mysql
-	url = https://github.com/opscode-cookbooks/mysql.git
+  path = cookbooks/mysql
+  url = https://github.com/opscode-cookbooks/mysql.git
 [submodule "cookbooks/openssl"]
-	path = cookbooks/openssl
-	url = https://github.com/opscode-cookbooks/openssl.git
+  path = cookbooks/openssl
+  url = https://github.com/opscode-cookbooks/openssl.git
 [submodule "cookbooks/database"]
-	path = cookbooks/database
-	url = https://github.com/opscode-cookbooks/database.git
+  path = cookbooks/database
+  url = https://github.com/opscode-cookbooks/database.git
 [submodule "cookbooks/nodejs"]
-	path = cookbooks/nodejs
-	url = https://github.com/mdxp/nodejs-cookbook
+  path = cookbooks/nodejs
+  url = https://github.com/mdxp/nodejs-cookbook
 [submodule "cookbooks/build-essential"]
-	path = cookbooks/build-essential
-	url = https://github.com/opscode-cookbooks/build-essential.git
+  path = cookbooks/build-essential
+  url = https://github.com/opscode-cookbooks/build-essential.git
 [submodule "cookbooks/npm"]
-	path = cookbooks/npm
-	url = https://github.com/balbeko/chef-npm.git
+  path = cookbooks/npm
+  url = https://github.com/balbeko/chef-npm.git
 [submodule "cookbooks/postgresql"]
-	path = cookbooks/postgresql
-	url = https://github.com/freewrite-cookbooks/postgresql.git
+  path = cookbooks/postgresql
+  url = https://github.com/freewrite-cookbooks/postgresql.git
 [submodule "cookbooks/lib"]
-	path = cookbooks/lib
-	url = https://github.com/freewrite-cookbooks/lib.git
+  path = cookbooks/lib
+  url = https://github.com/freewrite-cookbooks/lib.git
 [submodule "cookbooks/hostsfile"]
-	path = cookbooks/hostsfile
-	url = https://github.com/customink-webops/hostsfile.git
+  path = cookbooks/hostsfile
+  url = https://github.com/customink-webops/hostsfile.git
 [submodule "cookbooks/iptables"]
-	path = cookbooks/iptables
-	url = https://github.com/opscode-cookbooks/iptables.git
+  path = cookbooks/iptables
+  url = https://github.com/opscode-cookbooks/iptables.git

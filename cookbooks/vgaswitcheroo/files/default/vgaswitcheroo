@@ -15,37 +15,37 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 . /lib/lsb/init-functions
 
 status() {
-	if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
-		cat /sys/kernel/debug/vgaswitcheroo/switch
-	fi
+  if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
+    cat /sys/kernel/debug/vgaswitcheroo/switch
+  fi
 }
 
 case "$1" in
-	force-reload|reload|restart|start)
-		if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
-			echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
-			logger -t vgaswitcheroo "Switch set to OFF"
-			status
-		else
-			logger -t vgaswitcheroo "Can't set switch: debugfs not available"
-		fi
-	;;
-	status)
-		status
-	;;
-	stop)
-		echo "Warning: Stop action is noop. Use unstart to set switch ON"
-		status
-	;;
-	unstart)
-		if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
-			echo ON > /sys/kernel/debug/vgaswitcheroo/switch
-			logger -t vgaswitcheroo "switch set to ON"
-			status
-		fi
-	;;
-	*)
-		echo "Usage: $0 force-reload|reload|restart|start|status|stop|unstart" >&2
-		exit 3
-	;;
+  force-reload|reload|restart|start)
+    if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
+      echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
+      logger -t vgaswitcheroo "Switch set to OFF"
+      status
+    else
+      logger -t vgaswitcheroo "Can't set switch: debugfs not available"
+    fi
+  ;;
+  status)
+    status
+  ;;
+  stop)
+    echo "Warning: Stop action is noop. Use unstart to set switch ON"
+    status
+  ;;
+  unstart)
+    if [ -e /sys/kernel/debug/vgaswitcheroo/switch ]; then
+      echo ON > /sys/kernel/debug/vgaswitcheroo/switch
+      logger -t vgaswitcheroo "switch set to ON"
+      status
+    fi
+  ;;
+  *)
+    echo "Usage: $0 force-reload|reload|restart|start|status|stop|unstart" >&2
+    exit 3
+  ;;
 esac

@@ -1,37 +1,37 @@
 [core]
-	whitespace = trailing-space,space-before-tab
-	excludesfile = /home/<%= node.user.username %>/.gitignore
+  whitespace = trailing-space,space-before-tab
+  excludesfile = /home/<%= node.user.username %>/.gitignore
 [branch]
-	autosetuprebase = always
-	autosetupmerge = true
+  autosetuprebase = always
+  autosetupmerge = true
 [branch "master"]
-	rebase = true
+  rebase = true
 [color]
-	ui = true
+  ui = true
 [github]
-	user = tdg5
+  user = tdg5
 [push]
-	default = tracking
+  default = tracking
 [rebase]
-	autosquash = true
+  autosquash = true
 [rerere]
-	enabled = true
+  enabled = true
 [user]
-	name = Danny Guinther
-	email = <%= node.user.email %>
+  name = Danny Guinther
+  email = <%= node.user.email %>
 [alias]
-	amd = commit --amend --no-edit
-	amend = commit --amend
-	br = branch
-	ci = commit
-	cm = commit -m
-	co = checkout
-	get = !git pull && git submodule init && git submodule update
-	put = push origin HEAD
-	rb = rebase
-	rmbr = !sh -c "git branch -d $0 && git push origin :heads/$0 && git remote prune origin"
-	rmremote = !sh -c "git push origin :heads/$0"
-	st = status
-	stat = status
-	unci = reset --soft HEAD^
-	unstage = reset HEAD
+  amd = commit --amend --no-edit
+  amend = commit --amend
+  br = branch
+  ci = commit
+  cm = commit -m
+  co = checkout
+  get = !git pull && git submodule init && git submodule update
+  put = push origin HEAD
+  rb = rebase
+  rmbr = !sh -c "git branch -d $0 && git push origin :heads/$0 && git remote prune origin"
+  rmremote = !sh -c "git push origin :heads/$0"
+  st = status
+  stat = status
+  unci = reset --soft HEAD^
+  unstage = reset HEAD

@@ -1,13 +1,13 @@
 %W[
-	/home/#{node.user.username}/#{node.vim_plugins.user_autoload_dir}
-	/home/#{node.user.username}/#{node.vim_plugins.user_bundle_dir}
+  /home/#{node.user.username}/#{node.vim_plugins.user_autoload_dir}
+  /home/#{node.user.username}/#{node.vim_plugins.user_bundle_dir}
 ].each do |dir|
-	directory dir do
-		group node.user.group
-		mode '0755'
-		owner node.user.username
-		recursive true
-	end
+  directory dir do
+    group node.user.group
+    mode '0755'
+    owner node.user.username
+    recursive true
+  end
 end
 
 include_recipe 'vim_plugins::pathogen'

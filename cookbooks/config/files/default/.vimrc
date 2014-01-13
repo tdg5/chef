@@ -35,17 +35,17 @@ colorscheme delek
 
 " Helper Function for getting the current directory
 function! CurDir()
-	let curdir = substitute(getcwd(), $HOME, "~", "g")
-	return curdir
+  let curdir = substitute(getcwd(), $HOME, "~", "g")
+  return curdir
 endfunction
 
 " Helper Function for determining if we are in 'PASTE MODE'
 function! HasPaste()
-	if &paste
-		return 'PASTE MODE  '
-	else
-		return ''
-	endif
+  if &paste
+    return 'PASTE MODE  '
+  else
+    return ''
+  endif
 endfunction
 
 set list

@@ -1,7 +1,7 @@
 {
-	"domain_name": "leadkarma.com",
-	"host_name": "danny-ubuntu",
-	"run_list": [
-		"role[lk]"
-	]
+  "domain_name": "leadkarma.com",
+  "host_name": "danny-ubuntu",
+  "run_list": [
+    "role[lk]"
+  ]
 }

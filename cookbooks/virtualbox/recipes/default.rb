@@ -1,6 +1,6 @@
 packages = %w[
-	dkms
-	virtualbox-dkms
+  dkms
+  virtualbox-dkms
 ]
 packages.unshift("linux-headers-#{`uname -r`}".strip)
 
