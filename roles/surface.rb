@@ -27,8 +27,8 @@ default_attributes({
     :rvmrc => {
       :rvm_trust_rvmrcs_flag => 1,
     },
-    :version => '1.25.5',
-    :default_ruby => '1.9.3-p484',
+    :version => '1.25.14',
+    :default_ruby => '2.0.0-p353',
     :gems => {},
     :global_gems => [{
       :name => 'gem-ctags',
@@ -41,6 +41,7 @@ default_attributes({
     'rubies' => [
       '1.9.3-p484',
       '2.0.0-p353',
+      '2.1.0',
     ],
   },
   'user' => {

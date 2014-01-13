@@ -20,7 +20,7 @@ global_gems = [{
   :name => 'gem-ctags',
 }, {
   :name => 'chef',
-  :version => '11.2.0',
+  :version => '11.8.2',
 }, {
   :name => 'bundler'
 }]
@@ -53,12 +53,13 @@ default_attributes({
         'version' => '1.9.3-p385',
         'patch' => 'falcon',
       },
-      '2.0.0-p247',
+      '2.0.0-p353',
+      '2.1.0',
     ],
     'rvmrc' => {
       'rvm_trust_rvmrcs_flag' => 1,
     },
-    'version' => '1.18.6',
+    'version' => '1.25.14',
   },
   'user' => {
     'username' => user,
