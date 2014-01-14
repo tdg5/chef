@@ -43,3 +43,12 @@
 [submodule "cookbooks/java"]
 	path = cookbooks/java
 	url = https://github.com/tdg5/chef_java.git
+[submodule "cookbooks/ark"]
+	path = cookbooks/ark
+	url = https://github.com/opscode-cookbooks/ark.git
+[submodule "cookbooks/ant"]
+	path = cookbooks/ant
+	url = https://github.com/opscode-cookbooks/ant.git
+[submodule "cookbooks/android_sdk"]
+	path = cookbooks/android-sdk
+	url = https://github.com/gildegoma/chef-android-sdk
