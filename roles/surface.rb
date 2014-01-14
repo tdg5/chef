@@ -9,7 +9,7 @@ run_list [
   'role[design]',
   'role[dev]',
   'role[rvm]',
-  'recipe[java]',
+  'role[java]',
   'role[nodejs]',
   'recipe[lastpass]',
 ]

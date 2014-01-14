@@ -9,7 +9,7 @@ run_list [
   'recipe[qt::dev]',
   'role[design]',
   'role[dev]',
-  'recipe[java]',
+  'role[java]',
   'recipe[bup_wrapper]',
   'recipe[hipchat]',
   'role[nodejs]',

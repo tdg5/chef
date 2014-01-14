@@ -14,7 +14,7 @@ run_list [
   'role[rvm]',
   'role[vm_host]',
   'recipe[audacity]',
-  'recipe[java]',
+  'role[java]',
   'recipe[modprobe::blackrock_alsa]',
   'recipe[pulseaudio::blackrock_alsa_mixer]',
   'role[nodejs]',
