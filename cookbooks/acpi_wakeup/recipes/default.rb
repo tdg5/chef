@@ -9,5 +9,5 @@ end
 
 service 'acpi_wakeup' do
   action [:enable, :start]
-  supports :Status => true, :restart => true
+  supports :status => true, :restart => true
 end
