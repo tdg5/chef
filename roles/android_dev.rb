@@ -3,6 +3,7 @@ description 'Role for android development'
 run_list [
   'role[java]',
   'recipe[android-sdk]',
+  'recipe[ant]',
   'recipe[ruboto]',
 ]
 default_attributes({
