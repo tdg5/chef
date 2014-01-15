@@ -21,7 +21,6 @@ extensions.each do |extension|
     files_group node.user.group
     files_owner node.user.username
     files_mode '0644'
-    not_if "file -d #{extension_dir}"
     source "extensions/3.2/#{extension}"
   end
 end
