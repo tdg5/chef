@@ -20,7 +20,7 @@ run_list [
   'role[nodejs]',
   'recipe[lastpass]',
   'recipe[hipchat]',
-  'recipe[android-sdk]',
+  'role[android_dev]',
 ]
 user = group = 'tdg5'
 default_attributes({

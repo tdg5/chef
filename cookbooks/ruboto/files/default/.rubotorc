@@ -1,0 +1,3 @@
+PATH="/usr/local/android-sdk/build-tools/19.0.0:$PATH"
+PATH="/usr/local/android-sdk/platform-tools:$PATH"
+PATH="/usr/local/android-sdk/tools:$PATH"
