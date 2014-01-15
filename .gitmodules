@@ -52,3 +52,6 @@
 [submodule "cookbooks/android_sdk"]
 	path = cookbooks/android-sdk
 	url = https://github.com/gildegoma/chef-android-sdk
+[submodule "cookbooks/chef_gem"]
+	path = cookbooks/chef_gem
+	url = https://github.com/hw-cookbooks/chef_gem.git

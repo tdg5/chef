@@ -43,16 +43,18 @@ default_attributes({
   },
   'rvm' => {
     'branch' => 'none',
-    'default_ruby' => '',
+    'default_ruby' => '2.1.0',
     'gems' => {
-      '1.9.3-p385' => global_gems,
-      '2.0.0-p247' => global_gems,
+      '1.9.3-p385-falcon' => global_gems,
+      '2.0.0-p353' => global_gems,
+      '2.1.0' => global_gems,
     },
     'rubies' => [
       {
         'version' => '1.9.3-p385',
         'patch' => 'falcon',
       },
+      '1.9.3-p484',
       '2.0.0-p353',
       '2.1.0',
     ],

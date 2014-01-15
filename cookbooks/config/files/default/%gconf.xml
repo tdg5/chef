@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <gconf>
+	<entry name="login_shell" mtime="1389803255" type="bool" value="true"/>
 	<entry name="font" mtime="1364777547" type="string">
 		<stringvalue>Ubuntu Mono 12</stringvalue>
 	</entry>
