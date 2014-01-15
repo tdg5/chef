@@ -12,6 +12,7 @@ run_list [
   'role[java]',
   'role[nodejs]',
   'recipe[lastpass]',
+  'recipe[powertop::powertune]',
 ]
 user = group = 'tdg5'
 default_attributes({
