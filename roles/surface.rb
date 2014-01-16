@@ -28,8 +28,8 @@ default_attributes({
     :rvmrc => {
       :rvm_trust_rvmrcs_flag => 1,
     },
-    :version => '1.25.14',
-    :default_ruby => '2.0.0-p353',
+    :version => '1.25.15',
+    :default_ruby => '2.1.0',
     :gems => {},
     :global_gems => [{
       :name => 'gem-ctags',
