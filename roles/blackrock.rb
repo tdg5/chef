@@ -32,6 +32,7 @@ default_attributes({
     :branch => 'none',
     :rvmrc => {
       :rvm_trust_rvmrcs_flag => 1,
+      :rvmsudo_secure_path => 1,
     },
     :version => '1.25.14',
     :default_ruby => '2.0.0-p353',
