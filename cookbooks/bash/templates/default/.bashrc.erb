@@ -18,8 +18,8 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -88,7 +88,6 @@ if [ -f ~/.sshagentrc ]; then
 fi
 
 # Load RVM into a shell session *as a function*
-{ [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"; } ||
 { [ -e '/etc/profile.d/rvm.sh' ] && source /etc/profile.d/rvm.sh; }
 
 export EDITOR=vim
@@ -99,7 +98,6 @@ elif [ -d /usr/share/vim/vim74 ]; then
   export VIMRUNTIME=/usr/share/vim/vim74
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 stty -ixon # enable reverse history search / enable XON/XOFF flow control
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h:\w$ \[\033[00m\]'
 
