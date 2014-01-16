@@ -93,8 +93,83 @@ case "$1" in
     echo "Warning: Stop action is noop."
     exit 0
   ;;
+  unstart)
+    # VM writeback timeout
+    echo '' > '/proc/sys/vm/dirty_writeback_centisecs';
+
+    # Enable SATA link power Managmenet for host0
+    echo '' > '/sys/class/scsi_host/host0/link_power_management_policy';
+
+    # Enable SATA link power Managmenet for host1
+    echo '' > '/sys/class/scsi_host/host1/link_power_management_policy';
+
+    # Enable SATA link power Managmenet for host2
+    echo '' > '/sys/class/scsi_host/host2/link_power_management_policy';
+
+    # Enable SATA link power Managmenet for host3
+    echo '' > '/sys/class/scsi_host/host3/link_power_management_policy';
+
+    # Enable SATA link power Managmenet for host4
+    echo '' > '/sys/class/scsi_host/host4/link_power_management_policy';
+
+    # Enable SATA link power Managmenet for host5
+    echo '' > '/sys/class/scsi_host/host5/link_power_management_policy';
+
+    # Enable Audio codec power management
+    echo '' > '/sys/module/snd_hda_intel/parameters/power_save';
+
+    # NMI watchdog should be turned off
+    echo '' > '/proc/sys/kernel/nmi_watchdog';
+
+    # Autosuspend for USB device Atmel maXTouch Digitizer [Atmel] (touchscreen)
+    echo 'on' > '/sys/bus/usb/devices/2-1.6/power/control';
+
+    # Autosuspend for USB device SAM [MICROSOFT]
+    echo 'on' > '/sys/bus/usb/devices/2-1.5/power/control';
+
+    # Start rule disabled so unstart rule not needed
+    # Autosuspend for USB device Bluetooth and Wireless LAN Composite Device [Marvell]
+    #echo 'on' > '/sys/bus/usb/devices/3-3/power/control';
+
+    # Runtime PM for PCI Device Intel Corporation 7 Series/C210 Series Chipset Family USB xHCI Host Controller
+    echo 'on' > '/sys/bus/pci/devices/0000:00:14.0/power/control';
+
+    # Runtime PM for PCI Device Intel Corporation 3rd Gen Core processor Graphics Controller
+    echo 'on' > '/sys/bus/pci/devices/0000:00:02.0/power/control';
+
+    # Runtime PM for PCI Device Intel Corporation 7 Series/C210 Series Chipset Family USB Enhanced Host Controller #1
+    echo 'on' > '/sys/bus/pci/devices/0000:00:1d.0/power/control';
+
+    # Runtime PM for PCI Device Intel Corporation 3rd Gen Core processor DRAM Controller
+    echo 'on' > '/sys/bus/pci/devices/0000:00:00.0/power/control';
+
+    # Runtime PM for PCI Device Intel Corporation 7 Series/C210 Series Chipset Family USB Enhanced Host Controller #2
+    echo 'on' > '/sys/bus/pci/devices/0000:00:1a.0/power/control';
+
+    # Runtime PM for PCI Device Intel Corporation 7 Series/C210 Series Chipset Family MEI Controller #1
+    echo 'on' > '/sys/bus/pci/devices/0000:00:16.0/power/control';
+
+    # Runtime PM for PCI Device Intel Corporation 7 Series/C210 Series Chipset Family SMBus Controller
+    echo 'on' > '/sys/bus/pci/devices/0000:00:1f.3/power/control';
+
+    # Runtime PM for PCI Device Intel Corporation 7 Series/C210 Series Chipset Family High Definition Audio Controller
+    echo 'on' > '/sys/bus/pci/devices/0000:00:1b.0/power/control';
+
+    # Runtime PM for PCI Device Intel Corporation HM77 Express Chipset LPC Controller
+    echo 'on' > '/sys/bus/pci/devices/0000:00:1f.0/power/control';
+
+    # Runtime PM for PCI Device Intel Corporation 7 Series Chipset Family 6-port SATA Controller [AHCI mode]
+    echo 'on' > '/sys/bus/pci/devices/0000:00:1f.2/power/control';
+
+    # Using 'ondemand' cpufreq governor
+    /sbin/modprobe cpufreq_ondemand > /dev/null 2>&1
+    echo '' > '/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor';
+    echo '' > '/sys/devices/system/cpu/cpu1/cpufreq/scaling_governor';
+    echo '' > '/sys/devices/system/cpu/cpu2/cpufreq/scaling_governor';
+    echo '' > '/sys/devices/system/cpu/cpu3/cpufreq/scaling_governor';
+  ;;
   *)
-    echo "Usage: $0 force-reload|reload|restart|start|stop" >&2
+    echo "Usage: $0 force-reload|reload|restart|start|stop|unstart" >&2
     exit 3
   ;;
 esac
