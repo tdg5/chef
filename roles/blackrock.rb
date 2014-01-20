@@ -23,6 +23,14 @@ run_list [
   'role[android_dev]',
 ]
 user = group = 'tdg5'
+default_gems = [{
+  :name => 'chef',
+  :version => '11.8.2',
+}, {
+  :name => 'bundler'
+}, {
+  :name => 'gem-ctags',
+}]
 default_attributes({
   :modprobe => {
     :blacklists => [
@@ -34,19 +42,12 @@ default_attributes({
       :rvm_trust_rvmrcs_flag => 1,
       :rvmsudo_secure_path => 1,
     },
-    :version => '1.25.14',
-    :default_ruby => '2.0.0-p353',
+    :version => '1.25.15',
+    :default_ruby => '2.1.0',
     :gems => {
-      '2.0.0-p353' => [{
-        :name => 'chef',
-        :version => '11.8.2',
-      }, {
-        :name => 'bundler'
-      },],
+      '2.0.0-p353' => default_gems,
+      '2.1.0' => default_gems,
     },
-    :global_gems => [{
-      :name => 'gem-ctags',
-    }],
     :rubies => [
       '1.9.3-p484',
       '2.0.0-p353',
@@ -59,4 +60,3 @@ default_attributes({
     'group' => group,
   },
 })
-
