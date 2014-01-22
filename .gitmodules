@@ -55,3 +55,6 @@
 [submodule "cookbooks/chef_gem"]
 	path = cookbooks/chef_gem
 	url = https://github.com/hw-cookbooks/chef_gem.git
+[submodule "cookbooks/ddclient"]
+	path = cookbooks/ddclient
+	url = git@github.com:freewrite-cookbooks/ddclient.git
