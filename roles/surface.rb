@@ -1,6 +1,7 @@
 name 'surface'
 description 'Role for surface specifics'
 run_list [
+  'recipe[lib]',
   'recipe[modules::surface]',
   'recipe[pm-utils::disable_usb_bluetooth]',
   'recipe[acpi_wakeup]',
@@ -11,6 +12,7 @@ run_list [
   'role[rvm]',
   'role[java]',
   'role[nodejs]',
+  'recipe[postgresql::server]',
   'recipe[lastpass]',
   'recipe[powertop::powertune]',
 ]
@@ -22,6 +24,15 @@ default_attributes({
   :modprobe => {
     :blacklists => [
     ],
+  },
+  :postgresql => {
+    :config => {
+      :listen_addresses => 'localhost',
+    },
+    :super_user => {
+      :password => 'postgres',
+      :username => 'postgres',
+    },
   },
   :rvm => {
     :branch => 'none',
@@ -51,4 +62,23 @@ default_attributes({
     'email' => 'dannyguinther@gmail.com',
     'group' => group,
   }
+})
+override_attributes({
+  :postgresql => {
+    :pg_hba => [
+      {
+        :db => 'all',
+        :method => 'trust',
+        :type => 'local',
+        :user => 'postgres',
+      },
+      {
+        :addr => '127.0.0.1/32',
+        :db => 'all',
+        :method => 'trust',
+        :type => 'host',
+        :user => 'postgres',
+      },
+    ],
+  },
 })
