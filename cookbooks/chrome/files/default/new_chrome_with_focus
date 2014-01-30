@@ -1,4 +1,6 @@
 #!/bin/bash
-[ "--incognito" = "$1" ] && incognito="$1" || n=""
-google-chrome $incognito
-wmctrl -i -a $(wmctrl -l | grep "New.*Google Chrome" | tail -n1 | cut -d" " -f1 | cut -d: -f2)
+
+existing_windows=$(wmctrl -l | cut -d" " -f1 | sort)
+google-chrome --new-window "$@" &>/dev/null
+new_chrome=$(comm -13 <(echo $existing_windows | sed 's/ /\n/g') <(wmctrl -l | cut -d" " -f1 | sort))
+wmctrl -i -a $(wmctrl -l -p | grep "$new_chrome" | tail -n1 | cut -d" " -f1 | cut -d: -f2)

@@ -10,7 +10,7 @@ dpkg_package 'google-chrome' do
   source '/tmp/google-chrome-stable_current_amd64.deb'
 end
 
-cookbook_file '/usr/bin/new_chrome_with_focus' do
+cookbook_file '/usr/local/bin/new_chrome_with_focus' do
   group 'root'
   mode 0755
   owner 'root'
