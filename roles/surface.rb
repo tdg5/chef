@@ -1,6 +1,7 @@
 name 'surface'
 description 'Role for surface specifics'
 run_list [
+  'recipe[ddclient]',
   'recipe[lib]',
   'recipe[modules::surface]',
   'recipe[pm-utils::disable_usb_bluetooth]',
@@ -17,9 +18,18 @@ run_list [
   'recipe[powertop::powertune]',
 ]
 user = group = 'tdg5'
+ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
 default_attributes({
   :acpi_wakeup => {
     :devices => %w[EHC1 EHC2 XHC],
+  },
+  :ddclient => {
+    :login => ddclient_config['login'],
+    :password => ddclient_config['password'],
+    :protocol => 'namecheap',
+    :records => 'surface',
+    :server => 'dynamicdns.park-your-domain.com',
+    :use => 'web, web=checkip.dyndns.org/, web-skip=\'IP Address\'',
   },
   :modprobe => {
     :blacklists => [
