@@ -46,6 +46,11 @@ default_attributes({
     :blacklists => [
     ],
   },
+  :openssh => {
+    :server => {
+      :password_authentication => 'no',
+    },
+  },
   :rvm => {
     :branch => 'none',
     :rvmrc => {

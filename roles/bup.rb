@@ -32,6 +32,11 @@ default_attributes({
       ],
     },
   },
+  :openssh => {
+    :server => {
+      :password_authentication => 'no',
+    },
+  },
   :postgresql => {
     :config => {
       :listen_addresses => 'localhost',
