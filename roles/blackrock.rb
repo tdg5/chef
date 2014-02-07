@@ -21,8 +21,10 @@ run_list [
   'recipe[lastpass]',
   'recipe[hipchat]',
   'role[android_dev]',
+  'recipe[ddclient]',
 ]
 user = group = 'tdg5'
+ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
 default_gems = [{
   :name => 'chef',
   :version => '11.8.2',
@@ -32,6 +34,14 @@ default_gems = [{
   :name => 'gem-ctags',
 }]
 default_attributes({
+  :ddclient => {
+    :login => ddclient_config['login'],
+    :password => ddclient_config['password'],
+    :protocol => 'namecheap',
+    :records => 'blackrock',
+    :server => 'dynamicdns.park-your-domain.com',
+    :use => 'web, web=checkip.dyndns.org/, web-skip=\'IP Address\'',
+  },
   :modprobe => {
     :blacklists => [
     ],

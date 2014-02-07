@@ -1,7 +1,6 @@
 name 'surface'
 description 'Role for surface specifics'
 run_list [
-  'recipe[ddclient]',
   'recipe[lib]',
   'recipe[modules::surface]',
   'recipe[pm-utils::disable_usb_bluetooth]',
@@ -16,6 +15,7 @@ run_list [
   'recipe[postgresql::server]',
   'recipe[lastpass]',
   'recipe[powertop::powertune]',
+  'recipe[ddclient]',
 ]
 user = group = 'tdg5'
 ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
