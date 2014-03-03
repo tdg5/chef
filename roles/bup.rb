@@ -20,7 +20,7 @@ global_gems = [{
   :name => 'gem-ctags',
 }, {
   :name => 'chef',
-  :version => '11.8.2',
+  :version => '11.10.4',
 }, {
   :name => 'bundler'
 }]
@@ -48,26 +48,26 @@ default_attributes({
   },
   'rvm' => {
     'branch' => 'none',
-    'default_ruby' => '2.1.0',
+    'default_ruby' => '2.1.1',
     'gems' => {
-      '1.9.3-p385-falcon' => global_gems,
-      '2.0.0-p353' => global_gems,
-      '2.1.0' => global_gems,
+      '1.9.3-p545' => global_gems,
+      '2.0.0-p451' => global_gems,
+      '2.1.1' => global_gems,
     },
     'rubies' => [
       {
         'version' => '1.9.3-p385',
         'patch' => 'falcon',
       },
-      '1.9.3-p484',
-      '2.0.0-p353',
-      '2.1.0',
+      '1.9.3-p545',
+      '2.0.0-p451',
+      '2.1.1',
     ],
     'rvmrc' => {
       'rvm_trust_rvmrcs_flag' => 1,
       :rvmsudo_secure_path => 1,
     },
-    'version' => '1.25.14',
+    'version' => '1.25.19',
   },
   'user' => {
     'username' => user,

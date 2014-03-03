@@ -27,7 +27,7 @@ user = group = 'tdg5'
 ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
 default_gems = [{
   :name => 'chef',
-  :version => '11.8.2',
+  :version => '11.10.4',
 }, {
   :name => 'bundler'
 }, {
@@ -57,16 +57,16 @@ default_attributes({
       :rvm_trust_rvmrcs_flag => 1,
       :rvmsudo_secure_path => 1,
     },
-    :version => '1.25.15',
-    :default_ruby => '2.1.0',
+    :version => '1.25.19',
+    :default_ruby => '2.1.1',
     :gems => {
-      '2.0.0-p353' => default_gems,
-      '2.1.0' => default_gems,
+      '2.0.0-p451' => default_gems,
+      '2.1.1' => default_gems,
     },
     :rubies => [
-      '1.9.3-p484',
-      '2.0.0-p353',
-      '2.1.0',
+      '1.9.3-p545',
+      '2.0.0-p451',
+      '2.1.1',
     ],
   },
   'user' => {

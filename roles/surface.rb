@@ -55,21 +55,21 @@ default_attributes({
       :rvm_trust_rvmrcs_flag => 1,
       :rvmsudo_secure_path => 1,
     },
-    :version => '1.25.15',
-    :default_ruby => '2.1.0',
+    :version => '1.25.19',
+    :default_ruby => '2.1.1',
     :gems => {},
     :global_gems => [{
       :name => 'gem-ctags',
     }, {
       :name => 'chef',
-      :version => '11.8.2',
+      :version => '11.10.4',
     }, {
       :name => 'bundler'
     },],
     'rubies' => [
-      '1.9.3-p484',
-      '2.0.0-p353',
-      '2.1.0',
+      '1.9.3-p545',
+      '2.0.0-p451',
+      '2.1.1',
     ],
   },
   'user' => {
