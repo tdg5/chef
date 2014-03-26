@@ -1,6 +1,8 @@
 include_recipe 'ubuntuone'
 
-package 'fontmatrix msttcorefonts fonts-mgopen ttf-mgopen'
+package 'fontmatrix'
+package 'msttcorefonts'
+package 'fonts-mgopen'
 
 home_dir = "/home/#{node.user.username}"
 user_fonts_dir = "#{home_dir}/.fonts"
