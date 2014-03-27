@@ -55,7 +55,7 @@ default_attributes({
       :rvm_trust_rvmrcs_flag => 1,
       :rvmsudo_secure_path => 1,
     },
-    :version => '1.25.19',
+    :version => '1.25.22',
     :default_ruby => '2.1.1',
     :gems => {},
     :global_gems => [{
