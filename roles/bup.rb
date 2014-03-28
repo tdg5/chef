@@ -45,6 +45,8 @@ default_attributes({
       :password => 'postgres',
       :username => 'postgres',
     },
+    :revision => '4',
+    :version => '9.3',
   },
   'rvm' => {
     'branch' => 'none',
