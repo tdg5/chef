@@ -1,6 +1,13 @@
 #!/bin/bash
 
+wait=0
+max_wait=10
 existing_windows=$(wmctrl -l | cut -d" " -f1 | sort)
 google-chrome --new-window "$@" &>/dev/null
-new_chrome=$(comm -13 <(echo $existing_windows | sed 's/ /\n/g') <(wmctrl -l | cut -d" " -f1 | sort))
+
+while [ $(echo "$wait <= $max_wait" | bc) -eq 1 ] && [ -z $new_chrome ]; do
+  wait=$(echo "$wait + .01" | bc)
+  sleep 0.01
+  new_chrome=$(comm -13 <(echo $existing_windows | sed 's/ /\n/g') <(wmctrl -l | cut -d" " -f1 | sort))
+done
 wmctrl -i -a $(wmctrl -l -p | grep "$new_chrome" | tail -n1 | cut -d" " -f1 | cut -d: -f2)
