@@ -87,3 +87,17 @@ default_attributes({
     'group' => group,
   },
 })
+
+
+override_attributes({
+  :postgresql => {
+    :pg_hba => [
+      {
+        :db => 'all',
+        :method => 'trust',
+        :type => 'local',
+        :user => 'postgres',
+      },
+    ],
+  },
+})
