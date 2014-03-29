@@ -1,4 +1,5 @@
 code = []
+post = []
 user_gconf_config_source = "xml::/home/#{node.user.username}/.gconf"
 
 node.gnome.keybindings.each_with_index do |keybinding, index|
@@ -11,6 +12,8 @@ node.gnome.keybindings.each_with_index do |keybinding, index|
   else
     # dconf returns quoted expression
     existing_value = `dconf read /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom#{index}/name`.strip.gsub(/(^'|'$)/, '')
+    # build post here because post will have to have all items if it needs to be written
+    post << "'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom#{index}/'"
     next if existing_value == keybinding[0]
     code << "dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom#{index}/name \"'#{keybinding[0]}'\""
     code << "dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom#{index}/command \"'#{keybinding[1]['action']}'\""
@@ -18,9 +21,13 @@ node.gnome.keybindings.each_with_index do |keybinding, index|
   end
 end
 
-gconf_code = code.join(' && ')
+unless code.empty? || post.empty?
+  code.unshift(%Q[gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[#{post.join(', ')}]"])
+end
+
+conf_code = code.join(' && ')
 bash 'install_keybindings' do
-  code gconf_code
+  code conf_code
   user node.user.username
   not_if { code.empty? }
 end
