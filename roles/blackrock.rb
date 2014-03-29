@@ -1,6 +1,7 @@
 name 'blackrock'
 description 'Role for blackrock specifics'
 run_list [
+  'recipe[lib]',
   'role[base]',
   'recipe[grub::blackrock]',
   'recipe[filesystem_layout::blackrock]',
@@ -17,6 +18,7 @@ run_list [
   'role[java]',
   'recipe[modprobe::blackrock_alsa]',
   'recipe[pulseaudio::blackrock_alsa_mixer]',
+  'recipe[postgresql::server]',
   'role[nodejs]',
   'recipe[lastpass]',
   'recipe[hipchat]',
@@ -68,6 +70,17 @@ default_attributes({
       '2.0.0-p451',
       '2.1.1',
     ],
+  },
+  'postgresql' => {
+    :config => {
+      :listen_addresses => 'localhost',
+    },
+    :super_user => {
+      :password => 'postgres',
+      :username => 'postgres',
+    },
+    :revision => '4',
+    :version => '9.3',
   },
   'user' => {
     'username' => user,
