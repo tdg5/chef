@@ -22,7 +22,6 @@ run_list [
   'role[nodejs]',
   'recipe[lastpass]',
   'recipe[hipchat]',
-  'role[android_dev]',
   'recipe[ddclient]',
 ]
 user = group = 'tdg5'
