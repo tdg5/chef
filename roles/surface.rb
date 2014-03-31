@@ -1,3 +1,5 @@
+# Fix Gnome 3.10.4 ui scaling
+# gsettings set org.gnome.desktop.interface scaling-factor 1
 name 'surface'
 description 'Role for surface specifics'
 run_list [
@@ -19,6 +21,14 @@ run_list [
 ]
 user = group = 'tdg5'
 ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
+default_gems = [{
+  :name => 'gem-ctags',
+}, {
+  :name => 'chef',
+  :version => '11.10.4',
+}, {
+  :name => 'bundler'
+}]
 default_attributes({
   :acpi_wakeup => {
     :devices => %w[EHC1 EHC2 XHC],
@@ -48,6 +58,8 @@ default_attributes({
       :password => 'postgres',
       :username => 'postgres',
     },
+    :revision => '4',
+    :version => '9.3',
   },
   :rvm => {
     :branch => 'none',
@@ -57,15 +69,10 @@ default_attributes({
     },
     :version => '1.25.22',
     :default_ruby => '2.1.1',
-    :gems => {},
-    :global_gems => [{
-      :name => 'gem-ctags',
-    }, {
-      :name => 'chef',
-      :version => '11.10.4',
-    }, {
-      :name => 'bundler'
-    },],
+    :gems => {
+      '2.0.0-p451' => default_gems,
+      '2.1.1' => default_gems,
+    },
     'rubies' => [
       '1.9.3-p545',
       '2.0.0-p451',
