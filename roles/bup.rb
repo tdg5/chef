@@ -53,7 +53,6 @@ default_attributes({
     'default_ruby' => '2.1.1',
     'gems' => {
       '1.9.3-p545' => global_gems,
-      '2.0.0-p451' => global_gems,
       '2.1.1' => global_gems,
     },
     'rubies' => [
@@ -62,14 +61,13 @@ default_attributes({
         'patch' => 'falcon',
       },
       '1.9.3-p545',
-      '2.0.0-p451',
       '2.1.1',
     ],
     'rvmrc' => {
       'rvm_trust_rvmrcs_flag' => 1,
       :rvmsudo_secure_path => 1,
     },
-    'version' => '1.25.19',
+    'version' => '1.25.22',
   },
   'user' => {
     'username' => user,
