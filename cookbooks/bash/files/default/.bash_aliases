@@ -46,6 +46,32 @@ function ggo() {
   vim $(git grep --name-only "$@")
 }
 
+GBRR_DEFAULT_COUNT=10
+function gbrr() {
+
+  COUNT=${1-$GBRR_DEFAULT_COUNT}
+
+  IFS=$'\r\n' BRANCHES=($(
+      git reflog | \
+      sed -n 's/.*checkout: moving from .* to \(.*\)/\1/p' | \
+      perl -ne 'print unless $a{$_}++' | \
+      head -n $COUNT
+  ))
+
+  for ((i = 0; i < ${#BRANCHES[@]}; i++)); do
+      echo "$i) ${BRANCHES[$i]}"
+  done
+
+  read -p "Switch to which branch? "
+  if [[ $REPLY != "" ]] && [[ ${BRANCHES[$REPLY]} != "" ]]; then
+      echo
+      set -x
+      git checkout ${BRANCHES[$REPLY]}
+  else
+      echo Aborted.
+  fi
+}
+
 alias aliases='vi ~/.bash_aliases'
 alias be='bundle exec'
 alias bun='bundle'
