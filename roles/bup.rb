@@ -52,7 +52,7 @@ default_attributes({
     'branch' => 'none',
     'default_ruby' => '2.1.1',
     'gems' => {
-      '1.9.3-p545' => global_gems,
+      '1.9.3-p385-falcon' => global_gems,
       '2.1.1' => global_gems,
     },
     'rubies' => [
@@ -60,7 +60,6 @@ default_attributes({
         'version' => '1.9.3-p385',
         'patch' => 'falcon',
       },
-      '1.9.3-p545',
       '2.1.1',
     ],
     'rvmrc' => {
