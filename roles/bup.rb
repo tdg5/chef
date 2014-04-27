@@ -11,7 +11,7 @@ run_list [
   'recipe[lastpass]',
 ]
 user = group = 'danny'
-global_gems = [{
+default_gems = [{
   :name => 'gem-ctags',
 }, {
   :name => 'chef',
@@ -44,29 +44,32 @@ default_attributes({
     :version => '9.3',
   },
   'rvm' => {
-    'branch' => 'none',
-    'default_ruby' => '2.1.1',
-    'gems' => {
-      '1.9.3-p385-falcon' => global_gems,
-      '2.1.1' => global_gems,
+    :branch => 'none',
+    :default_ruby => '2.1.1',
+    :gems => {
+      '1.9.3-p385-falcon' => default_gems,
+      '2.1.1' => default_gems,
     },
-    'rubies' => [
+    :global_gems => [{
+      :name => 'gem-ctags',
+    }],
+    :rubies => [
       {
-        'version' => '1.9.3-p385',
-        'patch' => 'falcon',
+        :version => '1.9.3-p385',
+        :patch => 'falcon',
       },
       '2.1.1',
     ],
-    'rvmrc' => {
-      'rvm_trust_rvmrcs_flag' => 1,
+    :rvmrc => {
+      :rvm_trust_rvmrcs_flag => 1,
       :rvmsudo_secure_path => 1,
     },
-    'version' => '1.25.22',
+    :version => '1.25.22',
   },
-  'user' => {
-    'username' => user,
-    'email' => 'danny@backupify.com',
-    'group' => group,
+  :user => {
+    :username => user,
+    :email => 'danny@backupify.com',
+    :group => group,
   }
 })
 

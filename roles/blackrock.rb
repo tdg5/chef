@@ -23,8 +23,6 @@ default_gems = [{
   :version => '11.10.4',
 }, {
   :name => 'bundler'
-}, {
-  :name => 'gem-ctags',
 }]
 default_attributes({
   :ddclient => {
@@ -56,6 +54,9 @@ default_attributes({
       '2.0.0-p451' => default_gems,
       '2.1.1' => default_gems,
     },
+    :global_gems => [{
+      :name => 'gem-ctags',
+    }],
     :rubies => [
       '1.9.3-p545',
       '2.0.0-p451',

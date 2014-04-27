@@ -15,8 +15,6 @@ run_list [
 user = group = 'tdg5'
 ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
 default_gems = [{
-  :name => 'gem-ctags',
-}, {
   :name => 'chef',
   :version => '11.10.4',
 }, {
@@ -66,34 +64,34 @@ default_attributes({
       '2.0.0-p451' => default_gems,
       '2.1.1' => default_gems,
     },
-    'rubies' => [
+    :global_gems => [{
+      :name => 'gem-ctags',
+    }],
+    :rubies => [
       '1.9.3-p545',
       '2.0.0-p451',
       '2.1.1',
     ],
   },
-  'user' => {
-    'username' => user,
-    'email' => 'dannyguinther@gmail.com',
-    'group' => group,
+  :user => {
+    :username => user,
+    :email => 'dannyguinther@gmail.com',
+    :group => group,
   }
 })
 override_attributes({
   :postgresql => {
-    :pg_hba => [
-      {
-        :db => 'all',
-        :method => 'trust',
-        :type => 'local',
-        :user => 'postgres',
-      },
-      {
-        :addr => '127.0.0.1/32',
-        :db => 'all',
-        :method => 'trust',
-        :type => 'host',
-        :user => 'postgres',
-      },
-    ],
+    :pg_hba => [{
+      :db => 'all',
+      :method => 'trust',
+      :type => 'local',
+      :user => 'postgres',
+    }, {
+      :addr => '127.0.0.1/32',
+      :db => 'all',
+      :method => 'trust',
+      :type => 'host',
+      :user => 'postgres',
+    }],
   },
 })
