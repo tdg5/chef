@@ -1,18 +1,13 @@
 name 'bup'
 description 'Role for bup specifics'
 run_list [
-  'recipe[lib]',
-  'role[base]',
-  'role[rvm]',
+  'role[dev]',
   'role[vm_host]',
-  'recipe[postgresql::server]',
   'recipe[qt::dev]',
   'role[design]',
   'role[dev]',
-  'role[java]',
   'recipe[bup_wrapper]',
   'recipe[hipchat]',
-  'role[nodejs]',
   'recipe[lastpass]',
 ]
 user = group = 'danny'

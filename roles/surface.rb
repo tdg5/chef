@@ -3,18 +3,11 @@
 name 'surface'
 description 'Role for surface specifics'
 run_list [
-  'recipe[lib]',
+  'role[dev]',
   'recipe[modules::surface]',
   'recipe[pm-utils::disable_usb_bluetooth]',
   'recipe[acpi_wakeup]',
-  'role[base]',
-  'role[tools]',
   'role[design]',
-  'role[dev]',
-  'role[rvm]',
-  'role[java]',
-  'role[nodejs]',
-  'recipe[postgresql::server]',
   'recipe[lastpass]',
   'recipe[powertop::powertune]',
   'recipe[ddclient]',
