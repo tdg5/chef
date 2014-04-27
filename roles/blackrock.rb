@@ -12,7 +12,6 @@ run_list [
   'role[vm_host]',
   'recipe[audacity]',
   #'recipe[modprobe::blackrock_alsa]',
-  #'recipe[pulseaudio::blackrock_alsa_mixer]',
   'recipe[lastpass]',
   'recipe[hipchat]',
   'recipe[ddclient]',
