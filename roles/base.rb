@@ -24,6 +24,7 @@ run_list [
   'recipe[skype]',
   'recipe[screenlets]',
   'role[java]',
+  'recipe[adb]',
 ]
 default_attributes({
   :gnome => {
