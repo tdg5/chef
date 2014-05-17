@@ -8,6 +8,9 @@ components = %w[
   gnome::gsettings
 ]
 components.push('vim-gnome') if node.recipe?('vim')
+if GnomeVersion.gnome_version_constraint('= 3.9.90')
+  components.push('gnome::shell_hacks')
+end
 
 components.each { |recipe| include_recipe recipe }
 
