@@ -2407,7 +2407,7 @@ const MessageTray = new Lang.Class({
             let shouldShowNotification = (hasNotifications && this._trayState == State.HIDDEN && !this._traySummoned);
             let nextNotification = this._notificationQueue[0] || null;
             if (shouldShowNotification && nextNotification) {
-                let limited = this._busy || Main.layoutManager.bottomMonitor.inFullscreen;
+                let limited = false;
                 let showNextNotification = (!limited || nextNotification.forFeedback || nextNotification.urgency == Urgency.CRITICAL);
                 if (showNextNotification)
                     this._showNotification();
