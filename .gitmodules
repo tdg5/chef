@@ -58,3 +58,6 @@
 [submodule "cookbooks/ddclient"]
 	path = cookbooks/ddclient
 	url = git@github.com:freewrite-cookbooks/ddclient.git
+[submodule "cookbooks/vagrant"]
+	path = cookbooks/vagrant
+	url = https://github.com/tdg5/vagrant-cookbook.git
