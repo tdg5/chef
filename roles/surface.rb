@@ -10,6 +10,7 @@ run_list [
   'role[design]',
   'recipe[lastpass]',
   'recipe[powertop::powertune]',
+  'recipe[hipchat]',
   'recipe[ddclient]',
 ]
 user = group = 'tdg5'
