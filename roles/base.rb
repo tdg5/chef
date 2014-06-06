@@ -25,6 +25,7 @@ run_list [
   'recipe[screenlets]',
   'role[java]',
   'recipe[adb]',
+  'recipe[wallpapers]',
 ]
 default_attributes({
   :gnome => {
