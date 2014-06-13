@@ -2,6 +2,10 @@ function bcd() {
   cd $(bundle show $1)
 }
 
+function bg() {
+  grep -R -- "$1" $(bundle list --paths)
+}
+
 function cd_src() {
   cd ~/src/$1
 }
