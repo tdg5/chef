@@ -27,7 +27,7 @@ function top_cmds() {
 }
 
 function change_pic_offsets() {
-  [ ! -z $1 ] && n="$1" || n="1"
+  [ ! -z $1 ] && n="$1" || n="2"
   for pic in $(find -name 'DSC_*.JPG' | sed 's/.\/DSC_//'); do mv DSC_${pic} DSC_${n}${pic}; done
 }
 
