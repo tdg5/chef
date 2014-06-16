@@ -119,6 +119,7 @@ alias gssh='git stash show -p'
 alias gst='git stash'
 alias gundo='git reset HEAD@{1}'
 alias ll='ls -altr'
+alias my_ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias realias='source ~/.bash_aliases'
 alias up='[ $(git rev-parse --show-toplevel 2>/dev/null || echo ~) = $(pwd) ] && cd $([ $(echo ~) = $(pwd) ] && echo / || echo) || cd $(git rev-parse --show-toplevel 2>/dev/null)'
 
