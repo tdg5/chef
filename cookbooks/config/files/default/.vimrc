@@ -9,6 +9,7 @@ set background=dark
 set backspace=eol,indent,start
 set encoding=utf-8
 set grepprg=ack-grep
+set textwidth=80
 set hidden
 set incsearch
 set laststatus=2
