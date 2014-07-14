@@ -42,6 +42,15 @@ function gbrd() {
   git rev-list --pretty=short $br1...$br2
 }
 
+# Checkout pull request ref by PR id
+function gcopr() {
+  ([ -z "$1" ] || [ $(($1)) -le 0 ]) && echo 'Invalid pull request ID' && return
+  pr_id=$1
+  [ -z "$2" ] && br_name="pull_request_${1}" || br_name="$2"
+  git fetch origin pull/${pr_id}/head:${br_name}
+  git checkout ${br_name}
+}
+
 function ggo() {
   vim $(git grep --name-only "$@")
 }
