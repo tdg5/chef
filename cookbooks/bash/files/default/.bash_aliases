@@ -65,7 +65,6 @@ function gbrr() {
   read -p "Switch to which branch? "
   if [[ $REPLY != "" ]] && [[ ${BRANCHES[$REPLY]} != "" ]]; then
       echo
-      set -x
       git checkout ${BRANCHES[$REPLY]}
   else
       echo Aborted.
