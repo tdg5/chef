@@ -97,6 +97,9 @@ set foldlevelstart=99
 autocmd BufRead,BufNewFile *.js let javaScript_fold=1
 autocmd BufRead,BufNewFile *.rb let ruby_fold=1
 
+" disable syntax highlighting for buffers over 42.5kb
+autocmd BufWinEnter * if line2byte(line("$") + 1) > 42500 | syntax clear | endif
+
 " make the write and quit commands case insensitive
 :command W w
 :command Q q
