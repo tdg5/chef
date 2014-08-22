@@ -12,6 +12,7 @@ run_list [
   'recipe[powertop::powertune]',
   'recipe[hipchat]',
   'recipe[ddclient]',
+  'role[vm_host]',
 ]
 user = group = 'tdg5'
 ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
