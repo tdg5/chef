@@ -45,26 +45,23 @@ default_attributes({
   },
   'rvm' => {
     :branch => 'none',
-    :default_ruby => '2.1.1',
+    :default_ruby => '2.1.2',
     :gems => {
-      '1.9.3-p385-falcon' => default_gems,
       '2.1.1' => default_gems,
+      '2.1.2' => default_gems,
     },
     :global_gems => [{
       :name => 'gem-ctags',
     }],
     :rubies => [
-      {
-        :version => '1.9.3-p385',
-        :patch => 'falcon',
-      },
       '2.1.1',
+      '2.1.2',
     ],
     :rvmrc => {
       :rvm_trust_rvmrcs_flag => 1,
       :rvmsudo_secure_path => 1,
     },
-    :version => '1.25.22',
+    :version => '1.25.28',
   },
   :user => {
     :username => user,
