@@ -2,3 +2,5 @@ log
 tmp
 *.swp
 /vendor
+.kitchen/
+.kitchen.local.yml
