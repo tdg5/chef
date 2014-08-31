@@ -1,7 +1,11 @@
 root_dir = File.expand_path('../..', __FILE__)
 home_dir = `echo $HOME`.strip
 
-cookbook_path "#{root_dir}/cookbooks"
+cookbook_path(%W[
+  #{root_dir}/cookbooks
+  #{root_dir}/vendor/cookbooks
+])
+
 data_bag_path "#{root_dir}/data_bags"
 encrypted_data_bag_secret "#{home_dir}/.ssh/id_rsa.home"
 file_cache_path '/tmp/chef/solo'
