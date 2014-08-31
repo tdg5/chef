@@ -56,6 +56,9 @@ DEPENDENCIES
   rvm
     git: https://github.com/fnichol/chef-rvm.git
     revision: 3d1c3dda01d5dee02a99d53783f2f11d5a0f195d
+  tmux
+    git: https://github.com/stevendanna/tmux
+    revision: 9503cab431ac0240ecb1a203b80bd5c29777773d
   vagrant
     git: https://github.com/tdg5/vagrant-cookbook.git
     revision: 4ba49989ee14a72c8128e5f9447f9469090a78e6
@@ -118,6 +121,7 @@ GRAPH
   rvm (0.9.3)
     chef_gem (>= 0.0.0)
     java (>= 0.0.0)
+  tmux (1.4.1)
   vagrant (0.2.0)
     dmg (>= 0.0.0)
     windows (>= 0.0.0)

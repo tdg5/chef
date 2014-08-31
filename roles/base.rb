@@ -8,7 +8,7 @@ run_list [
   'recipe[vim]',
   'recipe[vim_plugins]',
   'recipe[config::vim]',
-  'recipe[tmux]',
+  'recipe[tmux_wrapper]',
   'recipe[tmux_plugins]',
   'recipe[xclip]',
   'recipe[config::tmux]',
