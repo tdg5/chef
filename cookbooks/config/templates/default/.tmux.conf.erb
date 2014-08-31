@@ -59,3 +59,10 @@ bind-key C-y run 'tmux save-buffer - | xclip -i -selection clipboard'
 
 # Open custom reverse search w/ history
 bind-key / copy-mode \; command-prompt -p "Search Up:" 'send-keys ? C-u %% Enter'
+
+set -g @tpm_plugins "\
+  <%= node.tmux_plugins.plugins.join(" \\\n  ") %> \
+"
+
+# initializes TMUX plugin manager
+run-shell "[ -f ~/.tmux/plugins/tpm/tpm ] && ~/.tmux/plugins/tpm/tpm || true"
