@@ -5,3 +5,5 @@ link '/usr/bin/tmux' do
   to '/opt/tmux/bin/tmux'
   user 'root'
 end
+
+include_recipe 'tmux_wrapper::config'

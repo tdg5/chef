@@ -44,10 +44,16 @@ bind-key -r C-j resize-pane -D 1
 bind-key -r C-k resize-pane -U 1
 bind-key -r C-l resize-pane -R 1
 
+# Open new windows and panes with same working directory
+bind % split-window -h -c "#{pane_current_path}"
+bind '"' split-window -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+
 # Switch to copy-mode and go up a page
 # Normal copy-mode bindings make this action repeatable
 bind-key C-u copy-mode -u
 
+# Reload .tmux.conf
 bind-key C-r source-file ~/.tmux.conf
 
 # vim copy-mode key bindings for visual mode and yank
