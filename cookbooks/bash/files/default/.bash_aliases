@@ -29,6 +29,13 @@ function top_cmds() {
 function change_pic_offsets() {
   [ ! -z $1 ] && n="$1" || n="2"
   for pic in $(find -name 'DSC_*.JPG' | sed 's/.\/DSC_//'); do mv DSC_${pic} DSC_${n}${pic}; done
+  for pic in $(find -name 'DSC_*.NEF' | sed 's/.\/DSC_//'); do mv DSC_${pic} DSC_${n}${pic}; done
+}
+
+function raw2jpg() {
+  mkdir -p raw
+  for pic in $(find -maxdepth 1 -name '*.NEF'); do mv ${pic} raw; done
+  ufraw-batch --out-type=jpeg --out-path=./ ./raw/*.NEF
 }
 
 function gbrd() {
