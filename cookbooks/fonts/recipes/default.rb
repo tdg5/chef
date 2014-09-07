@@ -1,5 +1,3 @@
-include_recipe 'ubuntuone'
-
 package 'fontmatrix'
 package 'msttcorefonts'
 package 'fonts-mgopen'
@@ -13,12 +11,12 @@ directory user_fonts_dir do
   owner node.user.username
 end
 
-ubuntuone_fonts = "#{user_fonts_dir}/ubuntuone_fonts"
-link ubuntuone_fonts do
+cloud_fonts = "#{user_fonts_dir}/cloud_fonts"
+link cloud_fonts do
   group node.user.group
   owner node.user.username
   notifies :run, 'bash[update_font_cache]'
-  to "#{home_dir}/Ubuntu One/fonts"
+  to "#{home_dir}/Dropbox/config/fonts"
 end
 
 bash 'update_font_cache' do

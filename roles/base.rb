@@ -21,7 +21,6 @@ run_list [
   'recipe[pidgin]',
   'recipe[gnome]',
   'recipe[dropbox]',
-  'recipe[ubuntuone]',
   'recipe[skype]',
   'recipe[screenlets]',
   'role[java]',

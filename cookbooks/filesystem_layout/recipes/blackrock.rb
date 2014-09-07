@@ -38,7 +38,6 @@ directories_to_delete = [
 directories_to_delete.each {|dir| FileUtils.rmdir(dir) if File.exists?(dir) && !File.symlink?(dir) && Dir.entries(dir).length == 2 }
 
 dropbox_dir = "#{home_dir}/Dropbox"
-ubuntuone_dir = "#{home_dir}/Ubuntu One"
 symlinks = {
   documents_dir => "#{HDD_PATH}/Documents",
   downloads_dir => "#{HDD_PATH}/Downloads",
@@ -47,8 +46,6 @@ symlinks = {
   pictures_dir => "#{HDD_PATH}/Pictures",
   projects_dir => "#{HDD_PATH}/Projects",
   videos_dir => "#{HDD_PATH}/Videos",
-  ubuntuone_dir => "#{HDD_PATH}/Ubuntu One",
-  '/usr/share/backgrounds/ubuntuone_backgrounds' => "#{HDD_PATH}/Ubuntu One/backgrounds",
 }
 
 symlinks.each do |symlink_path, to_path|
