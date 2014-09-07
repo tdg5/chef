@@ -11,7 +11,8 @@ function cd_src() {
 }
 
 function chef() {
-  rvmsudo chef-solo -c ~/src/tdg5_chef/solo/solo.rb -j ~/src/tdg5_chef/solo/nodes/$1.json
+  [ ! -z $1 ] && name="$1" || name=`hostname`
+  rvmsudo chef-solo -c ~/src/tdg5_chef/solo/solo.rb -j ~/src/tdg5_chef/solo/nodes/${name}.json
 }
 
 function gimprand() {
