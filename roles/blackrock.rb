@@ -15,6 +15,7 @@ run_list [
   'recipe[lastpass]',
   'recipe[hipchat]',
   'recipe[ddclient]',
+  'role[docker]',
 ]
 user = group = 'tdg5'
 ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
