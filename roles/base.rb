@@ -11,7 +11,6 @@ run_list [
   'recipe[tmux_wrapper]',
   'recipe[tmux_plugins]',
   'recipe[xclip]',
-  'recipe[config::tmux]',
   'recipe[htop]',
   'recipe[apt]',
   'recipe[openssh]',
