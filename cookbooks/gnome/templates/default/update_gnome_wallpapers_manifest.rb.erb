@@ -1,0 +1,59 @@
+#!/usr/bin/env ruby
+
+MANIFEST_PATH = '<%= node.gnome.wallpapers.manifest_path %>'.freeze
+WALLPAPER_DIRS = <%= node.gnome.wallpapers.wallpaper_dirs.to_a %>.freeze
+
+if File.exists?(File.realpath(MANIFEST_PATH))
+  manifest_mtime = File.stat(MANIFEST_PATH).mtime
+  exit if WALLPAPER_DIRS.none? do |dir|
+    File.stat(File.realpath(dir)).mtime > manifest_mtime
+  end
+end
+
+MANIFEST_HEADER = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">',
+  '<!-- This file is managed by Chef. All local changes will be overridden during the next Chef converge. -->',
+  '<wallpapers>',
+].join("\n").freeze
+MANIFEST_FOOTER = [
+  '</wallpapers>',
+].join("\n").freeze
+
+ITEM_TEMPLATE_1 = [
+  '<wallpaper deleted="false">',
+  '<name>',
+].join("\n").freeze
+ITEM_TEMPLATE_2 = [
+  '</name>',
+  '<filename>',
+].join("\n").freeze
+ITEM_TEMPLATE_3 = [
+  '</filename>',
+  '<options>zoom</options>',
+  '<pcolor>#ffffff</pcolor>',
+  '<scolor>#000000</scolor>',
+  '</wallpaper>',
+].join("\n").freeze
+
+WALLPAPER_GLOB = '**/*.{bmp,BMP,gif,GIF,jpg,JPG,png,PNG,svg,SVG}'.freeze
+FILES = WALLPAPER_DIRS.map do |dir|
+  Dir.glob(File.join(dir, WALLPAPER_GLOB))
+end.flatten
+
+begin
+  manifest = File.open(MANIFEST_PATH, 'w')
+  manifest.write(MANIFEST_HEADER)
+  FILES.each do |file|
+    manifest.write([
+      ITEM_TEMPLATE_1,
+      File.basename(file, File.extname(file)),
+      ITEM_TEMPLATE_2,
+      file,
+      ITEM_TEMPLATE_3,
+    ].join)
+  end
+  manifest.write(MANIFEST_FOOTER)
+ensure
+  manifest.close
+end

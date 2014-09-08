@@ -20,4 +20,11 @@ default.gnome = {
     :schema => 'org.gnome.desktop.wm.keybindings',
     :value => "['<Control><Alt>Down', '<Control><Alt>j']",
   },],
+  :wallpapers => {
+    :manifest_path => '/usr/local/share/gnome-background-properties/gnome-wallpapers.xml',
+    :update_script_path => '/usr/local/sbin/update_gnome_wallpapers_manifest',
+    :wallpaper_dirs => [
+      '/home/tdg5/Pictures/wallpapers',
+    ],
+  }
 }

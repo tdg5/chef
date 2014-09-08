@@ -6,6 +6,7 @@ components = %w[
   gnome::keybindings
   gnome::disable_overlay_scrollbars
   gnome::gsettings
+  gnome::wallpapers
 ]
 components.push('vim-gnome') if node.recipe?('vim')
 if GnomeVersion.gnome_version_constraint('= 3.9.90')
