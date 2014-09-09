@@ -1,12 +1,15 @@
 #!/usr/bin/env ruby
 
-MANIFEST_PATH = '<%= node.gnome.wallpapers.manifest_path %>'.freeze
+RAW_MANIFEST_PATH = '<%= node.gnome.wallpapers.manifest_path %>'.freeze
 WALLPAPER_DIRS = <%= node.gnome.wallpapers.wallpaper_dirs.to_a %>.freeze
+MANIFEST_PATH = (File.realpath(RAW_MANIFEST_PATH) rescue RAW_MANIFEST_PATH).freeze
 
-if File.exists?(File.realpath(MANIFEST_PATH))
+if File.exists?(MANIFEST_PATH)
   manifest_mtime = File.stat(MANIFEST_PATH).mtime
   exit if WALLPAPER_DIRS.none? do |dir|
-    File.stat(File.realpath(dir)).mtime > manifest_mtime
+    path = File.realpath(dir) rescue dir
+    next unless Dir.exists?(path)
+    File.stat(path).mtime > manifest_mtime
   end
 end
 
