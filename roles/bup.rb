@@ -23,6 +23,7 @@ default_attributes({
   :bash => {
     :bashrc => {
       :extra_sources => [
+        '~/scripts/bup_aliases',
         '~/scripts/ec2env',
       ],
     },
