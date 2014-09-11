@@ -25,25 +25,4 @@ run_list [
   'role[java]',
   'recipe[adb]',
 ]
-default_attributes({
-  :gnome => {
-    :keybindings => {
-      'Launch Terminal' => {
-        'action' => 'x-terminal-emulator',
-        'binding' => '<Primary><Alt>t',
-      },
-      'Launch Chrome' => {
-        'action' => 'new_chrome_with_focus',
-        'binding' => '<Primary><Alt>b',
-      },
-      'Launch Chrome Incognito' => {
-        'action' => 'new_chrome_with_focus --incognito',
-        'binding' => '<Primary><Shift><Alt>b',
-      },
-      'Suspend' => {
-        'action' => 'dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend',
-        'binding' => '<Primary><Shift><Alt>s',
-      },
-    },
-  },
-})
+default_attributes({})
