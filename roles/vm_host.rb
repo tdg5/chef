@@ -6,7 +6,7 @@ run_list [
 ]
 default_attributes({
   'vagrant' => {
-    'url' => 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb',
-    'checksum' => '0fc3259cf08b693e3383636256734513ee93bf258f8328efb64e1dde447aadbe',
+    'url' => 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.5_x86_64.deb',
+    'checksum' => 'e2c7af6d032ac551ebd6399265cb9cb64402c9fb96a12289161b7f67afada28a',
   },
 })
