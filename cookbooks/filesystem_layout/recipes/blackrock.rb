@@ -1,7 +1,7 @@
 require 'etc'
 require 'fileutils'
 
-HDD_PATH='/media/hdd'
+HDD_PATH='/media/tdg5/hdd'
 
 directory HDD_PATH do
   group node.user.group
@@ -12,7 +12,7 @@ end
 group = Etc.getgrnam(node.user.group)
 user = Etc.getpwnam(node.user.group)
 
-mount '/media/hdd' do
+mount HDD_PATH do
   action [:mount, :enable]
   device '92F48F5FF48F4487'
   device_type :uuid
