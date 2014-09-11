@@ -4,7 +4,10 @@ RAW_MANIFEST_PATH = '<%= node.gnome.wallpapers.manifest_path %>'.freeze
 WALLPAPER_DIRS = <%= node.gnome.wallpapers.wallpaper_dirs.to_a %>.freeze
 MANIFEST_PATH = (File.realpath(RAW_MANIFEST_PATH) rescue RAW_MANIFEST_PATH).freeze
 
-if File.exists?(MANIFEST_PATH)
+FORCE_MATCHER = /--force/
+FORCE = ARGV.any?{ |arg| FORCE_MATCHER === arg }
+
+if File.exists?(MANIFEST_PATH) && !FORCE
   manifest_mtime = File.stat(MANIFEST_PATH).mtime
   exit if WALLPAPER_DIRS.none? do |dir|
     path = File.realpath(dir) rescue dir
