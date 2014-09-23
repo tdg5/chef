@@ -1,6 +1,6 @@
 {
   "domain_name": "backupify.com",
-  "host_name": "dannny",
+  "host_name": "bup",
   "run_list": [
     "role[bup]"
   ]
