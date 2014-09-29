@@ -49,16 +49,16 @@ default_attributes({
       :rvm_trust_rvmrcs_flag => 1,
       :rvmsudo_secure_path => 1,
     },
-    :version => '1.25.30',
-    :default_ruby => '2.1.2',
+    :version => '1.25.31',
+    :default_ruby => '2.1.3',
     :gems => {
-      '2.1.2' => default_gems,
+      '2.1.3' => default_gems,
     },
     :global_gems => [{
       :name => 'gem-ctags',
     }],
     :rubies => [
-      '2.1.2',
+      '2.1.3',
     ],
   },
   'postgresql' => {
@@ -78,7 +78,6 @@ default_attributes({
     'group' => group,
   },
 })
-
 
 override_attributes({
   :postgresql => {
