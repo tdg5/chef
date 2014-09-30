@@ -6,6 +6,7 @@ run_list [
   'recipe[qt::dev]',
   'role[design]',
   'role[dev]',
+  'role[docker]',
   'recipe[bup_wrapper]',
   'recipe[hipchat]',
   'recipe[lastpass]',
