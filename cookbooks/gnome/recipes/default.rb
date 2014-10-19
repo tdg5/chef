@@ -1,7 +1,7 @@
 package 'gnome-shell'
 
 components = %w[
-  config::gnome-terminal
+  gnome::gnome_terminal_config
   gnome::extensions
   gnome::keybindings
   gnome::disable_overlay_scrollbars
