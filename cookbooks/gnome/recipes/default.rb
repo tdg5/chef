@@ -3,9 +3,8 @@ package 'gnome-shell'
 components = %w[
   gnome::gnome_terminal_config
   gnome::extensions
-  gnome::keybindings
   gnome::disable_overlay_scrollbars
-  gnome::gsettings
+  gnome::settings
   gnome::wallpapers
 ]
 components.push('vim-gnome') if node.recipe?('vim')
