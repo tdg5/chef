@@ -16,6 +16,24 @@ default.gnome = {
         'firefox.desktop',
       ],
     },
+    :include_minimize_and_maximize_on_windows => {
+      :key => 'button-layout',
+      :schema => 'org.gnome.shell.overrides',
+      :user => node.user.username,
+      :value => ':minimize,maximize,close',
+    },
+    :show_date_in_clock => {
+      :key => 'clock-show-date',
+      :schema => 'org.gnome.desktop.interface',
+      :user => node.user.username,
+      :value => true,
+    },
+    :show_seconds_in_clock => {
+      :key => 'clock-show-seconds',
+      :schema => 'org.gnome.desktop.interface',
+      :user => node.user.username,
+      :value => true,
+    },
     :move_to_workspace_down_keybindings => {
       :key => 'move-to-workspace-down',
       :schema => 'org.gnome.desktop.wm.keybindings',
