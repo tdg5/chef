@@ -28,7 +28,7 @@ DEPENDENCIES
     revision: e5f39f3e78ca4c71376b035e9c089e5fca487f5f
   gnome_setting
     git: https://github.com/tdg5-cookbooks/gnome_setting.git
-    revision: 22c32aa9a98d900b55a3341c72ea35a91482b16b
+    revision: 492c6fcfe189221f29b421bd62016115804954f1
   hostsfile
     git: https://github.com/customink-webops/hostsfile.git
     revision: 495fd80ba7a3c306abe8c2585f6ec25bd937fc81
