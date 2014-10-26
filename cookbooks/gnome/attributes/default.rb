@@ -1,5 +1,11 @@
 default.gnome = {
   :settings => {
+    :clock_format => {
+      :key => 'clock-format',
+      :schema => 'org.gnome.desktop.interface',
+      :user => node.user.username,
+      :value => '12h',
+    },
     :favorite_apps => {
       :key => 'favorite-apps',
       :schema => 'org.gnome.shell',
@@ -16,11 +22,29 @@ default.gnome = {
         'firefox.desktop',
       ],
     },
+    :idle_delay => {
+      :key => 'idle-delay',
+      :schema => 'org.gnome.desktop.session',
+      :user => node.user.username,
+      :value => 300,
+    },
     :include_minimize_and_maximize_on_windows => {
       :key => 'button-layout',
       :schema => 'org.gnome.shell.overrides',
       :user => node.user.username,
       :value => ':minimize,maximize,close',
+    },
+    :lid_close_ac => {
+      :key => 'lid-close-ac-action',
+      :schema => 'org.gnome.settings-daemon.plugins.power',
+      :user => node.user.username,
+      :value => 'nothing',
+    },
+    :lid_close_battery => {
+      :key => 'lid-close-battery-action',
+      :schema => 'org.gnome.settings-daemon.plugins.power',
+      :user => node.user.username,
+      :value => 'nothing',
     },
     :show_date_in_clock => {
       :key => 'clock-show-date',
@@ -33,6 +57,17 @@ default.gnome = {
       :schema => 'org.gnome.desktop.interface',
       :user => node.user.username,
       :value => true,
+    },
+    :enabled_extensions => {
+      :key => 'enabled-extensions',
+      :schema => 'org.gnome.shell',
+      :user => node.user.username,
+      :value => [
+        'system-monitor@paradoxxx.zero.gmail.com',
+        'nohotcorner@azuri.free.fr',
+        'places-menu@gnome-shell-extensions.gcampax.github.com',
+        'mediaplayer@patapon.info',
+      ],
     },
     :move_to_workspace_down_keybindings => {
       :key => 'move-to-workspace-down',
@@ -132,6 +167,12 @@ default.gnome = {
       :schema => 'org.gnome.settings-daemon.plugins.media-keys.custom-keybinding',
       :user => node.user.username,
       :value => '<Primary><Shift><Alt>b',
+    },
+    :lock_on_suspend => {
+      :key => 'ubuntu-lock-on-suspend',
+      :schema => 'org.gnome.desktop.screensaver',
+      :user => node.user.username,
+      :value => true,
     },
     :suspend_keybinding_name => {
       :key => 'name',
