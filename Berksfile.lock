@@ -25,7 +25,7 @@ DEPENDENCIES
     revision: 31e38b4c9d0ec57c342131e802663b35fb5bdd5a
   docker
     git: https://github.com/bflad/chef-docker.git
-    revision: e5f39f3e78ca4c71376b035e9c089e5fca487f5f
+    revision: 383cc5fd74eeb2f24f3824420d841c7b87a94a64
   gnome_setting
     git: https://github.com/tdg5-cookbooks/gnome_setting.git
     revision: 492c6fcfe189221f29b421bd62016115804954f1
