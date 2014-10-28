@@ -1,21 +1,37 @@
 default.gnome = {
+  :extensions => {
+    :mediaplayer => {
+      :git => 'https://github.com/eonpatapon/gnome-shell-extensions-mediaplayer.git',
+      :install_script => {
+        :code => './autogen.sh; make install-zip',
+      },
+      :name => 'mediaplayer@patapon.info',
+      :revision => 'a236a019e92e4624138e43a3500672e8b7f73ba6',
+    },
+    :no_hot_corner => {
+      :git => 'https://github.com/HROMANO/nohotcorner.git',
+      :link => true,
+      :name => 'nohotcorner@azuri.free.fr',
+      :revision => '7f8183e638e9ee95457f7c5fe9886ccf30f897d3',
+    },
+    :places_menu => {
+      :name => 'places-menu@gnome-shell-extensions.gcampax.github.com',
+    },
+    :system_monitor => {
+      :git => 'https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet.git',
+      :link => {
+        :src_path => 'system-monitor@paradoxxx.zero.gmail.com',
+      },
+      :name => 'system-monitor@paradoxxx.zero.gmail.com',
+      :revision => '59767af3b57252547e2bf507044e1f4fa12a73bb',
+    },
+  },
   :settings => {
     :clock_format => {
       :key => 'clock-format',
       :schema => 'org.gnome.desktop.interface',
       :user => node.user.username,
       :value => '12h',
-    },
-    :enabled_extensions => {
-      :key => 'enabled-extensions',
-      :schema => 'org.gnome.shell',
-      :user => node.user.username,
-      :value => [
-        'system-monitor@paradoxxx.zero.gmail.com',
-        'nohotcorner@azuri.free.fr',
-        'places-menu@gnome-shell-extensions.gcampax.github.com',
-        'mediaplayer@patapon.info',
-      ],
     },
     :favorite_apps => {
       :key => 'favorite-apps',
