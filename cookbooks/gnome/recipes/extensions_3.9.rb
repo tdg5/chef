@@ -1,6 +1,7 @@
 %w[
   gir1.2-gtop-2.0
   gir1.2-networkmanager-1.0
+  libglib2.0-dev
   gnome-common
 ].each { |pkg| package pkg }
 
