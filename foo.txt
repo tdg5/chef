@@ -1,0 +1,8 @@
+placeDisplay.js:
+
+const Hostname1Iface = '<node>\
+<interface name="org.freedesktop.hostname1">\
+<property name="PrettyHostname" type="s" access="read" />\
+</interface>\
+</node>';
+

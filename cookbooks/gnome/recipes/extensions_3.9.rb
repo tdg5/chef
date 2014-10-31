@@ -33,6 +33,7 @@ unless extensions.nil? || extensions.empty?
       install_script_id = "install_#{nickname}_gnome_shell_extension"
 
       git extension_src_dir do
+        branch extension['branch'] if extension['branch']
         group user_group
         repository repository_url
         revision extension['revision'] if extension['revision']
@@ -66,6 +67,10 @@ unless extensions.nil? || extensions.empty?
         end
       end
     end
+  end
+
+  bash 'chown_extensions_dir_recursively' do
+    code "chown -R #{node.user.username}:#{node.user.group} #{extensions_dir}"
   end
 
   gnome_setting 'enabled_extensions' do

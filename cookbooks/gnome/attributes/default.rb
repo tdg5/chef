@@ -3,7 +3,10 @@ default.gnome = {
     :mediaplayer => {
       :git => 'https://github.com/eonpatapon/gnome-shell-extensions-mediaplayer.git',
       :install_script => {
-        :code => './autogen.sh; make install-zip',
+        :code => [
+          './autogen.sh',
+          'make install-zip',
+        ].join('; '),
       },
       :name => 'mediaplayer@patapon.info',
       :revision => 'a236a019e92e4624138e43a3500672e8b7f73ba6',
@@ -15,7 +18,17 @@ default.gnome = {
       :revision => '7f8183e638e9ee95457f7c5fe9886ccf30f897d3',
     },
     :places_menu => {
+      :branch => 'gnome-3-10',
+      :git => 'git://git.gnome.org/gnome-shell-extensions',
+      :install_script => {
+        :code => [
+          './autogen.sh',
+          'cd extensions/places-menu',
+          "prefix='/home/#{node.user.username}/.local' make -e install",
+        ].join('; '),
+      },
       :name => 'places-menu@gnome-shell-extensions.gcampax.github.com',
+      :revision => 'dbe646ca099acd2b5da14c7f9103e72bce7685c3',
     },
     :system_monitor => {
       :git => 'https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet.git',
