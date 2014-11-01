@@ -3,6 +3,7 @@
   gir1.2-networkmanager-1.0
   libglib2.0-dev
   gnome-common
+  gnome-shell-extensions
 ].each { |pkg| package pkg }
 
 extensions = node['gnome']['extensions']
