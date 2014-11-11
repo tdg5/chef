@@ -38,6 +38,7 @@ function raw2jpg() {
   ufraw-batch --out-type=jpeg --out-path=./ ./raw/*.NEF
 }
 
+# Display commit differences between two branches
 function gbrd() {
   if [ ! -z $2 ]; then
     br1="$1"
@@ -47,6 +48,22 @@ function gbrd() {
     br2="$1"
   fi
   git rev-list --pretty=short $br1...$br2
+}
+
+# Return to previous branch
+function gbrb() {
+  br="$(git reflog | sed -n 's/.*checkout: moving from .* to \(.*\)/\1/p' | sed "2q;d")"
+  git checkout $br
+}
+
+# Push to origin remote setting upstream branch appropriately
+function gputu() {
+  if [ -z $1 ]; then
+    br="$(git rev-parse --abbrev-ref HEAD)"
+  else
+    br="$1"
+  fi
+  git push -u origin $br
 }
 
 # Checkout pull request ref by PR id
@@ -132,6 +149,7 @@ alias gsp='git stash pop'
 alias gss='git stash save'
 alias gssh='git stash show -p'
 alias gst='git stash'
+alias gstd='git stash drop'
 alias gundo='git reset HEAD@{1}'
 alias ll='ls -altr'
 alias my_ip='dig +short myip.opendns.com @resolver1.opendns.com'
