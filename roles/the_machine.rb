@@ -1,6 +1,15 @@
 name 'the_machine'
 description 'Role for the machine'
 run_list [
+  'recipe[vim]',
+  'recipe[tmux_wrapper]',
+  'recipe[xclip]',
+  'recipe[htop]',
+  'recipe[apt]',
+  'recipe[openssh]',
+  'recipe[wmctrl]',
+  'recipe[chrome]',
+  'recipe[spotify]',
   'role[rvm]',
   'role[vm_host]',
   'role[docker]',
