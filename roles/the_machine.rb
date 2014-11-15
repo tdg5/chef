@@ -1,5 +1,5 @@
-name 'blackrock'
-description 'Role for blackrock specifics'
+name 'the_machine'
+description 'Role for the machine'
 run_list [
   'role[rvm]',
   'role[vm_host]',
