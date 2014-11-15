@@ -31,4 +31,9 @@ default_attributes({
       '2.1.4',
     ],
   },
+  'user' => {
+    'username' => user,
+    'email' => 'obiedman@gmail.com',
+    'group' => group,
+  },
 })
