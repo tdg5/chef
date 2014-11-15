@@ -4,3 +4,5 @@ default.tmux = {
   :install_method => 'source',
   :version => '1.9a',
 }
+
+default.tmux_plugins.plugins = []
