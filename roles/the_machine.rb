@@ -22,7 +22,7 @@ default_attributes({
     :version => '1.26.1',
     :default_ruby => '2.1.4',
     :gems => {
-      '2.1.4' => default_gems,
+      '2.1.4' => [],
     },
     :global_gems => [{
       :name => 'gem-ctags',
