@@ -8,7 +8,7 @@ cookbook_path(%W[
 
 data_bag_path "#{root_dir}/data_bags"
 encrypted_data_bag_secret "#{home_dir}/.ssh/id_rsa.home"
-file_cache_path '/tmp/chef/solo'
+file_cache_path "#{root_dir}/.cache"
 log_location "#{root_dir}/log/chef-solo.log"
 node_path "#{root_dir}/solo/nodes"
 role_path "#{root_dir}/roles"

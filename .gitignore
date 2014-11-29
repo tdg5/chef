@@ -4,3 +4,4 @@ tmp
 /vendor
 .kitchen/
 .kitchen.local.yml
+/.cache
