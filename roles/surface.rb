@@ -34,6 +34,16 @@ default_attributes({
     :server => 'dynamicdns.park-your-domain.com',
     :use => 'web, web=checkip.dyndns.org/, web-skip=\'IP Address\'',
   },
+  :gnome => {
+    :settings => {
+      :desktop_scale_factor => {
+        :key => 'scaling-factor',
+        :schema => 'org.gnome.desktop.interface',
+        :user => user,
+        :value => 1
+      },
+    },
+  },
   :modprobe => {
     :blacklists => [
     ],
