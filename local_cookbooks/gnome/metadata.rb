@@ -7,6 +7,7 @@ long_description 'Installs and customizes Gnome shell, extenstions, and tools.'
 version '0.0.1'
 
 depends 'gnome_setting'
+depends 'vim-gnome'
 
 recipe 'gnome', 'Install gnome-shell and all extensions, tools, and cusomizations.'
 recipe 'gnome::settings', 'Install gnome-shell and all extensions, tools, and cusomizations.'

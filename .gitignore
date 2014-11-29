@@ -5,3 +5,4 @@ tmp
 .kitchen/
 .kitchen.local.yml
 /.cache
+/cookbooks

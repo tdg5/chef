@@ -1,4 +1,16 @@
+# vi:ft=ruby:
 source 'https://api.berkshelf.com'
+
+def dependencies(path)
+  berks = "#{path}/Berksfile.in"
+  instance_eval(File.read(berks)) if File.exists?(berks)
+end
+
+# Load local cookbooks
+Dir.glob('./local_cookbooks/*').each do |path|
+  dependencies path
+  cookbook File.basename(path), :path => path
+end
 
 cookbook 'android-sdk', :git => 'https://github.com/gildegoma/chef-android-sdk'
 cookbook 'ant', :git => 'https://github.com/opscode-cookbooks/ant.git'
