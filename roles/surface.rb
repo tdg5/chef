@@ -1,5 +1,3 @@
-# Fix Gnome 3.10.4 ui scaling
-# gsettings set org.gnome.desktop.interface scaling-factor 1
 name 'surface'
 description 'Role for surface specifics'
 run_list [
