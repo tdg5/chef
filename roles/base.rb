@@ -2,7 +2,7 @@ name 'base'
 description 'Base role applied to all nodes.'
 run_list [
   'recipe[lib]',
-  'recipe[bash]',
+  'recipe[bash_config]',
   'recipe[config::git]',
   'recipe[config::sshagent]',
   'recipe[vim]',
