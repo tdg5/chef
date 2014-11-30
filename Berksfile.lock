@@ -39,6 +39,9 @@ DEPENDENCIES
   ddclient
     git: https://github.com/freewrite-cookbooks/ddclient.git
     revision: 31e38b4c9d0ec57c342131e802663b35fb5bdd5a
+  device-mapper
+    git: https://github.com/bflad/chef-device-mapper.git
+    revision: 2ff19d6b8d0b9ebae6b579db6d82b8921fd3c59c
   docker
     git: https://github.com/bflad/chef-docker.git
     revision: ccaaaee6d8311fb04e5b9a1d3ad96943f5436bd4

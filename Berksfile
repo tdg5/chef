@@ -20,6 +20,7 @@ cookbook 'build-essential', :git => 'https://github.com/opscode-cookbooks/build-
 cookbook 'docker', :git => 'https://github.com/bflad/chef-docker.git'
 cookbook 'chef_gem', :git => 'https://github.com/hw-cookbooks/chef_gem.git'
 cookbook 'database', :git => 'https://github.com/opscode-cookbooks/database.git'
+cookbook 'device-mapper', :git => 'https://github.com/bflad/chef-device-mapper.git'
 cookbook 'ddclient', :git => 'https://github.com/freewrite-cookbooks/ddclient.git'
 cookbook 'gnome_setting', :git => 'https://github.com/tdg5-cookbooks/gnome_setting.git'
 cookbook 'hostsfile', :git => 'https://github.com/customink-webops/hostsfile.git'
