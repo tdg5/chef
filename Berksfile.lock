@@ -94,7 +94,9 @@ DEPENDENCIES
   modprobe
     path: local_cookbooks/modprobe
   modules
-    path: local_cookbooks/modules
+    git: git@github.com:tdg5/modules-cookbook.git
+    revision: 6ade16b78376ce84a0aad5c41858ef7d1879220e
+    branch: ubuntu-debian-fixes
   mysql
     git: https://github.com/opscode-cookbooks/mysql.git
     revision: b1c9c3064c9889795b8868f0f1a3cc2425371f58
@@ -279,7 +281,7 @@ GRAPH
     ark (~> 0.4)
     java (~> 1.13)
   modprobe (0.0.1)
-  modules (0.0.1)
+  modules (0.2.0)
   mysql (5.6.1)
     yum-mysql-community (>= 0.0.0)
   mysql-chef_gem (0.0.5)

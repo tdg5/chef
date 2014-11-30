@@ -2,7 +2,7 @@ name 'surface'
 description 'Role for surface specifics'
 run_list [
   'role[dev]',
-  'recipe[modules::surface]',
+  'recipe[modules]',
   'recipe[pm-utils::disable_usb_bluetooth]',
   'recipe[acpi_wakeup]',
   'role[design]',
@@ -43,7 +43,11 @@ default_attributes({
     },
   },
   :modprobe => {
-    :blacklists => [
+    :blacklists => [],
+  },
+  :modules => {
+    :modules => [
+      'coretemp'
     ],
   },
   :openssh => {

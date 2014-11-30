@@ -26,6 +26,7 @@ cookbook 'hostsfile', :git => 'https://github.com/customink-webops/hostsfile.git
 cookbook 'iptables', :git => 'https://github.com/opscode-cookbooks/iptables.git'
 cookbook 'java', :git => 'https://github.com/tdg5/chef_java.git'
 cookbook 'lib', :git => 'https://github.com/freewrite-cookbooks/lib.git'
+cookbook 'modules', :git => 'git@github.com:tdg5/modules-cookbook.git', :branch => 'ubuntu-debian-fixes'
 cookbook 'mysql', :git => 'https://github.com/opscode-cookbooks/mysql.git'
 cookbook 'nodejs', :git => 'https://github.com/redguide/nodejs.git'
 cookbook 'openssh', :git => 'https://github.com/opscode-cookbooks/openssh.git'
