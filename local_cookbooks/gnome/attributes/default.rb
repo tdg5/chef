@@ -33,6 +33,12 @@ default.gnome = {
       :user => node.user.username,
       :value => '12h',
     },
+    :show_desktop_icons => {
+      :key => 'show-desktop-icons',
+      :schema => 'org.gnome.desktop.background',
+      :user => node.user.username,
+      :value => true,
+    },
     :favorite_apps => {
       :key => 'favorite-apps',
       :schema => 'org.gnome.shell',
