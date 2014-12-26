@@ -68,6 +68,8 @@ DEPENDENCIES
     path: local_cookbooks/grunt
   handbrake
     path: local_cookbooks/handbrake
+  heroku_toolbelt
+    path: local_cookbooks/heroku_toolbelt
   hipchat
     path: local_cookbooks/hipchat
   hostsfile
@@ -256,6 +258,8 @@ GRAPH
   grunt (0.0.1)
     nodejs (>= 0.0.0)
   handbrake (0.0.1)
+    apt (>= 0.0.0)
+  heroku_toolbelt (0.0.1)
     apt (>= 0.0.0)
   hipchat (0.0.1)
     apt (>= 0.0.0)

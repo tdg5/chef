@@ -16,6 +16,7 @@ run_list [
   'recipe[hipchat]',
   'recipe[ddclient]',
   'role[docker]',
+  'recipe[heroku_toolbelt]',
 ]
 user = group = 'tdg5'
 ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
