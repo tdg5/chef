@@ -18,9 +18,9 @@ default_attributes({
   },
   :bash => {
     :bashrc => {
-      :extra_sources => [
-        '~/.rubotorc',
-      ],
+      :extra_sources => {
+        'ruboto config' => '~/.rubotorc',
+      },
     },
   },
   :java => {

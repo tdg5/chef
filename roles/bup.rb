@@ -23,10 +23,10 @@ default_gems = [{
 default_attributes({
   :bash => {
     :bashrc => {
-      :extra_sources => [
-        '~/scripts/bup_aliases',
-        '~/scripts/ec2env',
-      ],
+      :extra_sources => {
+        'Backupify-specific aliases' => '~/scripts/bup_aliases',
+        'EC2 env switcher' => '~/scripts/ec2env',
+      },
     },
   },
   :openssh => {
