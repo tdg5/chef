@@ -72,16 +72,17 @@ default_attributes({
       :rvm_trust_rvmrcs_flag => 1,
       :rvmsudo_secure_path => 1,
     },
-    :version => '1.25.30',
-    :default_ruby => '2.1.2',
+    :version => '1.26.6',
+    :default_ruby => '2.2.0',
     :gems => {
-      '2.1.2' => default_gems,
+      '2.2.0' => default_gems,
     },
     :global_gems => [{
       :name => 'gem-ctags',
     }],
     :rubies => [
-      '2.1.2',
+      '2.1.4',
+      '2.2.0',
     ],
   },
   :user => {
