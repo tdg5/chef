@@ -24,5 +24,15 @@ run_list [
   'recipe[screenlets]',
   'role[java]',
   'recipe[adb]',
+  'recipe[liquidprompt]',
 ]
-default_attributes({})
+default_attributes({
+  'bash' => {
+    'bashrc' => {
+      'extra_sources' => {
+        'Alias definitions' => '~/.bash_aliases',
+        'SSH Agent config and keys' => '~/.sshagentrc',
+      },
+    },
+  },
+})
