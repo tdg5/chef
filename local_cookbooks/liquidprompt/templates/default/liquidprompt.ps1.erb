@@ -1,0 +1,13 @@
+# Customize prompt. This explicitly disables some features!
+# add prefix, time, jobs, user, host
+LP_PS1="${LP_PS1_PREFIX}${LP_TIME}${LP_JOBS}${LP_USER}${LP_HOST}"
+
+# Add permissions and path
+LP_PS1="${LP_PS1}${LP_PERM}${LP_PWD}"
+
+# Add VCS infos
+# If root, the info has not been collected unless LP_ENABLE_VCS_ROOT is set.
+LP_PS1="${LP_PS1}${LP_VCS}"
+
+# add return code, prompt mark, and postfix
+LP_PS1="${LP_PS1}${LP_ERR}${LP_MARK}${LP_PS1_POSTFIX}"

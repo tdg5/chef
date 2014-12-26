@@ -96,6 +96,8 @@ DEPENDENCIES
   lib
     git: https://github.com/freewrite-cookbooks/lib.git
     revision: 17646e5a54c255e96d20dc77bb64a200966951be
+  liquidprompt
+    path: local_cookbooks/liquidprompt
   modprobe
     path: local_cookbooks/modprobe
   modules
@@ -280,6 +282,7 @@ GRAPH
     nodejs (>= 0.0.0)
   lastpass (0.0.1)
   lib (0.0.1)
+  liquidprompt (0.0.1)
   lxc (2.0.0)
     dpkg_autostart (>= 0.1.10)
     iptables-ng (>= 0.0.0)

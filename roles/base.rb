@@ -32,6 +32,7 @@ default_attributes({
       'extra_sources' => {
         'Alias definitions' => '~/.bash_aliases',
         'SSH Agent config and keys' => '~/.sshagentrc',
+        'liquidprompt' => '/opt/liquidprompt/liquidprompt',
       },
     },
   },
