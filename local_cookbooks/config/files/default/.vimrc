@@ -107,6 +107,13 @@ set foldlevelstart=99
 autocmd BufRead,BufNewFile *.js let javaScript_fold=1
 autocmd BufRead,BufNewFile *.rb let ruby_fold=1
 
+" enable spell check for markdown and git commits
+autocmd FileType gitcommit setlocal spell spelllang=en_us
+autocmd FileType markdown setlocal spell spelllang=en_us
+
+" use custom file for additions to the dictionary
+set spellfile=$HOME/.vim/.vim-spell-en.utf-8.add
+
 " disable syntax highlighting for buffers over 42.5kb
 autocmd BufWinEnter * if line2byte(line("$") + 1) > 42500 | syntax clear | endif
 
