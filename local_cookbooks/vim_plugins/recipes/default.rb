@@ -1,6 +1,7 @@
-%W[
-  /home/#{node.user.username}/#{node.vim_plugins.user_autoload_dir}
-  /home/#{node.user.username}/#{node.vim_plugins.user_bundle_dir}
+[
+  File.join("/home/#{node.user.username}", node.vim_plugins.user_vim_config_dir),
+  File.join("/home/#{node.user.username}", node.vim_plugins.user_autoload_dir),
+  File.join("/home/#{node.user.username}", node.vim_plugins.user_bundle_dir),
 ].each do |dir|
   directory dir do
     group node.user.group
