@@ -32,6 +32,10 @@ function change_pic_offsets() {
   for pic in $(find -maxdepth 1 -name 'DSC_*.JPG' -o -name 'DSC_*.jpg' -o -name 'DSC_*.NEF' | sed 's/.\/DSC_//'); do mv DSC_${pic} DSC_${n}${pic}; done
 }
 
+function rm_nefs_without_jpgs() {
+  for x in $(comm -13 <(find -name '*.JPG'| sed 's/JPG/NEF/' | sort) <(find -name '*.NEF' | sort)); do rm -v $x; done
+}
+
 function raw2jpg() {
   mkdir -p raw
   for pic in $(find -maxdepth 1 -name '*.NEF'); do mv ${pic} raw; done
