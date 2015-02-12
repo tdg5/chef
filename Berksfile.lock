@@ -31,6 +31,9 @@ DEPENDENCIES
     revision: 8ba9733f9214cd4328a16dc2caed3768b30f3f66
   chrome
     path: local_cookbooks/chrome
+  composer
+    git: git://github.com/Morphodo/chef-composer.git
+    revision: 92aee6313fc47dfd51b45c176b7efe41c767c57d
   config
     path: local_cookbooks/config
   database
@@ -206,6 +209,7 @@ GRAPH
   chef_handler (1.1.6)
   chrome (0.0.1)
     wmctrl (>= 0.0.0)
+  composer (0.2.1)
   config (0.0.1)
   database (2.3.0)
     aws (>= 0.0.0)
