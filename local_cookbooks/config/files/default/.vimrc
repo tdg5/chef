@@ -161,13 +161,3 @@ let g:vim_markdown_initial_foldlevel=25
 
 " Should replace TestKey, but for now just hardcode rspec and minitest to spin
 let g:TestKey = { 'runners': {} }
-
-let g:TestKey.runners.rspec = { 'match': '_spec.rb$' }
-function g:TestKey.runners.rspec.run(file, line)
-  return ':!clear && spin push '.a:file
-endfunction
-
-let g:TestKey.runners.minitest = { 'match': '_test.rb$' }
-function g:TestKey.runners.minitest.run(file, line)
-  return ':!clear && spin push '.a:file
-endfunction
