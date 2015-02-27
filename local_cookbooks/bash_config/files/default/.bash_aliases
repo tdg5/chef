@@ -79,6 +79,10 @@ function gcopr() {
   git checkout ${br_name}
 }
 
+function gghist() {
+  git rev-list --all | xargs git grep "$@"
+}
+
 function ggo() {
   vim $(git grep --name-only "$@")
 }
