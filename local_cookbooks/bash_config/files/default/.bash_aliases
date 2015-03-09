@@ -164,6 +164,7 @@ alias gstd='git stash drop'
 alias gundo='git reset HEAD@{1}'
 alias ll='ls -altr'
 alias my_ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias pride="REPORTER=pride guard"
 alias realias='source ~/.bash_aliases'
 alias syslog='tail -f /var/log/syslog'
 alias up='[ $(git rev-parse --show-toplevel 2>/dev/null || echo ~) = $(pwd) ] && cd $([ $(echo ~) = $(pwd) ] && echo / || echo) || cd $(git rev-parse --show-toplevel 2>/dev/null)'
