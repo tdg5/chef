@@ -10,6 +10,7 @@ run_list [
   'recipe[bup_wrapper]',
   'recipe[hipchat]',
   'recipe[lastpass]',
+  'recipe[golang]',
 ]
 user = group = 'danny'
 default_gems = [{
@@ -28,6 +29,10 @@ default_attributes({
         'EC2 env switcher' => '~/scripts/ec2env',
       },
     },
+  },
+  :go => {
+    :version => "1.4",
+    :platform => "amd64",
   },
   :openssh => {
     :server => {
