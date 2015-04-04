@@ -122,6 +122,17 @@ function gbrr() {
   fi
 }
 
+function gtaga() {
+  [ -z "$1" ] && echo 'Invalid tag name!' && return
+  [ -z "$2" ] && msg="$1" || msg="$2"
+  git tag -a $1 -m $msg
+}
+
+function gtagdr() {
+  [ -z "$1" ] && echo 'Invalid tag name!' && return
+  git push origin :refs/tags/$1
+}
+
 alias aliases='vi ~/.bash_aliases'
 alias be='bundle exec'
 alias bun='bundle'
@@ -174,6 +185,9 @@ alias gss='git stash save'
 alias gssh='git stash show -p'
 alias gst='git stash'
 alias gstd='git stash drop'
+alias gtagd="git tag -d"
+alias gtagl="git tag -l"
+alias gtagp="git push --tags"
 alias gundo='git reset HEAD@{1}'
 alias ll='ls -altr'
 alias my_ip='dig +short myip.opendns.com @resolver1.opendns.com'
