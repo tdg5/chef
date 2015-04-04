@@ -60,6 +60,12 @@ function gbrb() {
   git checkout $br
 }
 
+# Rebase from previous branch
+function grbp() {
+  br="$(git reflog | sed -n 's/.*checkout: moving from .* to \(.*\)/\1/p' | sed "2q;d")"
+  git rebase $br
+}
+
 # Push to origin remote setting upstream branch appropriately
 function gputu() {
   if [ -z $1 ]; then
