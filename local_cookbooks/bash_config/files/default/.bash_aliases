@@ -197,6 +197,7 @@ __git_complete gcp _git_cherry_pick
 __git_complete gd _git_diff
 __git_complete gg _git_grep
 __git_complete ggi _git_grep
+__git_complete ggno _git_grep
 __git_complete gget _git_pull
 __git_complete gl _git_log
 __git_complete glv _git_log
