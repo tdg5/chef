@@ -134,6 +134,7 @@ alias gamd='git commit --amend --no-edit'
 alias gamend='git commit --amend'
 alias gbr='git branch'
 alias gbrc='git rev-parse --abbrev-ref HEAD'
+alias gbrp='git reflog | sed -n "s/.*checkout: moving from .* to \(.*\)/\1/p" | sed "2q;d")'
 alias gbrt="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
