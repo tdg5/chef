@@ -83,8 +83,12 @@ function gghist() {
   git rev-list --all | xargs git grep "$@"
 }
 
+function ggio() {
+  $EDITOR $(git grep -i --name-only "$@")
+}
+
 function ggo() {
-  vim $(git grep --name-only "$@")
+  $EDITOR $(git grep --name-only "$@")
 }
 
 GBRR_DEFAULT_COUNT=10
