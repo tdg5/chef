@@ -188,6 +188,8 @@ fi
 
 # Bash completion
 __git_complete ga _git_add
+__git_complete gap _git_add
+__git_complete gau _git_add
 __git_complete gback _git_reset
 __git_complete gbr _git_branch
 __git_complete gco _git_checkout
@@ -198,6 +200,7 @@ __git_complete ggi _git_grep
 __git_complete gget _git_pull
 __git_complete gl _git_log
 __git_complete glv _git_log
+__git_complete glp _git_log
 __git_complete gput _git_push
 __git_complete grb _git_rebase
 __git_complete gs _git_status
