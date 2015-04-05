@@ -66,6 +66,12 @@ function grbp() {
   git rebase $br
 }
 
+# Merge previous branch
+function gmp() {
+  br="$(git reflog | sed -n 's/.*checkout: moving from .* to \(.*\)/\1/p' | sed "2q;d")"
+  git merge $br
+}
+
 # Push to origin remote setting upstream branch appropriately
 function gputu() {
   if [ -z $1 ]; then
@@ -175,6 +181,9 @@ alias gget='git pull'
 alias gl='git log'
 alias glp='git log -p'
 alias glv='git log --oneline --graph'
+alias gm='git merge'
+alias gma='git merge --abort'
+alias gmm='git merge master'
 alias gput='git push'
 alias gr='git reset'
 alias grb='git rebase'
