@@ -133,6 +133,11 @@ function gtagdr() {
   git push origin :refs/tags/$1
 }
 
+function gshn() {
+  ([ -z "$1" ] || [ $(($1)) -le 0 ]) && echo 'Invalid integer!' && return
+  git show $(echo "HEAD@{$1}")
+}
+
 alias aliases='vi ~/.bash_aliases'
 alias be='bundle exec'
 alias bun='bundle'
