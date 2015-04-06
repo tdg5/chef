@@ -194,6 +194,7 @@ alias gsl='git stash list'
 alias gsp='git stash pop'
 alias gss='git stash save'
 alias gssh='git stash show -p'
+alias gsshno='git stash show --name-only'
 alias gst='git stash'
 alias gstd='git stash drop'
 alias gtagd="git tag -d"
