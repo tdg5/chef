@@ -54,12 +54,6 @@ function gbrd() {
   git rev-list --pretty=short $br1...$br2
 }
 
-# Return to previous branch
-function gbrb() {
-  br="$(git reflog | sed -n 's/.*checkout: moving from .* to \(.*\)/\1/p' | sed "2q;d")"
-  git checkout $br
-}
-
 # Rebase from previous branch
 function grbp() {
   br="$(git reflog | sed -n 's/.*checkout: moving from .* to \(.*\)/\1/p' | sed "2q;d")"
@@ -162,6 +156,7 @@ alias gau='git add -u'
 alias gback='git reset HEAD~ --soft'
 alias gbackk='git reset HEAD~ --hard'
 alias gbr='git branch'
+alias gbrb='git checkout -'
 alias gbrc='git rev-parse --abbrev-ref HEAD'
 alias gbrp='git reflog | sed -n "s/.*checkout: moving from .* to \(.*\)/\1/p" | sed "2q;d")'
 alias gbrt="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
