@@ -161,3 +161,7 @@ let g:vim_markdown_initial_foldlevel=25
 
 " Should replace TestKey, but for now just hardcode rspec and minitest to spin
 let g:TestKey = { 'runners': {} }
+
+
+" Allow unusual strings after ``` in markdown syntax
+autocmd FileType mkd syn region mkdCode start=/^\s*```.*$/ end=/^\s*```\s*$/
