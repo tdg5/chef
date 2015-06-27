@@ -2,7 +2,7 @@ root_dir = File.expand_path('../..', __FILE__)
 
 cookbook_path(%W[
   #{root_dir}/cookbooks
-  #{root_dir}/local_cookbooks
+  #{root_dir}/embedded_cookbooks
 ])
 
 data_bag_path "#{root_dir}/data_bags"

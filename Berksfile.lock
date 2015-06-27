@@ -1,8 +1,8 @@
 DEPENDENCIES
   acpi_wakeup
-    path: local_cookbooks/acpi_wakeup
+    path: embedded_cookbooks/acpi_wakeup
   adb
-    path: local_cookbooks/adb
+    path: embedded_cookbooks/adb
   android-sdk
     git: https://github.com/gildegoma/chef-android-sdk
     revision: 9bf11bb53ae6c6c7476b855bb86f7482173bb9a0
@@ -16,26 +16,26 @@ DEPENDENCIES
     git: https://github.com/opscode-cookbooks/ark.git
     revision: 1f7c092ffe80073409bce7fa851346fb076a259f
   audacity
-    path: local_cookbooks/audacity
+    path: embedded_cookbooks/audacity
   bash_config
-    path: local_cookbooks/bash_config
+    path: embedded_cookbooks/bash_config
   build-essential
     git: https://github.com/opscode-cookbooks/build-essential.git
     revision: b4785e95223867eec6cd2b6a87d22818bd5453fb
   bup_wrapper
-    path: local_cookbooks/bup_wrapper
+    path: embedded_cookbooks/bup_wrapper
   canonical_partners_repo
-    path: local_cookbooks/canonical_partners_repo
+    path: embedded_cookbooks/canonical_partners_repo
   chef_gem
     git: https://github.com/hw-cookbooks/chef_gem.git
     revision: 8ba9733f9214cd4328a16dc2caed3768b30f3f66
   chrome
-    path: local_cookbooks/chrome
+    path: embedded_cookbooks/chrome
   composer
     git: git://github.com/Morphodo/chef-composer.git
     revision: 92aee6313fc47dfd51b45c176b7efe41c767c57d
   config
-    path: local_cookbooks/config
+    path: embedded_cookbooks/config
   database
     git: https://github.com/opscode-cookbooks/database.git
     revision: 6e3c78e223c5e3c544bc7b8f418b90b3283f3711
@@ -49,43 +49,43 @@ DEPENDENCIES
     git: https://github.com/bflad/chef-docker.git
     revision: ccaaaee6d8311fb04e5b9a1d3ad96943f5436bd4
   dropbox
-    path: local_cookbooks/dropbox
+    path: embedded_cookbooks/dropbox
   exuberant-ctags
-    path: local_cookbooks/exuberant-ctags
+    path: embedded_cookbooks/exuberant-ctags
   filesystem_layout
-    path: local_cookbooks/filesystem_layout
+    path: embedded_cookbooks/filesystem_layout
   fonts
-    path: local_cookbooks/fonts
+    path: embedded_cookbooks/fonts
   gimp
-    path: local_cookbooks/gimp
+    path: embedded_cookbooks/gimp
   gitk
-    path: local_cookbooks/gitk
+    path: embedded_cookbooks/gitk
   gnome
-    path: local_cookbooks/gnome
+    path: embedded_cookbooks/gnome
   gnome_setting
     git: https://github.com/tdg5-cookbooks/gnome_setting.git
     revision: 31c33adc56e7cdac67f2759931aab2a381c3e235
   grub
-    path: local_cookbooks/grub
+    path: embedded_cookbooks/grub
   grunt
-    path: local_cookbooks/grunt
+    path: embedded_cookbooks/grunt
   handbrake
-    path: local_cookbooks/handbrake
+    path: embedded_cookbooks/handbrake
   heroku_toolbelt
-    path: local_cookbooks/heroku_toolbelt
+    path: embedded_cookbooks/heroku_toolbelt
   hipchat
-    path: local_cookbooks/hipchat
+    path: embedded_cookbooks/hipchat
   hostsfile
     git: https://github.com/customink-webops/hostsfile.git
     revision: 495fd80ba7a3c306abe8c2585f6ec25bd937fc81
   htop
-    path: local_cookbooks/htop
+    path: embedded_cookbooks/htop
   ievms
-    path: local_cookbooks/ievms
+    path: embedded_cookbooks/ievms
   iftop
-    path: local_cookbooks/iftop
+    path: embedded_cookbooks/iftop
   iotop
-    path: local_cookbooks/iotop
+    path: embedded_cookbooks/iotop
   iptables
     git: https://github.com/opscode-cookbooks/iptables.git
     revision: 98d7c4826c449fdcddd0bb1ad04b066386ffbf2b
@@ -93,16 +93,16 @@ DEPENDENCIES
     git: https://github.com/tdg5/chef_java.git
     revision: 510486cc2e0ac62f0efaf29c41838e8f27c93791
   jsonlint
-    path: local_cookbooks/jsonlint
+    path: embedded_cookbooks/jsonlint
   lastpass
-    path: local_cookbooks/lastpass
+    path: embedded_cookbooks/lastpass
   lib
     git: https://github.com/freewrite-cookbooks/lib.git
     revision: 17646e5a54c255e96d20dc77bb64a200966951be
   liquidprompt
-    path: local_cookbooks/liquidprompt
+    path: embedded_cookbooks/liquidprompt
   modprobe
-    path: local_cookbooks/modprobe
+    path: embedded_cookbooks/modprobe
   modules
     git: git@github.com:tdg5/modules-cookbook.git
     revision: 6ade16b78376ce84a0aad5c41858ef7d1879220e
@@ -123,60 +123,60 @@ DEPENDENCIES
     git: https://github.com/tdg5/chef-packer
     revision: f70611caee20727a6b279a30a4988d8c42ab7c21
   pidgin
-    path: local_cookbooks/pidgin
+    path: embedded_cookbooks/pidgin
   pm-utils
-    path: local_cookbooks/pm-utils
+    path: embedded_cookbooks/pm-utils
   postgresql
     git: https://github.com/freewrite-cookbooks/postgresql.git
     revision: ae2f73f9d0b9749a584185a7f4b39826035825cd
   powertop
-    path: local_cookbooks/powertop
+    path: embedded_cookbooks/powertop
   qt
-    path: local_cookbooks/qt
+    path: embedded_cookbooks/qt
   redis
-    path: local_cookbooks/redis
+    path: embedded_cookbooks/redis
   ruboto
-    path: local_cookbooks/ruboto
+    path: embedded_cookbooks/ruboto
   rvm
     git: https://github.com/fnichol/chef-rvm.git
     revision: 8a877e9b497f8fb06dfe6f5975561331b3924243
   screenlets
-    path: local_cookbooks/screenlets
+    path: embedded_cookbooks/screenlets
   scripts
-    path: local_cookbooks/scripts
+    path: embedded_cookbooks/scripts
   skype
-    path: local_cookbooks/skype
+    path: embedded_cookbooks/skype
   spotify
-    path: local_cookbooks/spotify
+    path: embedded_cookbooks/spotify
   tmux
     git: https://github.com/stevendanna/tmux
     revision: 5276662aba27849540ed556b4a6f855648046229
   tmux_plugins
-    path: local_cookbooks/tmux_plugins
+    path: embedded_cookbooks/tmux_plugins
   tmux_wrapper
-    path: local_cookbooks/tmux_wrapper
+    path: embedded_cookbooks/tmux_wrapper
   tmuxinator
-    path: local_cookbooks/tmuxinator
+    path: embedded_cookbooks/tmuxinator
   tree
-    path: local_cookbooks/tree
+    path: embedded_cookbooks/tree
   vagrant
     git: https://github.com/tdg5/vagrant-cookbook.git
     revision: 4ba49989ee14a72c8128e5f9447f9469090a78e6
   vgaswitcheroo
-    path: local_cookbooks/vgaswitcheroo
+    path: embedded_cookbooks/vgaswitcheroo
   vim
     git: https://github.com/opscode-cookbooks/vim.git
     revision: 858a24f745d3f7e13daca5ba918861d31401e0bf
   vim-gnome
-    path: local_cookbooks/vim-gnome
+    path: embedded_cookbooks/vim-gnome
   vim_plugins
-    path: local_cookbooks/vim_plugins
+    path: embedded_cookbooks/vim_plugins
   virtualbox
-    path: local_cookbooks/virtualbox
+    path: embedded_cookbooks/virtualbox
   wmctrl
-    path: local_cookbooks/wmctrl
+    path: embedded_cookbooks/wmctrl
   xclip
-    path: local_cookbooks/xclip
+    path: embedded_cookbooks/xclip
 
 GRAPH
   acpi_wakeup (0.0.1)

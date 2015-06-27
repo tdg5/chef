@@ -7,7 +7,7 @@ def dependencies(path)
 end
 
 # Load local cookbooks
-Dir.glob('./local_cookbooks/*').each do |path|
+Dir.glob('./embedded_cookbooks/*').each do |path|
   dependencies path
   cookbook File.basename(path), :path => path
 end
