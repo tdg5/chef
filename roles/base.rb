@@ -19,6 +19,7 @@ run_list [
   'recipe[spotify]',
   'recipe[pidgin]',
   'recipe[gnome]',
+  'recipe[thunar]',
   'recipe[dropbox]',
   'recipe[skype]',
   'recipe[screenlets]',

@@ -148,6 +148,8 @@ DEPENDENCIES
     path: embedded_cookbooks/skype
   spotify
     path: embedded_cookbooks/spotify
+  thunar
+    path: embedded_cookbooks/thunar
   tmux
     git: https://github.com/stevendanna/tmux
     revision: 5276662aba27849540ed556b4a6f855648046229
@@ -346,6 +348,8 @@ GRAPH
     apt (>= 0.0.0)
   sysctl (0.6.0)
     ohai (>= 0.0.0)
+  thunar (0.0.1)
+    apt (>= 0.0.0)
   tmux (1.4.1)
   tmux_plugins (0.0.1)
   tmux_wrapper (0.0.1)
