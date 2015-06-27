@@ -26,6 +26,7 @@ run_list [
   'role[java]',
   'recipe[adb]',
   'recipe[liquidprompt]',
+  'recipe[config::mime_applications]',
 ]
 default_attributes({
   'bash' => {
