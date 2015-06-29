@@ -34,6 +34,13 @@ export EDITOR=vim
 # enable reverse history search / enable XON/XOFF flow control
 stty -ixon
 
+# Setup GOPATH and GOBIN if go is detected
+if [ -n "$(which go)" ]; then
+  export GOPATH=$HOME/projects/go
+  export GOBIN=$GOPATH/bin
+  export PATH="$PATH:$GOPATH"
+fi
+
 # Load external helpers
 <% node.bash.bashrc.extra_sources.each_pair do |description, sourceable_path| %>
 # <%= description %>
