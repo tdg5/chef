@@ -11,6 +11,6 @@ default_attributes({
     'checksum' => 'e2c7af6d032ac551ebd6399265cb9cb64402c9fb96a12289161b7f67afada28a',
   },
   'packer' => {
-    'version' => '0.7.1',
+    'version' => '0.8.0',
   },
 })
