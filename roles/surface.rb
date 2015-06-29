@@ -10,6 +10,7 @@ run_list [
   'recipe[powertop::powertune]',
   'recipe[hipchat]',
   'recipe[ddclient]',
+  'role[docker]',
   'role[vm_host]',
   'recipe[heroku_toolbelt]',
   'role[php]',
