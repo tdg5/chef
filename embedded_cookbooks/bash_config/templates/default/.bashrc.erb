@@ -38,7 +38,7 @@ stty -ixon
 if [ -n "$(which go)" ]; then
   export GOPATH=$HOME/projects/go
   export GOBIN=$GOPATH/bin
-  export PATH="$PATH:$GOPATH"
+  export PATH="$PATH:$GOBIN:$GOPATH"
 fi
 
 # Load external helpers
