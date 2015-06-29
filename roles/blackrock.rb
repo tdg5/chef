@@ -18,6 +18,7 @@ run_list [
   'role[docker]',
   'recipe[heroku_toolbelt]',
   'role[php]',
+  'role[golang]',
 ]
 user = group = 'tdg5'
 ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
