@@ -2,4 +2,4 @@
 *.swo
 *~
 .#*
-tags
+/tags
