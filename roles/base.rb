@@ -16,7 +16,6 @@ run_list [
   'recipe[openssh]',
   'recipe[wmctrl]',
   'recipe[chrome]',
-  'recipe[spotify]',
   'recipe[pidgin]',
   'recipe[gnome]',
   'recipe[thunar]',
