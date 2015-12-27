@@ -76,6 +76,11 @@ default_attributes({
     :revision => '4',
     :version => '9.3',
   },
+  'tmux' => {
+    'user_conf_group' => group,
+    'user_conf_path' => "/home/#{user}/.tmux.conf",
+    'user_conf_user' => user,
+  },
   'user' => {
     'username' => user,
     'email' => 'dannyguinther@gmail.com',

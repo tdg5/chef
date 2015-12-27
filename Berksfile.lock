@@ -150,13 +150,11 @@ DEPENDENCIES
     path: embedded_cookbooks/spotify
   thunar
     path: embedded_cookbooks/thunar
-  tmux
-    git: https://github.com/stevendanna/tmux
-    revision: 5276662aba27849540ed556b4a6f855648046229
   tmux_plugins
     path: embedded_cookbooks/tmux_plugins
   tmux_wrapper
-    path: embedded_cookbooks/tmux_wrapper
+    git: https://github.com/tdg5-cookbooks/tmux_wrapper.git
+    revision: 54e18b6868d89440091bfc15d19547215e0853ad
   tmuxinator
     path: embedded_cookbooks/tmuxinator
   tree
@@ -342,7 +340,7 @@ GRAPH
     ohai (>= 0.0.0)
   thunar (0.0.1)
     apt (>= 0.0.0)
-  tmux (1.4.1)
+  tmux (1.5.0)
   tmux_plugins (0.0.1)
   tmux_wrapper (0.0.1)
     tmux (>= 0.0.0)
