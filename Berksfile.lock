@@ -45,9 +45,9 @@ DEPENDENCIES
   device-mapper
     git: https://github.com/bflad/chef-device-mapper.git
     revision: 2ff19d6b8d0b9ebae6b579db6d82b8921fd3c59c
-  docker
-    git: https://github.com/bflad/chef-docker.git
-    revision: ccaaaee6d8311fb04e5b9a1d3ad96943f5436bd4
+  docker_service
+    git: https://github.com/tdg5-cookbooks/docker_service.git
+    revision: 7e508c1a11cdd4f8506887dc68dd3566d90fbbbb
   dropbox
     path: embedded_cookbooks/dropbox
   exuberant-ctags
@@ -211,6 +211,7 @@ GRAPH
   chef_handler (1.1.6)
   chrome (0.0.1)
     wmctrl (>= 0.0.0)
+  compat_resource (12.5.26)
   composer (0.2.1)
   config (0.0.1)
   database (2.3.0)
@@ -224,19 +225,10 @@ GRAPH
     apt (>= 0.0.0)
     modules (>= 0.0.0)
   dmg (2.2.2)
-  docker (0.36.0)
-    apt (>= 0.0.0)
-    aufs (>= 0.1.1)
-    device-mapper (>= 0.1.0)
-    git (>= 0.0.0)
-    golang (>= 0.0.0)
-    homebrew (>= 0.0.0)
-    iptables (>= 0.0.0)
-    lxc (>= 1.1.6)
-    modules (>= 0.0.0)
-    runit (>= 0.0.0)
-    sysctl (>= 0.0.0)
-    yum-epel (>= 0.0.0)
+  docker (2.3.19)
+    compat_resource (>= 12.5.23)
+  docker_service (0.0.1)
+    docker (~> 2.0)
   dpkg_autostart (0.1.12)
   dropbox (0.0.1)
     apt (>= 0.0.0)
