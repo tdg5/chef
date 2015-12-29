@@ -45,6 +45,9 @@ DEPENDENCIES
   device-mapper
     git: https://github.com/bflad/chef-device-mapper.git
     revision: 2ff19d6b8d0b9ebae6b579db6d82b8921fd3c59c
+  docker-compose
+    git: https://github.com/uzyexe/chef-docker-compose.git
+    revision: 1cfbc2e679017e5977614216427385b89fbf225c
   docker_service
     git: https://github.com/tdg5-cookbooks/docker_service.git
     revision: 7e508c1a11cdd4f8506887dc68dd3566d90fbbbb
@@ -225,6 +228,9 @@ GRAPH
   dmg (2.2.2)
   docker (2.3.19)
     compat_resource (>= 12.5.23)
+  docker-compose (0.0.1)
+    docker (>= 0.0.0)
+    python (>= 0.0.0)
   docker_service (0.0.1)
     docker (~> 2.0)
   dpkg_autostart (0.1.12)
@@ -315,6 +321,9 @@ GRAPH
     lib (>= 0.0.0)
   powertop (0.0.1)
     apt (>= 0.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   qt (0.0.1)
     apt (>= 0.0.0)
   redis (0.0.1)
