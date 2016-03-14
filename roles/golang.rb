@@ -6,6 +6,6 @@ run_list([
 default_attributes({
   :go => {
     :platform => "amd64",
-    :version => "1.4",
+    :version => "1.6",
   },
 })

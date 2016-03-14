@@ -68,6 +68,9 @@ DEPENDENCIES
   gnome_setting
     git: https://github.com/tdg5-cookbooks/gnome_setting.git
     revision: 31c33adc56e7cdac67f2759931aab2a381c3e235
+  golang
+    git: https://github.com/NOX73/chef-golang
+    revision: 890daa10f8295f88c04fbf0c863e50a05cfa3ebb
   grub
     path: embedded_cookbooks/grub
   grunt
@@ -257,7 +260,7 @@ GRAPH
     gnome_setting (>= 0.0.0)
     vim-gnome (>= 0.0.0)
   gnome_setting (0.0.1)
-  golang (1.5.0)
+  golang (1.7.0)
   grub (0.0.1)
   grunt (0.0.1)
     nodejs (>= 0.0.0)

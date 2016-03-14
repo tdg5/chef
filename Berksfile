@@ -25,6 +25,7 @@ cookbook 'device-mapper', :git => 'https://github.com/bflad/chef-device-mapper.g
 cookbook 'ddclient', :git => 'https://github.com/freewrite-cookbooks/ddclient.git'
 cookbook 'docker-compose', :git => 'https://github.com/uzyexe/chef-docker-compose.git'
 cookbook 'gnome_setting', :git => 'https://github.com/tdg5-cookbooks/gnome_setting.git'
+cookbook 'golang', :git => 'https://github.com/NOX73/chef-golang'
 cookbook 'hostsfile', :git => 'https://github.com/customink-webops/hostsfile.git'
 cookbook 'iptables', :git => 'https://github.com/opscode-cookbooks/iptables.git'
 cookbook 'java', :git => 'https://github.com/tdg5/chef_java.git'
