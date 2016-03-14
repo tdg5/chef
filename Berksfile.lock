@@ -127,7 +127,7 @@ DEPENDENCIES
     revision: b75ab471185f108a2fadc5c43efb7e2ef057ab30
   packer
     git: https://github.com/tdg5/chef-packer
-    revision: f70611caee20727a6b279a30a4988d8c42ab7c21
+    revision: de02761f560b8ad8777e5fd681edb66077feaa27
   pidgin
     path: embedded_cookbooks/pidgin
   pm-utils
