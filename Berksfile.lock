@@ -144,8 +144,8 @@ DEPENDENCIES
   ruboto
     path: embedded_cookbooks/ruboto
   rvm
-    git: https://github.com/fnichol/chef-rvm.git
-    revision: 8a877e9b497f8fb06dfe6f5975561331b3924243
+    git: https://github.com/martinisoft/chef-rvm.git
+    revision: eddd733694a1d3e0872f5692e8dda93aa2752791
   screenlets
     path: embedded_cookbooks/screenlets
   scripts

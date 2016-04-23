@@ -12,4 +12,9 @@ default_attributes({
       },
     },
   },
+  'rvm' => {
+    'gpg' => {
+      'keyserver' => 'hkp://keys.gnupg.net',
+    },
+  },
 })
