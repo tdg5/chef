@@ -361,7 +361,7 @@ GRAPH
   xclip (0.0.1)
     apt (>= 0.0.0)
   xfs (1.1.0)
-  yum (3.5.1)
+  yum (3.10.0)
   yum-epel (0.5.3)
     yum (~> 3.0)
   yum-mysql-community (0.1.10)
