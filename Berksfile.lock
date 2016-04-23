@@ -146,8 +146,6 @@ DEPENDENCIES
   rvm
     git: https://github.com/martinisoft/chef-rvm.git
     revision: eddd733694a1d3e0872f5692e8dda93aa2752791
-  screenlets
-    path: embedded_cookbooks/screenlets
   scripts
     path: embedded_cookbooks/scripts
   skype
@@ -324,8 +322,6 @@ GRAPH
   rvm (0.10.1)
     chef_gem (>= 0.0.0)
     java (>= 0.0.0)
-  screenlets (0.0.1)
-    apt (>= 0.0.0)
   scripts (0.0.1)
     chrome (>= 0.0.0)
   skype (0.0.1)

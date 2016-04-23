@@ -21,7 +21,6 @@ run_list [
   'recipe[thunar]',
   'recipe[dropbox]',
   'recipe[skype]',
-  'recipe[screenlets]',
   'role[java]',
   'recipe[adb]',
   'recipe[liquidprompt]',
