@@ -7,8 +7,8 @@ run_list [
 ]
 default_attributes({
   'vagrant' => {
-    'url' => 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.5_x86_64.deb',
-    'checksum' => 'e2c7af6d032ac551ebd6399265cb9cb64402c9fb96a12289161b7f67afada28a',
+    'url' => 'https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb',
+    'checksum' => 'ed0e1ae0f35aecd47e0b3dfb486a230984a08ceda3b371486add4d42714a693d',
   },
   'packer' => {
     'version' => '0.9.0',
