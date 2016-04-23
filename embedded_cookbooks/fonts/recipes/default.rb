@@ -1,4 +1,3 @@
-package 'fontmatrix'
 package 'msttcorefonts'
 package 'fonts-mgopen'
 
