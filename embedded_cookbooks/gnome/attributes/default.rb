@@ -6,13 +6,12 @@ default.gnome = {
         :code => './autogen.sh; make install-zip',
       },
       :name => 'mediaplayer@patapon.info',
-      :revision => 'a236a019e92e4624138e43a3500672e8b7f73ba6',
+      :revision => '2cb5d6da4023c6e563fecdcc173dfcbc0c43cb67',
     },
     :no_hot_corner => {
       :git => 'https://github.com/HROMANO/nohotcorner.git',
-      :link => true,
       :name => 'nohotcorner@azuri.free.fr',
-      :revision => '7f8183e638e9ee95457f7c5fe9886ccf30f897d3',
+      :revision => '930bb8bca3d2bd66fed87c860e4392341dcbf5ab',
     },
     :places_menu => {
       :name => 'places-menu@gnome-shell-extensions.gcampax.github.com',
@@ -23,7 +22,7 @@ default.gnome = {
         :src_path => 'system-monitor@paradoxxx.zero.gmail.com',
       },
       :name => 'system-monitor@paradoxxx.zero.gmail.com',
-      :revision => '59767af3b57252547e2bf507044e1f4fa12a73bb',
+      :revision => '8b31f070e9e59109d729661ced313d6a63e31787',
     },
   },
   :settings => {
