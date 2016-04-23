@@ -46,8 +46,8 @@ DEPENDENCIES
     git: https://github.com/bflad/chef-device-mapper.git
     revision: 2ff19d6b8d0b9ebae6b579db6d82b8921fd3c59c
   docker-compose
-    git: https://github.com/uzyexe/chef-docker-compose.git
-    revision: 1cfbc2e679017e5977614216427385b89fbf225c
+    git: https://github.com/tdg5-cookbooks/chef-docker-compose.git
+    revision: e97cc64342aef58031c044294a727e1bc16de102
   docker_service
     git: https://github.com/tdg5-cookbooks/docker_service.git
     revision: 7e508c1a11cdd4f8506887dc68dd3566d90fbbbb
@@ -228,9 +228,9 @@ GRAPH
   dmg (2.2.2)
   docker (2.6.8)
     compat_resource (>= 12.9.0)
-  docker-compose (0.0.1)
+  docker-compose (0.0.2)
     docker (>= 0.0.0)
-    python (>= 0.0.0)
+    poise-python (>= 0.0.0)
   docker_service (0.0.1)
     docker (~> 2.0)
   dropbox (0.0.1)
@@ -301,14 +301,20 @@ GRAPH
   pidgin (0.0.1)
     apt (>= 0.0.0)
   pm-utils (0.0.1)
+  poise (2.7.0)
+  poise-archive (1.1.2)
+    poise (~> 2.6)
+  poise-languages (1.4.0)
+    poise (~> 2.5)
+    poise-archive (~> 1.0)
+  poise-python (1.2.1)
+    poise (~> 2.0)
+    poise-languages (~> 1.2)
   postgresql (1.0.0)
     apt (>= 0.0.0)
     lib (>= 0.0.0)
   powertop (0.0.1)
     apt (>= 0.0.0)
-  python (1.4.6)
-    build-essential (>= 0.0.0)
-    yum-epel (>= 0.0.0)
   qt (0.0.1)
     apt (>= 0.0.0)
   redis (0.0.1)
