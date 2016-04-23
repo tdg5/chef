@@ -94,7 +94,7 @@ DEPENDENCIES
     path: embedded_cookbooks/iotop
   iptables
     git: https://github.com/opscode-cookbooks/iptables.git
-    revision: 98d7c4826c449fdcddd0bb1ad04b066386ffbf2b
+    revision: 305cca575980ca8b9fd15ff158c5d1e1ae21b508
   java
     git: https://github.com/tdg5/chef_java.git
     revision: 510486cc2e0ac62f0efaf29c41838e8f27c93791
@@ -121,7 +121,7 @@ DEPENDENCIES
     revision: 2f05db5d9278e7d491e5ffb7147226cf3538ac63
   openssh
     git: https://github.com/opscode-cookbooks/openssh.git
-    revision: 1a87fb85b7f8f0b19a6ffeef4dd47ecdb5668749
+    revision: 6dd460c265111cd7f0d24f9c636a3510ce08d10d
   openssl
     git: https://github.com/opscode-cookbooks/openssl.git
     revision: b75ab471185f108a2fadc5c43efb7e2ef057ab30
@@ -267,7 +267,7 @@ GRAPH
     apt (>= 0.0.0)
   iotop (0.0.1)
     apt (>= 0.0.0)
-  iptables (0.14.0)
+  iptables (2.2.0)
   java (1.17.5)
   jsonlint (0.0.1)
     nodejs (>= 0.0.0)
@@ -290,8 +290,8 @@ GRAPH
     build-essential (>= 0.0.0)
     homebrew (>= 0.0.0)
     yum-epel (>= 0.0.0)
-  openssh (1.3.5)
-    iptables (>= 0.0.0)
+  openssh (2.0.0)
+    iptables (>= 1.0.0)
   openssl (2.0.1)
     chef-sugar (>= 0.0.0)
   packer (0.3.0)
