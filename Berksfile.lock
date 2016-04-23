@@ -96,8 +96,8 @@ DEPENDENCIES
     git: https://github.com/opscode-cookbooks/iptables.git
     revision: 305cca575980ca8b9fd15ff158c5d1e1ae21b508
   java
-    git: https://github.com/tdg5/chef_java.git
-    revision: 510486cc2e0ac62f0efaf29c41838e8f27c93791
+    git: https://github.com/agileorbit-cookbooks/java.git
+    revision: c98c525e910231400b02e7e7e9b60da0d775533a
   jsonlint
     path: embedded_cookbooks/jsonlint
   lastpass
@@ -268,7 +268,8 @@ GRAPH
   iotop (0.0.1)
     apt (>= 0.0.0)
   iptables (2.2.0)
-  java (1.17.5)
+  java (1.39.0)
+    apt (>= 0.0.0)
   jsonlint (0.0.1)
     nodejs (>= 0.0.0)
   lastpass (0.0.1)
