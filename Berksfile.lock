@@ -90,6 +90,8 @@ DEPENDENCIES
     path: embedded_cookbooks/ievms
   iftop
     path: embedded_cookbooks/iftop
+  image_tools
+    path: embedded_cookbooks/image_tools
   iotop
     path: embedded_cookbooks/iotop
   iptables
@@ -264,6 +266,8 @@ GRAPH
   ievms (0.0.1)
     apt (>= 0.0.0)
   iftop (0.0.1)
+    apt (>= 0.0.0)
+  image_tools (0.0.1)
     apt (>= 0.0.0)
   iotop (0.0.1)
     apt (>= 0.0.0)
