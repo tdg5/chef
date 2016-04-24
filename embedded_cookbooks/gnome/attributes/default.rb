@@ -24,6 +24,14 @@ default.gnome = {
       :name => 'system-monitor@paradoxxx.zero.gmail.com',
       :revision => '8b31f070e9e59109d729661ced313d6a63e31787',
     },
+    :randomwall => {
+      :git => 'https://github.com/rodakorn/randwall.git',
+      :link => {
+        :src_path => 'Random_Walls@Antares',
+      },
+      :name => 'Random_Walls@Antares',
+      :revision => '8f22597b0a88722c88a65e0480440d3bc8fa18cf',
+    },
   },
   :settings => {
     :clock_format => {
