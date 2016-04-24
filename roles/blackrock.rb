@@ -53,7 +53,7 @@ default_attributes({
       :rvmsudo_secure_path => 1,
     },
     :version => '1.26.6',
-    :default_ruby => '2.2.0',
+    :default_ruby => '2.2.4',
     :gems => {
       '2.2.0' => default_gems,
     },
