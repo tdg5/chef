@@ -22,8 +22,6 @@ DEPENDENCIES
   build-essential
     git: https://github.com/opscode-cookbooks/build-essential.git
     revision: b4785e95223867eec6cd2b6a87d22818bd5453fb
-  bup_wrapper
-    path: embedded_cookbooks/bup_wrapper
   canonical_partners_repo
     path: embedded_cookbooks/canonical_partners_repo
   chef_gem

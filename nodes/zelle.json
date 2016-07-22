@@ -1,0 +1,6 @@
+{
+  "host_name": "zelle",
+  "run_list": [
+    "role[zelle]"
+  ]
+}

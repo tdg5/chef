@@ -1,5 +1,5 @@
-name 'bup'
-description 'Role for bup specifics'
+name 'zelle'
+description 'Role for zelle specifics'
 run_list [
   'role[dev]',
   'role[vm_host]',
@@ -7,12 +7,10 @@ run_list [
   'role[design]',
   'role[dev]',
   'role[docker]',
-  'recipe[bup_wrapper]',
-  'recipe[hipchat]',
   'recipe[lastpass]',
   'role[golang]',
 ]
-user = group = 'danny'
+user = group = 'tdg5'
 default_gems = [{
   :name => 'gem-ctags',
 }, {
@@ -22,14 +20,6 @@ default_gems = [{
   :name => 'bundler'
 }]
 default_attributes({
-  :bash => {
-    :bashrc => {
-      :extra_sources => {
-        'Backupify-specific aliases' => '~/scripts/bup_aliases',
-        'EC2 env switcher' => '~/scripts/ec2env',
-      },
-    },
-  },
   :openssh => {
     :server => {
       :password_authentication => 'no',
@@ -48,17 +38,16 @@ default_attributes({
   },
   'rvm' => {
     :branch => 'none',
-    :default_ruby => '2.1.2',
+    :default_ruby => '2.3',
     :gems => {
-      '2.1.1' => default_gems,
-      '2.1.2' => default_gems,
+      '2.3' => default_gems,
+      '2.3' => default_gems,
     },
     :global_gems => [{
       :name => 'gem-ctags',
     }],
     :rubies => [
-      '2.1.1',
-      '2.1.2',
+      '2.3',
     ],
     :rvmrc => {
       :rvm_trust_rvmrcs_flag => 1,
@@ -73,7 +62,7 @@ default_attributes({
   },
   :user => {
     :username => user,
-    :email => 'danny@backupify.com',
+    :email => 'dannyguinther@gmail.com',
     :group => group,
   }
 })
