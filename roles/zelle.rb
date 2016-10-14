@@ -9,6 +9,7 @@ run_list [
   'role[docker]',
   'recipe[lastpass]',
   'role[golang]',
+  'recipe[modprobe::hid_apple]',
 ]
 user = group = 'tdg5'
 default_gems = [{
