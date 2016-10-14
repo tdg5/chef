@@ -144,7 +144,7 @@ DEPENDENCIES
   ruboto
     path: embedded_cookbooks/ruboto
   rvm
-    git: https://github.com/martinisoft/chef-rvm.git
+    git: https://github.com/fnichol/chef-rvm.git
     revision: eddd733694a1d3e0872f5692e8dda93aa2752791
   scripts
     path: embedded_cookbooks/scripts
@@ -201,8 +201,6 @@ GRAPH
   aws (2.5.0)
   bash_config (0.0.1)
   build-essential (2.1.3)
-  bup_wrapper (0.0.1)
-    hostsfile (>= 0.0.0)
   canonical_partners_repo (0.0.1)
     apt (>= 0.0.0)
   chef-sugar (2.4.1)
