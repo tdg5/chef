@@ -10,8 +10,8 @@ default_attributes({
   :nodejs => {
     :install_method => 'source',
     :source => {
-      :checksum => 'cc05ff06149c638345835788f448471d264a7e011bf083394f86d5be51975c7e',
+      :checksum => 'a8a2d4b74734991dd45e5b2b0b13617864f1283f6d6bc262e1e4d30741114352',
     },
-    :version => '5.3.0',
+    :version => '6.8.0',
   },
 })
