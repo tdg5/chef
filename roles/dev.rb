@@ -4,6 +4,7 @@ run_list [
   'role[base]',
   'role[rvm]',
   'role[nodejs]',
+  'role[clojure]',
   'recipe[gitk]',
   'recipe[tmuxinator]',
   'recipe[postgresql::server]',
