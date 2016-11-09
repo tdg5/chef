@@ -1,0 +1,6 @@
+{
+  "host_name": "zendesk",
+  "run_list": [
+    "role[zendesk]"
+  ]
+}
