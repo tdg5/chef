@@ -2,7 +2,7 @@ name 'zelle'
 description 'Role for zelle specifics'
 run_list [
   'role[dev]',
-  'role[vm_host]',
+  'role[vm_foundry]',
   'recipe[qt::dev]',
   'role[design]',
   'role[dev]',
