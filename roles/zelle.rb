@@ -22,6 +22,13 @@ default_gems = [{
   :name => 'bundler'
 }]
 default_attributes({
+  :bash => {
+    :bashrc => {
+      :extra_sources => {
+        :xtra_aliases => '~/.bash/xtra_aliases',
+      },
+    },
+  },
   :lein => {
     :group => group,
     :home => home,
