@@ -21,6 +21,11 @@ default_gems = [{
   :name => 'bundler'
 }]
 default_attributes({
+  :lein => {
+    :group => group,
+    :home => home,
+    :user => user,
+  },
   :openssh => {
     :server => {
       :password_authentication => 'no',
