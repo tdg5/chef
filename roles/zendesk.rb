@@ -59,7 +59,7 @@ default_attributes({
   },
   :user => {
     :username => user,
-    :email => 'dannyguinther@gmail.com',
+    :email => 'danny@zensight.co',
     :group => group,
   }
 })
