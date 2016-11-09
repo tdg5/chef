@@ -7,7 +7,6 @@ run_list [
   'role[clojure]',
   'recipe[gitk]',
   'recipe[tmuxinator]',
-  'recipe[postgresql::server]',
   'role[tools]',
 ]
 default_attributes({})

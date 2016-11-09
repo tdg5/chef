@@ -2,6 +2,7 @@ name 'surface'
 description 'Role for surface specifics'
 run_list [
   'role[dev]',
+  'role[postgres]',
   'recipe[modules]',
   'recipe[pm-utils::disable_usb_bluetooth]',
   'recipe[acpi_wakeup]',
@@ -58,17 +59,6 @@ default_attributes({
     :server => {
       :password_authentication => 'no',
     },
-  },
-  :postgresql => {
-    :config => {
-      :listen_addresses => 'localhost',
-    },
-    :super_user => {
-      :password => 'postgres',
-      :username => 'postgres',
-    },
-    :revision => '4',
-    :version => '9.3',
   },
   :rvm => {
     :branch => 'none',

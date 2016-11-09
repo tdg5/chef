@@ -2,6 +2,7 @@ name 'zelle'
 description 'Role for zelle specifics'
 run_list [
   'role[dev]',
+  'role[postgres]',
   'role[vm_foundry]',
   'recipe[qt::dev]',
   'role[design]',
@@ -30,17 +31,6 @@ default_attributes({
     :server => {
       :password_authentication => 'no',
     },
-  },
-  :postgresql => {
-    :config => {
-      :listen_addresses => 'localhost',
-    },
-    :super_user => {
-      :password => 'postgres',
-      :username => 'postgres',
-    },
-    :revision => '4',
-    :version => '9.3',
   },
   'rvm' => {
     :branch => 'none',

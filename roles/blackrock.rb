@@ -2,6 +2,7 @@ name 'blackrock'
 description 'Role for blackrock specifics'
 run_list [
   'role[dev]',
+  'role[postgres]',
   'recipe[grub::blackrock]',
   'recipe[filesystem_layout::blackrock]',
   'recipe[vgaswitcheroo]',
@@ -64,17 +65,6 @@ default_attributes({
       '2.1.4',
       '2.2.0',
     ],
-  },
-  'postgresql' => {
-    :config => {
-      :listen_addresses => 'localhost',
-    },
-    :super_user => {
-      :password => 'postgres',
-      :username => 'postgres',
-    },
-    :revision => '4',
-    :version => '9.3',
   },
   'tmux' => {
     'user_conf_group' => group,
