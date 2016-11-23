@@ -133,8 +133,6 @@ vnoremap <Space> zf
 set scrolloff=5
 set sidescrolloff=5
 
-filetype indent off
-
 " Plugin keybindings
 nmap <leader>xt :TagbarToggle<CR>
 nmap <leader>xo :CtrlP<CR>
