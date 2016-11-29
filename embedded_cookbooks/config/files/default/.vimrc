@@ -122,9 +122,6 @@ autocmd BufWinEnter * if line2byte(line("$") + 1) > 42500 | syntax clear | endif
 :command Wq wq
 :command WQ wq
 
-" remap jj in insert mode to exit insert mode
-inoremap ;; <Esc>
-
 " use space to open folds in normal mode
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
