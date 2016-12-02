@@ -45,7 +45,7 @@ DEPENDENCIES
     revision: 2ff19d6b8d0b9ebae6b579db6d82b8921fd3c59c
   docker-compose
     git: https://github.com/tdg5-cookbooks/chef-docker-compose.git
-    revision: e97cc64342aef58031c044294a727e1bc16de102
+    revision: 28781d12ebd286e285396769823532ed7b982fe2
   docker_service
     git: https://github.com/tdg5-cookbooks/docker_service.git
     revision: 7e508c1a11cdd4f8506887dc68dd3566d90fbbbb
