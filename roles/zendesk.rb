@@ -4,6 +4,7 @@ run_list([
   'role[dev]',
   'role[vm_host]',
   'role[design]',
+  'role[docker]',
   'recipe[lastpass]',
 ])
 user = group = 'danny'
