@@ -48,7 +48,7 @@ DEPENDENCIES
     revision: 28781d12ebd286e285396769823532ed7b982fe2
   docker_service
     git: https://github.com/tdg5-cookbooks/docker_service.git
-    revision: 7e508c1a11cdd4f8506887dc68dd3566d90fbbbb
+    revision: 8de7926923f508855e54f825b885e85294915784
   dropbox
     path: embedded_cookbooks/dropbox
   exuberant-ctags
@@ -211,7 +211,7 @@ GRAPH
   chef_handler (1.1.6)
   chrome (0.0.1)
     wmctrl (>= 0.0.0)
-  compat_resource (12.16.1)
+  compat_resource (12.16.2)
   composer (0.2.1)
   config (0.0.1)
   database (2.3.0)
@@ -225,8 +225,8 @@ GRAPH
     apt (>= 0.0.0)
     modules (>= 0.0.0)
   dmg (2.2.2)
-  docker (2.9.7)
-    compat_resource (>= 12.14.2)
+  docker (2.13.0)
+    compat_resource (>= 12.16.2)
   docker-compose (0.0.2)
     docker (>= 0.0.0)
     poise-python (>= 0.0.0)
