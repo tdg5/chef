@@ -4,6 +4,7 @@ execute pathogen#infect()
 syntax on
 filetype on
 filetype plugin on
+filetype plugin indent on
 
 set background=dark
 set backspace=eol,indent,start
