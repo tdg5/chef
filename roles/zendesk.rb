@@ -2,6 +2,7 @@ name 'zendesk'
 description 'Role for zendesk specifics'
 run_list([
   'role[dev]',
+  'role[postgres]',
   'role[vm_host]',
   'role[design]',
   'role[docker]',
@@ -63,4 +64,24 @@ default_attributes({
     :email => 'danny@zensight.co',
     :group => group,
   }
+})
+
+override_attributes({
+  :postgresql => {
+    :pg_hba => [
+      {
+        :addr => '127.0.0.1/32',
+        :db => 'all',
+        :method => 'trust',
+        :type => 'host',
+        :user => 'postgres',
+      },
+      {
+        :db => 'all',
+        :method => 'trust',
+        :type => 'local',
+        :user => 'postgres',
+      },
+    ],
+  },
 })
