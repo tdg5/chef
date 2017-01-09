@@ -208,7 +208,7 @@ alias pride="REPORTER=pride guard"
 alias realias='source ~/.bash_aliases'
 alias syslog='tail -f /var/log/syslog'
 alias up='[ $(git rev-parse --show-toplevel 2>/dev/null || echo ~) = $(pwd) ] && cd $([ $(echo ~) = $(pwd) ] && echo / || echo) || cd $(git rev-parse --show-toplevel 2>/dev/null)'
-alias www_proxy='ssh -C2qTnN -D 8080'
+alias www_proxy='ssh -C2qTnN -D 8527'
 
 # enable color support
 if [ -x /usr/bin/dircolors ]; then
