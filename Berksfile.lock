@@ -45,10 +45,10 @@ DEPENDENCIES
     revision: 2ff19d6b8d0b9ebae6b579db6d82b8921fd3c59c
   docker-compose
     git: https://github.com/tdg5-cookbooks/chef-docker-compose.git
-    revision: 28781d12ebd286e285396769823532ed7b982fe2
+    revision: 41b7d71108161769764e9b14363e5911e3a101e4
   docker_service
     git: https://github.com/tdg5-cookbooks/docker_service.git
-    revision: 8de7926923f508855e54f825b885e85294915784
+    revision: 7962e17fcacbe87d4e349c526583fd5e0debd18b
   dropbox
     path: embedded_cookbooks/dropbox
   exuberant-ctags
