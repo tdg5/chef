@@ -13,6 +13,7 @@ run_list [
   'recipe[modprobe::hid_apple]',
 ]
 user = group = 'tdg5'
+home = "/home/#{user}"
 default_gems = [{
   :name => 'gem-ctags',
 }, {
@@ -60,7 +61,7 @@ default_attributes({
   },
   'tmux' => {
     'user_conf_group' => group,
-    'user_conf_path' => "/home/#{user}/.tmux.conf",
+    'user_conf_path' => "#{home}/.tmux.conf",
     'user_conf_user' => user,
   },
   :user => {
