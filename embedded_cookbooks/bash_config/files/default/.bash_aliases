@@ -138,6 +138,10 @@ function gshn() {
   git show HEAD@{$1}
 }
 
+function rename_jpgs() {
+  jhead -n%Y%m%d-%H%M%S *.JPG
+}
+
 alias aliases='vi ~/.bash_aliases'
 alias be='bundle exec'
 alias bun='bundle'
