@@ -137,7 +137,7 @@ DEPENDENCIES
     path: embedded_cookbooks/pm-utils
   postgresql
     git: https://github.com/tdg5-cookbooks/postgresql.git
-    revision: ae2f73f9d0b9749a584185a7f4b39826035825cd
+    revision: 371f5eee36846fbcc77b792f46f5a1b51bbea0d2
   powertop
     path: embedded_cookbooks/powertop
   qt
