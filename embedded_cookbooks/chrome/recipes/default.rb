@@ -1,3 +1,6 @@
+package 'gconf-service'
+package 'libgconf-2-4'
+
 remote_file '/tmp/google-chrome-stable_current_amd64.deb' do
   backup false
   notifies :install, 'dpkg_package[google-chrome]'
