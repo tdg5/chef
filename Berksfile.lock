@@ -38,7 +38,7 @@ DEPENDENCIES
     git: https://github.com/opscode-cookbooks/database.git
     revision: 6e3c78e223c5e3c544bc7b8f418b90b3283f3711
   ddclient
-    git: https://github.com/freewrite-cookbooks/ddclient.git
+    git: https://github.com/tdg5-cookbooks/ddclient.git
     revision: 31e38b4c9d0ec57c342131e802663b35fb5bdd5a
   device-mapper
     git: https://github.com/bflad/chef-device-mapper.git
@@ -106,7 +106,7 @@ DEPENDENCIES
     git: https://github.com/tdg5-cookbooks/chef-leiningen.git
     revision: b1aaa46c5505004bf9be5b89ee4fcabe4990ca21
   lib
-    git: https://github.com/freewrite-cookbooks/lib.git
+    git: https://github.com/tdg5-cookbooks/lib.git
     revision: 17646e5a54c255e96d20dc77bb64a200966951be
   liquidprompt
     path: embedded_cookbooks/liquidprompt
@@ -136,7 +136,7 @@ DEPENDENCIES
   pm-utils
     path: embedded_cookbooks/pm-utils
   postgresql
-    git: https://github.com/freewrite-cookbooks/postgresql.git
+    git: https://github.com/tdg5-cookbooks/postgresql.git
     revision: ae2f73f9d0b9749a584185a7f4b39826035825cd
   powertop
     path: embedded_cookbooks/powertop
