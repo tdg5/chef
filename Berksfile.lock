@@ -45,10 +45,10 @@ DEPENDENCIES
     revision: 2ff19d6b8d0b9ebae6b579db6d82b8921fd3c59c
   docker-compose
     git: https://github.com/tdg5-cookbooks/chef-docker-compose.git
-    revision: 41b7d71108161769764e9b14363e5911e3a101e4
+    revision: 7fbdc15d01658306c3744490369064c7d7a5240f
   docker_service
     git: https://github.com/tdg5-cookbooks/docker_service.git
-    revision: 7962e17fcacbe87d4e349c526583fd5e0debd18b
+    revision: 29f6f8259213aa9b0b758c6d385ee90828297882
   dropbox
     path: embedded_cookbooks/dropbox
   exuberant-ctags
@@ -206,12 +206,12 @@ GRAPH
   build-essential (2.1.3)
   canonical_partners_repo (0.0.1)
     apt (>= 0.0.0)
+  chef-apt-docker (2.0.4)
   chef-sugar (2.4.1)
   chef_gem (0.1.0)
   chef_handler (1.1.6)
   chrome (0.0.1)
     wmctrl (>= 0.0.0)
-  compat_resource (12.16.2)
   composer (0.2.1)
   config (0.0.1)
   database (2.3.0)
@@ -225,13 +225,13 @@ GRAPH
     apt (>= 0.0.0)
     modules (>= 0.0.0)
   dmg (2.2.2)
-  docker (2.13.0)
-    compat_resource (>= 12.16.2)
-  docker-compose (0.0.2)
+  docker (2.16.4)
+  docker-compose (0.0.3)
     docker (>= 0.0.0)
     poise-python (>= 0.0.0)
   docker_service (0.0.1)
-    docker (~> 2.0)
+    chef-apt-docker (~> 2.0)
+    docker (>= 2.13.0)
   dropbox (0.0.1)
     apt (>= 0.0.0)
   exuberant-ctags (0.0.1)
