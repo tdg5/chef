@@ -1,5 +1,4 @@
 package 'msttcorefonts'
-package 'fonts-mgopen'
 
 home_dir = "/home/#{node.user.username}"
 user_fonts_dir = "#{home_dir}/.fonts"
