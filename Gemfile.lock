@@ -223,6 +223,7 @@ PLATFORMS
 
 DEPENDENCIES
   berkshelf
+  chef
   kitchen-vagrant
   knife-solo
   knife-solo_data_bag
@@ -230,4 +231,4 @@ DEPENDENCIES
   test-kitchen
 
 BUNDLED WITH
-   1.11.2
+   1.16.1
