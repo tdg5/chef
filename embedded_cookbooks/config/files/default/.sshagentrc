@@ -1,7 +1,7 @@
 export SSH_ENV="$HOME/.ssh/environment";
 
 # Initialize a new "ssh-agent"
-if [ `pgrep ssh-agent | wc -l` -eq 0 ]; then
+if [ `pgrep -U $UID ssh-agent | wc -l` -eq 0 ]; then
   # Start the agent
   ssh-agent | head -2 > "${SSH_ENV}";
   chmod 600 $SSH_ENV;
