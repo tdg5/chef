@@ -42,7 +42,7 @@ if [ -n "$(which go)" ]; then
 fi
 
 # Load external helpers
-<% node.bash.bashrc.extra_sources.each_pair do |description, sourceable_path| %>
+<% node['bash']['bashrc']['extra_sources'].each_pair do |description, sourceable_path| %>
 # <%= description %>
 [ -e <%= sourceable_path %> ] && source <%= sourceable_path %>
 <% end %>

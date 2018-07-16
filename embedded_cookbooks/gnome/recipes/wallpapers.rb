@@ -1,9 +1,9 @@
-directory File.dirname(node.gnome.wallpapers.manifest_path) do
+directory File.dirname(node['gnome']['wallpapers']['manifest_path']) do
   mode '0755'
   recursive true
 end
 
-script_path = node.gnome.wallpapers.update_script_path
+script_path = node['gnome']['wallpapers']['update_script_path']
 directory File.dirname(script_path) do
   mode '0755'
   recursive true

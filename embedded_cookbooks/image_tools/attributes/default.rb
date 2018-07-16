@@ -1,6 +1,4 @@
-default.image_tools = {
-  :packages => [
-    'ffdiaporama',
-    'jhead',
-  ],
-}
+default['image_tools']['packages'] = [
+  'ffdiaporama',
+  'jhead',
+]

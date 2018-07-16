@@ -1,12 +1,12 @@
 [
-  File.join("/home/#{node.user.username}", node.vim_plugins.user_vim_config_dir),
-  File.join("/home/#{node.user.username}", node.vim_plugins.user_autoload_dir),
-  File.join("/home/#{node.user.username}", node.vim_plugins.user_bundle_dir),
+  File.join("/home/#{node['user']['username']}", node['vim_plugins']['user_vim_config_dir']),
+  File.join("/home/#{node['user']['username']}", node['vim_plugins']['user_autoload_dir']),
+  File.join("/home/#{node['user']['username']}", node['vim_plugins']['user_bundle_dir']),
 ].each do |dir|
   directory dir do
-    group node.user.group
+    group node['user']['group']
     mode '0755'
-    owner node.user.username
+    owner node['user']['username']
     recursive true
   end
 end

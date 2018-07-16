@@ -1,6 +1,6 @@
 [core]
   whitespace = trailing-space,space-before-tab
-  excludesfile = /home/<%= node.user.username %>/.gitignore
+  excludesfile = /home/<%= node['user']['username'] %>/.gitignore
 [branch]
   autosetuprebase = always
   autosetupmerge = true
@@ -18,7 +18,7 @@
   enabled = true
 [user]
   name = Danny Guinther
-  email = <%= node.user.email %>
+  email = <%= node['user']['email'] %>
 [alias]
   amd = commit --amend --no-edit
   amend = commit --amend

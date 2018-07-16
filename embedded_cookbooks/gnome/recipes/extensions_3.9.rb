@@ -8,8 +8,8 @@
 
 extensions = node['gnome']['extensions']
 unless extensions.nil? || extensions.empty?
-  user_username = node.user.username
-  user_group = node.user.group
+  user_username = node['user']['username']
+  user_group = node['user']['group']
   gnome_shell_dir = "/home/#{user_username}/.local/share/gnome-shell"
   extensions_src_dir = File.join(gnome_shell_dir, 'extensions_src')
   extensions_dir = File.join(gnome_shell_dir, 'extensions')

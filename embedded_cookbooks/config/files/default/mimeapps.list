@@ -6,8 +6,6 @@ x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 x-scheme-handler/mailto=google-chrome.desktop
 x-scheme-handler/webcal=google-chrome.desktop
-inode/directory=thunar.desktop
-application/x-gnome-saved-search=thunar.desktop
 
 [Added Associations]
 application/x-virtualbox-vbox=gedit.desktop;

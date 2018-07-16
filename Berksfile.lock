@@ -3,27 +3,27 @@ DEPENDENCIES
     path: embedded_cookbooks/acpi_wakeup
   adb
     path: embedded_cookbooks/adb
-  android-sdk
-    git: https://github.com/gildegoma/chef-android-sdk
-    revision: 9bf11bb53ae6c6c7476b855bb86f7482173bb9a0
-  ant
-    git: https://github.com/opscode-cookbooks/ant.git
-    revision: 69b809c64e2d66a7bfe8226d50fe30a17a00f427
   apt
     git: https://github.com/opscode-cookbooks/apt.git
-    revision: f9171b77e7d4f19afeeb3b8c32667cc6b0568ddb
+    revision: eabf84d7769b7c323e76f56f85436612bfde9eb0
   ark
     git: https://github.com/opscode-cookbooks/ark.git
-    revision: 1f7c092ffe80073409bce7fa851346fb076a259f
+    revision: 32d49784228cf3c25ef229679762e8ecd0c4f4c4
   audacity
     path: embedded_cookbooks/audacity
   bash_config
     path: embedded_cookbooks/bash_config
   build-essential
     git: https://github.com/opscode-cookbooks/build-essential.git
-    revision: b4785e95223867eec6cd2b6a87d22818bd5453fb
+    revision: fb4d6d693152e691cedcbd01f5497dbe2e19fa0d
   canonical_partners_repo
     path: embedded_cookbooks/canonical_partners_repo
+  chef-golang
+    git: https://github.com/NOX73/chef-golang
+    revision: 3667f9d8158e7429c65a96612ac566adb2c918b7
+  chef-packer
+    git: https://github.com/tdg5-cookbooks/chef-packer
+    revision: 7a9b4feafea813c60c7604658badf77251686bcf
   chef_gem
     git: https://github.com/hw-cookbooks/chef_gem.git
     revision: 8ba9733f9214cd4328a16dc2caed3768b30f3f66
@@ -38,7 +38,7 @@ DEPENDENCIES
     path: embedded_cookbooks/curl
   database
     git: https://github.com/opscode-cookbooks/database.git
-    revision: 6e3c78e223c5e3c544bc7b8f418b90b3283f3711
+    revision: 41cc5a3f4617f431c623e1d67c8d6bafb1e104e8
   ddclient
     git: https://github.com/tdg5-cookbooks/ddclient.git
     revision: 31e38b4c9d0ec57c342131e802663b35fb5bdd5a
@@ -50,7 +50,7 @@ DEPENDENCIES
     revision: 7fbdc15d01658306c3744490369064c7d7a5240f
   docker_service
     git: https://github.com/tdg5-cookbooks/docker_service.git
-    revision: 29f6f8259213aa9b0b758c6d385ee90828297882
+    revision: 7f4518d57f7932b0db0f71a002af2a1ca3a86f3e
   dropbox
     path: embedded_cookbooks/dropbox
   exuberant-ctags
@@ -68,13 +68,8 @@ DEPENDENCIES
   gnome_setting
     git: https://github.com/tdg5-cookbooks/gnome_setting.git
     revision: 31c33adc56e7cdac67f2759931aab2a381c3e235
-  golang
-    git: https://github.com/NOX73/chef-golang
-    revision: 890daa10f8295f88c04fbf0c863e50a05cfa3ebb
   grub
     path: embedded_cookbooks/grub
-  grunt
-    path: embedded_cookbooks/grunt
   handbrake
     path: embedded_cookbooks/handbrake
   heroku_toolbelt
@@ -83,7 +78,7 @@ DEPENDENCIES
     path: embedded_cookbooks/hipchat
   hostsfile
     git: https://github.com/customink-webops/hostsfile.git
-    revision: 495fd80ba7a3c306abe8c2585f6ec25bd937fc81
+    revision: 71ed85e0da701378e2f3f791881ca5e832b73f08
   htop
     path: embedded_cookbooks/htop
   ievms
@@ -96,10 +91,10 @@ DEPENDENCIES
     path: embedded_cookbooks/iotop
   iptables
     git: https://github.com/opscode-cookbooks/iptables.git
-    revision: 305cca575980ca8b9fd15ff158c5d1e1ae21b508
+    revision: fa4da02d1eaca74c81b3ed25caebe8a949b4457c
   java
-    git: https://github.com/agileorbit-cookbooks/java.git
-    revision: c98c525e910231400b02e7e7e9b60da0d775533a
+    git: https://github.com/tdg5-cookbooks/java.git
+    revision: b846f7233d4f1dac83a3a6500e89c3bd25eb4d1c
   jsonlint
     path: embedded_cookbooks/jsonlint
   lastpass
@@ -120,52 +115,44 @@ DEPENDENCIES
     branch: ubuntu-debian-fixes
   mysql
     git: https://github.com/opscode-cookbooks/mysql.git
-    revision: b1c9c3064c9889795b8868f0f1a3cc2425371f58
+    revision: e03d2f065e981bdf09ac41e05123332e6ba56b24
   nodejs
     git: https://github.com/redguide/nodejs.git
-    revision: 2f05db5d9278e7d491e5ffb7147226cf3538ac63
+    revision: 3f3cb4776ad391c14ff165d527876f4a3cc27552
   openssh
     git: https://github.com/opscode-cookbooks/openssh.git
-    revision: 6dd460c265111cd7f0d24f9c636a3510ce08d10d
+    revision: 86f210f785189422e9ef644b3f1015e84e31df2e
   openssl
     git: https://github.com/opscode-cookbooks/openssl.git
-    revision: b75ab471185f108a2fadc5c43efb7e2ef057ab30
+    revision: 75620d8d722fe98abd5b8860e90781db87f52125
   oracle_java
     path: embedded_cookbooks/oracle_java
-  packer
-    git: https://github.com/tdg5/chef-packer
-    revision: de02761f560b8ad8777e5fd681edb66077feaa27
   pidgin
     path: embedded_cookbooks/pidgin
   pm-utils
     path: embedded_cookbooks/pm-utils
   postgresql
     git: https://github.com/tdg5-cookbooks/postgresql.git
-    revision: 371f5eee36846fbcc77b792f46f5a1b51bbea0d2
+    revision: 820f981b3fd8d716c27ea766834e9107e3f1c17d
   powertop
     path: embedded_cookbooks/powertop
   qt
     path: embedded_cookbooks/qt
   redis
     path: embedded_cookbooks/redis
-  ruboto
-    path: embedded_cookbooks/ruboto
-  rvm
-    git: https://github.com/fnichol/chef-rvm.git
-    revision: eddd733694a1d3e0872f5692e8dda93aa2752791
+  ruby
+    path: embedded_cookbooks/ruby
   scripts
     path: embedded_cookbooks/scripts
   skype
     path: embedded_cookbooks/skype
   spotify
     path: embedded_cookbooks/spotify
-  thunar
-    path: embedded_cookbooks/thunar
   tmux_plugins
     path: embedded_cookbooks/tmux_plugins
   tmux_wrapper
     git: https://github.com/tdg5-cookbooks/tmux_wrapper.git
-    revision: 54e18b6868d89440091bfc15d19547215e0853ad
+    revision: 81ebe8922460630d5693ed92a292295cf62b806e
   tmuxinator
     path: embedded_cookbooks/tmuxinator
   tree
@@ -177,7 +164,7 @@ DEPENDENCIES
     path: embedded_cookbooks/vgaswitcheroo
   vim
     git: https://github.com/opscode-cookbooks/vim.git
-    revision: 858a24f745d3f7e13daca5ba918861d31401e0bf
+    revision: c56df1ae316061789260cfdb3d6b1332253a8c70
   vim-gnome
     path: embedded_cookbooks/vim-gnome
   vim_plugins
@@ -186,58 +173,49 @@ DEPENDENCIES
     path: embedded_cookbooks/virtualbox
   wmctrl
     path: embedded_cookbooks/wmctrl
-  xclip
-    path: embedded_cookbooks/xclip
+  xsel
+    path: embedded_cookbooks/xsel
 
 GRAPH
   acpi_wakeup (0.0.1)
   adb (0.0.1)
     apt (>= 0.0.0)
-  android-sdk (0.2.0)
-    ark (>= 0.0.0)
-    java (>= 0.0.0)
-    maven (>= 0.0.0)
-  ant (1.0.3)
-    ark (>= 0.0.0)
-    java (>= 0.0.0)
-  apt (2.6.0)
-  ark (0.9.1)
+  apt (7.1.1)
+  ark (4.0.0)
     build-essential (>= 0.0.0)
+    seven_zip (>= 0.0.0)
   audacity (0.0.1)
     apt (>= 0.0.0)
-  aws (2.5.0)
   bash_config (0.0.1)
-  build-essential (2.1.3)
+  build-essential (8.2.1)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
   canonical_partners_repo (0.0.1)
     apt (>= 0.0.0)
-  chef-apt-docker (2.0.4)
-  chef-sugar (2.4.1)
+  chef-apt-docker (2.0.6)
+  chef-golang (3.0.1)
+  chef-packer (1.0.0)
+    ark (>= 0.4.0)
   chef_gem (0.1.0)
-  chef_handler (1.1.6)
   chrome (0.0.1)
     wmctrl (>= 0.0.0)
   composer (0.2.1)
   config (0.0.1)
   curl (0.0.1)
     apt (>= 0.0.0)
-  database (2.3.0)
-    aws (>= 0.0.0)
-    mysql (>= 5.0.0)
-    mysql-chef_gem (>= 0.0.0)
+  database (6.1.1)
     postgresql (>= 1.0.0)
-    xfs (>= 0.0.0)
   ddclient (0.0.1)
   device-mapper (0.1.0)
     apt (>= 0.0.0)
     modules (>= 0.0.0)
-  dmg (2.2.2)
-  docker (2.16.4)
+  docker (4.4.1)
   docker-compose (0.0.3)
     docker (>= 0.0.0)
     poise-python (>= 0.0.0)
-  docker_service (0.0.1)
+  docker_service (0.1.1)
     chef-apt-docker (~> 2.0)
-    docker (>= 2.13.0)
+    docker (~> 4.4.0)
   dropbox (0.0.1)
     apt (>= 0.0.0)
   exuberant-ctags (0.0.1)
@@ -254,18 +232,15 @@ GRAPH
     gnome_setting (>= 0.0.0)
     vim-gnome (>= 0.0.0)
   gnome_setting (0.0.1)
-  golang (1.7.0)
   grub (0.0.1)
-  grunt (0.0.1)
-    nodejs (>= 0.0.0)
   handbrake (0.0.1)
     apt (>= 0.0.0)
   heroku_toolbelt (0.0.1)
     apt (>= 0.0.0)
   hipchat (0.0.1)
     apt (>= 0.0.0)
-  homebrew (1.9.2)
-  hostsfile (2.4.5)
+  homebrew (5.0.8)
+  hostsfile (3.0.1)
   htop (0.0.1)
     apt (>= 0.0.0)
   ievms (0.0.1)
@@ -276,58 +251,42 @@ GRAPH
     apt (>= 0.0.0)
   iotop (0.0.1)
     apt (>= 0.0.0)
-  iptables (2.2.0)
-  java (1.39.0)
-    apt (>= 0.0.0)
+  iptables (4.5.0)
+  java (2.1.0)
+    homebrew (>= 0.0.0)
+    windows (>= 0.0.0)
   jsonlint (0.0.1)
     nodejs (>= 0.0.0)
   lastpass (0.0.1)
   leiningen (0.1.0)
   lib (0.0.1)
   liquidprompt (0.0.1)
-  maven (1.2.0)
-    ark (~> 0.4)
-    java (~> 1.13)
+  mingw (2.1.0)
+    seven_zip (>= 0.0.0)
   modprobe (0.0.1)
   modules (0.2.0)
-  mysql (5.6.1)
-    yum-mysql-community (>= 0.0.0)
-  mysql-chef_gem (0.0.5)
-    build-essential (>= 0.0.0)
-<<<<<<< HEAD
-    mysql (>= 0.0.0)
-  nodejs (2.4.5)
-    apt (>= 0.0.0)
-    ark (>= 0.0.0)
-    build-essential (>= 0.0.0)
-    homebrew (>= 0.0.0)
-    yum-epel (>= 0.0.0)
-  openssh (2.0.0)
-    iptables (>= 1.0.0)
-  openssl (2.0.1)
-    chef-sugar (>= 0.0.0)
-  packer (0.3.0)
-    ark (>= 0.4.0)
-=======
-  openssh (2.6.3)
+  mysql (8.5.2)
+  nodejs (6.0.0)
+    ark (>= 2.0.2)
+    build-essential (>= 5.0)
+  openssh (2.7.1)
     iptables (>= 1.0)
-  openssl (8.1.2)
+  openssl (8.5.5)
   oracle_java (0.0.1)
     apt (>= 0.0.0)
->>>>>>> 09e2327... Add oracle_java cookbook
   pidgin (0.0.1)
     apt (>= 0.0.0)
   pm-utils (0.0.1)
-  poise (2.7.0)
-  poise-archive (1.1.2)
+  poise (2.8.2)
+  poise-archive (1.5.0)
     poise (~> 2.6)
-  poise-languages (1.4.0)
+  poise-languages (2.1.2)
     poise (~> 2.5)
     poise-archive (~> 1.0)
-  poise-python (1.2.1)
-    poise (~> 2.0)
-    poise-languages (~> 1.2)
-  postgresql (1.0.0)
+  poise-python (1.7.0)
+    poise (~> 2.7)
+    poise-languages (~> 2.0)
+  postgresql (2.0.0)
     apt (>= 0.0.0)
     lib (>= 0.0.0)
   powertop (0.0.1)
@@ -336,48 +295,38 @@ GRAPH
     apt (>= 0.0.0)
   redis (0.0.1)
     apt (>= 0.0.0)
-  ruboto (0.0.1)
-    rvm (>= 0.0.0)
-  rvm (0.10.1)
+  ruby (0.0.1)
+    apt (>= 0.0.0)
+  rvm (0.9.4)
     chef_gem (>= 0.0.0)
-    java (>= 0.0.0)
   scripts (0.0.1)
     chrome (>= 0.0.0)
+  seven_zip (3.1.0)
+    windows (>= 0.0.0)
   skype (0.0.1)
     apt (>= 0.0.0)
     canonical_partners_repo (>= 0.0.0)
   spotify (0.0.1)
     apt (>= 0.0.0)
-  thunar (0.0.1)
-    apt (>= 0.0.0)
   tmux (1.5.0)
   tmux_plugins (0.0.1)
-  tmux_wrapper (0.0.1)
+  tmux_wrapper (0.1.0)
     tmux (>= 0.0.0)
   tmuxinator (0.0.1)
     rvm (>= 0.0.0)
   tree (0.0.1)
     apt (>= 0.0.0)
   vagrant (0.2.0)
-    dmg (>= 0.0.0)
-    windows (>= 0.0.0)
   vgaswitcheroo (0.0.1)
-  vim (1.1.3)
+  vim (2.0.2)
   vim-gnome (0.0.1)
     apt (>= 0.0.0)
   vim_plugins (0.0.1)
     exuberant-ctags (>= 0.0.0)
   virtualbox (0.0.1)
     apt (>= 0.0.0)
-  windows (1.34.8)
-    chef_handler (>= 0.0.0)
+  windows (5.2.2)
   wmctrl (0.0.1)
     apt (>= 0.0.0)
-  xclip (0.0.1)
+  xsel (0.0.1)
     apt (>= 0.0.0)
-  xfs (1.1.0)
-  yum (3.10.0)
-  yum-epel (0.5.3)
-    yum (~> 3.0)
-  yum-mysql-community (0.1.10)
-    yum (>= 3.0)

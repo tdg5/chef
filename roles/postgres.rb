@@ -12,7 +12,7 @@ default_attributes({
       :password => 'postgres',
       :username => 'postgres',
     },
-    :revision => '1',
-    :version => '9.6',
+    :revision => nil,
+    :version => '10',
   },
 })

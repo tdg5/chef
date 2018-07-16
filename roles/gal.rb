@@ -1,13 +1,15 @@
-name 'zen_vm'
-description 'Role for zen_vm specifics'
-run_list([
-  'recipe[oracle_java]',
+name 'gal'
+description 'Role for gal specifics'
+run_list [
   'role[dev]',
   'role[postgres]',
+  'role[vm_foundry]',
+  'recipe[qt::dev]',
   'role[design]',
   'role[docker]',
-])
-user = group = 'danny'
+  'role[golang]',
+]
+user = group = 'tdg5'
 home = "/home/#{user}"
 default_attributes({
   :bash => {
@@ -17,7 +19,7 @@ default_attributes({
       },
     },
   },
- :lein => {
+  :lein => {
     :group => group,
     :home => home,
     :user => user,
@@ -27,14 +29,14 @@ default_attributes({
       :password_authentication => 'no',
     },
   },
-  :tmux => {
+  'tmux' => {
     'user_conf_group' => group,
     'user_conf_path' => "#{home}/.tmux.conf",
     'user_conf_user' => user,
   },
   :user => {
     :username => user,
-    :email => 'dguinther@seismic.com',
+    :email => 'dannyguinther@gmail.com',
     :group => group,
   }
 })
