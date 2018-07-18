@@ -4,24 +4,14 @@ run_list [
   'role[dev]',
   'role[postgres]',
   'role[vm_foundry]',
-  'recipe[qt::dev]',
+  #'recipe[qt::dev]',
   'role[design]',
-  'role[dev]',
   'role[docker]',
-  'recipe[lastpass]',
   'role[golang]',
   'recipe[modprobe::hid_apple]',
 ]
 user = group = 'tdg5'
 home = "/home/#{user}"
-default_gems = [{
-  :name => 'gem-ctags',
-}, {
-  :name => 'chef',
-  :version => '11.10.4',
-}, {
-  :name => 'bundler'
-}]
 default_attributes({
   :bash => {
     :bashrc => {
@@ -39,25 +29,6 @@ default_attributes({
     :server => {
       :password_authentication => 'no',
     },
-  },
-  'rvm' => {
-    :branch => 'none',
-    :default_ruby => '2.3',
-    :gems => {
-      '2.3' => default_gems,
-      '2.3' => default_gems,
-    },
-    :global_gems => [{
-      :name => 'gem-ctags',
-    }],
-    :rubies => [
-      '2.3',
-    ],
-    :rvmrc => {
-      :rvm_trust_rvmrcs_flag => 1,
-      :rvmsudo_secure_path => 1,
-    },
-    :version => '1.25.28',
   },
   'tmux' => {
     'user_conf_group' => group,

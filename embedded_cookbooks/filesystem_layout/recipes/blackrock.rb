@@ -4,13 +4,13 @@ require 'fileutils'
 HDD_PATH='/media/tdg5/hdd'
 
 directory HDD_PATH do
-  group node.user.group
-  owner node.user.username
+  group node['user']['group']
+  owner node['user']['username']
   mode 0775
 end
 
-group = Etc.getgrnam(node.user.group)
-user = Etc.getpwnam(node.user.group)
+group = Etc.getgrnam(node['user']['group'])
+user = Etc.getpwnam(node['user']['group'])
 
 mount HDD_PATH do
   action [:mount, :enable]
@@ -52,8 +52,8 @@ symlinks = {
 
 symlinks.each do |symlink_path, to_path|
   link symlink_path do
-    group node.user.group
+    group node['user']['group']
     to to_path
-    user node.user.username
+    user node['user']['username']
   end
 end

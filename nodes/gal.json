@@ -1,0 +1,6 @@
+{
+  "host_name": "gal",
+  "run_list": [
+    "role[gal]"
+  ]
+}

@@ -1,1 +1,1 @@
-default.acpi_wakeup.devices = []
+default['acpi_wakeup']['devices'] = []

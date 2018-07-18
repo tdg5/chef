@@ -5,6 +5,6 @@ run_list [
 ]
 default_attributes({
   :java => {
-    :jdk_version => '8',
+    :jdk_version => '10',
   },
 })

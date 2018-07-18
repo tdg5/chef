@@ -7,15 +7,10 @@ run_list [
   'recipe[pm-utils::disable_usb_bluetooth]',
   'recipe[acpi_wakeup]',
   'role[design]',
-  'recipe[lastpass]',
   'recipe[powertop::powertune]',
-  'recipe[hipchat]',
   'recipe[ddclient]',
   'role[docker]',
   'role[vm_host]',
-  'recipe[heroku_toolbelt]',
-  'role[php]',
-  'role[golang]',
 ]
 user = group = 'tdg5'
 ddclient_config = Chef::EncryptedDataBagItem.load('ddclient', 'tdg5')
@@ -59,25 +54,6 @@ default_attributes({
     :server => {
       :password_authentication => 'no',
     },
-  },
-  :rvm => {
-    :branch => 'none',
-    :rvmrc => {
-      :rvm_trust_rvmrcs_flag => 1,
-      :rvmsudo_secure_path => 1,
-    },
-    :version => '1.26.6',
-    :default_ruby => '2.2.0',
-    :gems => {
-      '2.2.0' => default_gems,
-    },
-    :global_gems => [{
-      :name => 'gem-ctags',
-    }],
-    :rubies => [
-      '2.1.4',
-      '2.2.0',
-    ],
   },
   'tmux' => {
     'user_conf_group' => group,

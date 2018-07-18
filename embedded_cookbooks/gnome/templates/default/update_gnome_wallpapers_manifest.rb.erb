@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-RAW_MANIFEST_PATH = '<%= node.gnome.wallpapers.manifest_path %>'.freeze
-WALLPAPER_DIRS = <%= node.gnome.wallpapers.wallpaper_dirs.to_a %>.freeze
+RAW_MANIFEST_PATH = '<%= node['gnome']['wallpapers']['manifest_path'] %>'.freeze
+WALLPAPER_DIRS = <%= node['gnome']['wallpapers']['wallpaper_dirs'].to_a %>.freeze
 MANIFEST_PATH = (File.realpath(RAW_MANIFEST_PATH) rescue RAW_MANIFEST_PATH).freeze
 
 FORCE_MATCHER = /--force/

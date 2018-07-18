@@ -1,5 +1,5 @@
 <%
-  devices = node.acpi_wakeup.devices
+  devices = node['acpi_wakeup']['devices']
   devices_regexp = "(#{devices.join('|')}).*enabled"
 %>
 #! /bin/sh

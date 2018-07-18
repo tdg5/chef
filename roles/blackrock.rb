@@ -47,25 +47,6 @@ default_attributes({
       :password_authentication => 'no',
     },
   },
-  :rvm => {
-    :branch => 'none',
-    :rvmrc => {
-      :rvm_trust_rvmrcs_flag => 1,
-      :rvmsudo_secure_path => 1,
-    },
-    :version => '1.26.6',
-    :default_ruby => '2.2.4',
-    :gems => {
-      '2.2.0' => default_gems,
-    },
-    :global_gems => [{
-      :name => 'gem-ctags',
-    }],
-    :rubies => [
-      '2.1.4',
-      '2.2.0',
-    ],
-  },
   'tmux' => {
     'user_conf_group' => group,
     'user_conf_path' => "/home/#{user}/.tmux.conf",
