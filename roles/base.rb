@@ -19,8 +19,8 @@ run_list [
   'recipe[pidgin]',
   'recipe[gnome]',
   'recipe[dropbox]',
-  'role[java]',
-  'recipe[adb]',
+  #'role[java]',
+  #'recipe[adb]',
   'recipe[liquidprompt]',
   'recipe[config::mime_applications]',
 ]
