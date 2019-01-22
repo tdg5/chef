@@ -167,3 +167,7 @@ autocmd BufRead,BufNewFile *.clj set textwidth=100
 
 " Allow unusual strings after ``` in markdown syntax
 autocmd FileType mkd syn region mkdCode start=/^\s*```.*$/ end=/^\s*```\s*$/
+
+" Allow folding XML
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
