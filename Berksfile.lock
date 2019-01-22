@@ -34,6 +34,8 @@ DEPENDENCIES
     revision: 92aee6313fc47dfd51b45c176b7efe41c767c57d
   config
     path: embedded_cookbooks/config
+  curl
+    path: embedded_cookbooks/curl
   database
     git: https://github.com/opscode-cookbooks/database.git
     revision: 6e3c78e223c5e3c544bc7b8f418b90b3283f3711
@@ -214,6 +216,8 @@ GRAPH
     wmctrl (>= 0.0.0)
   composer (0.2.1)
   config (0.0.1)
+  curl (0.0.1)
+    apt (>= 0.0.0)
   database (2.3.0)
     aws (>= 0.0.0)
     mysql (>= 5.0.0)
