@@ -229,6 +229,3 @@ DEPENDENCIES
   knife-solo_data_bag
   pry
   test-kitchen
-
-BUNDLED WITH
-   1.16.1
