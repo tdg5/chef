@@ -1,9 +1,8 @@
-name 'zendesk'
-description 'Role for zendesk specifics'
+name 'zen_vm'
+description 'Role for zen_vm specifics'
 run_list([
   'role[dev]',
   'role[postgres]',
-  'role[vm_host]',
   'role[design]',
   'role[docker]',
   'recipe[lastpass]',
@@ -61,7 +60,7 @@ default_attributes({
   },
   :user => {
     :username => user,
-    :email => 'danny@zensight.co',
+    :email => 'dguinther@seismic.com',
     :group => group,
   }
 })

@@ -1,0 +1,6 @@
+{
+  "host_name": "zen-vm",
+  "run_list": [
+    "role[zen_vm]"
+  ]
+}
