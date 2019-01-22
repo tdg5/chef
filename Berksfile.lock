@@ -130,6 +130,8 @@ DEPENDENCIES
   openssl
     git: https://github.com/opscode-cookbooks/openssl.git
     revision: b75ab471185f108a2fadc5c43efb7e2ef057ab30
+  oracle_java
+    path: embedded_cookbooks/oracle_java
   packer
     git: https://github.com/tdg5/chef-packer
     revision: de02761f560b8ad8777e5fd681edb66077feaa27
@@ -292,6 +294,7 @@ GRAPH
     yum-mysql-community (>= 0.0.0)
   mysql-chef_gem (0.0.5)
     build-essential (>= 0.0.0)
+<<<<<<< HEAD
     mysql (>= 0.0.0)
   nodejs (2.4.5)
     apt (>= 0.0.0)
@@ -305,6 +308,13 @@ GRAPH
     chef-sugar (>= 0.0.0)
   packer (0.3.0)
     ark (>= 0.4.0)
+=======
+  openssh (2.6.3)
+    iptables (>= 1.0)
+  openssl (8.1.2)
+  oracle_java (0.0.1)
+    apt (>= 0.0.0)
+>>>>>>> 09e2327... Add oracle_java cookbook
   pidgin (0.0.1)
     apt (>= 0.0.0)
   pm-utils (0.0.1)

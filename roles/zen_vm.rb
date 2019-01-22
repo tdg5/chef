@@ -1,6 +1,7 @@
 name 'zen_vm'
 description 'Role for zen_vm specifics'
 run_list([
+  'recipe[oracle_java]',
   'role[dev]',
   'role[postgres]',
   'role[design]',
