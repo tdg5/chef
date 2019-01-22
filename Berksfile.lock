@@ -97,8 +97,6 @@ DEPENDENCIES
     revision: b846f7233d4f1dac83a3a6500e89c3bd25eb4d1c
   jsonlint
     path: embedded_cookbooks/jsonlint
-  lastpass
-    path: embedded_cookbooks/lastpass
   leiningen
     git: https://github.com/tdg5-cookbooks/chef-leiningen.git
     revision: b1aaa46c5505004bf9be5b89ee4fcabe4990ca21
@@ -257,7 +255,6 @@ GRAPH
     windows (>= 0.0.0)
   jsonlint (0.0.1)
     nodejs (>= 0.0.0)
-  lastpass (0.0.1)
   leiningen (0.1.0)
   lib (0.0.1)
   liquidprompt (0.0.1)
