@@ -150,7 +150,7 @@ DEPENDENCIES
     path: embedded_cookbooks/tmux_plugins
   tmux_wrapper
     git: https://github.com/tdg5-cookbooks/tmux_wrapper.git
-    revision: 81ebe8922460630d5693ed92a292295cf62b806e
+    revision: db2ba3b21089b851d40c4988e0fe7d761e11bd4a
   tmuxinator
     path: embedded_cookbooks/tmuxinator
   tree
