@@ -1,3 +1,5 @@
+package 'ssh-askpass'
+
 cookbook_file "/home/#{node.user.username}/.sshagentrc" do
   group node.user.group
   owner node.user.username
