@@ -171,3 +171,8 @@ autocmd FileType mkd syn region mkdCode start=/^\s*```.*$/ end=/^\s*```\s*$/
 " Allow folding XML
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
+
+" Syntastic config
+let g:syntastic_mode_map = { "mode": "active",
+                           \ "active_filetypes": [],
+                           \ "passive_filetypes": ["scala"] }
