@@ -19,6 +19,7 @@ set nocompatible
 set nohls
 set notitle
 set nowrap
+set number
 set showmatch
 set showcmd
 set showmode
