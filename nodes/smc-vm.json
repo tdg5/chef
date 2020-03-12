@@ -1,0 +1,6 @@
+{
+  "host_name": "smc-vm",
+  "run_list": [
+    "role[smc_vm]"
+  ]
+}

@@ -13,7 +13,7 @@ default_attributes({
   :bash => {
     :bashrc => {
       :extra_sources => {
-        :xtra_aliases => '~/.bash/xtra_aliases',
+        :extra_aliases => '~/.bash/extra_aliases',
       },
     },
   },
