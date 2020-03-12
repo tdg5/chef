@@ -45,9 +45,6 @@ DEPENDENCIES
   device-mapper
     git: https://github.com/bflad/chef-device-mapper.git
     revision: 2ff19d6b8d0b9ebae6b579db6d82b8921fd3c59c
-  docker-compose
-    git: https://github.com/tdg5-cookbooks/chef-docker-compose.git
-    revision: 7fbdc15d01658306c3744490369064c7d7a5240f
   docker_service
     git: https://github.com/tdg5-cookbooks/docker_service.git
     revision: 7f4518d57f7932b0db0f71a002af2a1ca3a86f3e
@@ -208,9 +205,6 @@ GRAPH
     apt (>= 0.0.0)
     modules (>= 0.0.0)
   docker (4.4.1)
-  docker-compose (0.0.3)
-    docker (>= 0.0.0)
-    poise-python (>= 0.0.0)
   docker_service (0.1.1)
     chef-apt-docker (~> 2.0)
     docker (~> 4.4.0)
@@ -280,9 +274,6 @@ GRAPH
   poise-languages (2.1.2)
     poise (~> 2.5)
     poise-archive (~> 1.0)
-  poise-python (1.7.0)
-    poise (~> 2.7)
-    poise-languages (~> 2.0)
   postgresql (2.0.0)
     apt (>= 0.0.0)
     lib (>= 0.0.0)
