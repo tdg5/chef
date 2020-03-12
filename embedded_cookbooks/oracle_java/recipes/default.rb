@@ -1,9 +1,9 @@
-%w[software-properties-common debconf-utils wget curl].each do |pkg|\
+%w[software-properties-common debconf-utils wget curl].each do |pkg|
   package pkg
 end
 
 bash 'accept_license_agreement' do
-  code 'echo oracle-java11-installer shared/accepted-oracle-license-v1-2 select true | debconf-set-selections'
+  code 'echo oracle-java13-installer shared/accepted-oracle-license-v1-2 select true | debconf-set-selections'
 end
 
 apt_repository 'linuxuprising-ubuntu-java-bionic' do
@@ -14,4 +14,4 @@ apt_repository 'linuxuprising-ubuntu-java-bionic' do
   uri 'http://ppa.launchpad.net/linuxuprising/java/ubuntu'
 end
 
-package 'oracle-java11-set-default'
+package 'oracle-java13-set-default'
