@@ -10,7 +10,6 @@ set background=dark
 set backspace=eol,indent,start
 set encoding=utf-8
 set grepprg=ack-grep
-set textwidth=80
 set hidden
 set incsearch
 set laststatus=2
@@ -162,9 +161,6 @@ let g:TestKey = { 'runners': {} }
 let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^fact']
 let g:clojure_align_subforms = 1
 let g:clojure_fuzzy_indent = 1
-
-" Set clojure line width to 100 chars
-autocmd BufRead,BufNewFile *.clj set textwidth=100
 
 " Allow unusual strings after ``` in markdown syntax
 autocmd FileType mkd syn region mkdCode start=/^\s*```.*$/ end=/^\s*```\s*$/
