@@ -22,6 +22,27 @@ function gimprand() {
   for img in $(ls -al $maybe_path | grep -i jpg | sort -R | head -n $n | sort -n | awk '{print "'$maybe_path/'"$9}'); do x="$x $img"; done; gimp $x
 }
 
+# Adapted from https://gist.github.com/thomasdarimont/46358bc8167fce059d83a1ebdb92b0e7
+function decode_jwt() {
+  read jwt
+  local headerOrBody="$1"
+  if [ -z "$headerOrBody" ]; then
+    headerOrBody="body"
+  fi
+  local readPart
+  if [ "$headerOrBody" = "header" ]; then
+    readPart=1
+  else
+    readPart=2
+  fi
+  local input=$(echo -n $jwt | cut -d '.' -f $readPart)
+  local amountOfPaddingNeeded=$((4 - (${#input} % 4)))
+  if [ $amountOfPaddingNeeded -eq 1 ]; then input="$input"'='
+  elif [ $amountOfPaddingNeeded -eq 2 ]; then input="$input"'=='
+  fi
+  echo "$input" | tr '_-' '/+' | openssl enc -d -base64 | jq .
+}
+
 function top_cmds() {
   [ ! -z $1 ] && n="$1" || n="10"
   history | awk '{a[$2 " " $3]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head -n $n
