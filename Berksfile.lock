@@ -137,8 +137,6 @@ DEPENDENCIES
     path: embedded_cookbooks/redis
   ruby
     path: embedded_cookbooks/ruby
-  scripts
-    path: embedded_cookbooks/scripts
   skype
     path: embedded_cookbooks/skype
   spotify
@@ -148,8 +146,6 @@ DEPENDENCIES
   tmux_wrapper
     git: https://github.com/tdg5-cookbooks/tmux_wrapper.git
     revision: db2ba3b21089b851d40c4988e0fe7d761e11bd4a
-  tmuxinator
-    path: embedded_cookbooks/tmuxinator
   tree
     path: embedded_cookbooks/tree
   vagrant
@@ -268,12 +264,6 @@ GRAPH
   pidgin (0.0.1)
     apt (>= 0.0.0)
   pm-utils (0.0.1)
-  poise (2.8.2)
-  poise-archive (1.5.0)
-    poise (~> 2.6)
-  poise-languages (2.1.2)
-    poise (~> 2.5)
-    poise-archive (~> 1.0)
   postgresql (2.0.0)
     apt (>= 0.0.0)
     lib (>= 0.0.0)
@@ -285,10 +275,6 @@ GRAPH
     apt (>= 0.0.0)
   ruby (0.0.1)
     apt (>= 0.0.0)
-  rvm (0.9.4)
-    chef_gem (>= 0.0.0)
-  scripts (0.0.1)
-    chrome (>= 0.0.0)
   seven_zip (3.1.0)
     windows (>= 0.0.0)
   skype (0.0.1)
@@ -300,8 +286,6 @@ GRAPH
   tmux_plugins (0.0.1)
   tmux_wrapper (0.1.0)
     tmux (>= 0.0.0)
-  tmuxinator (0.0.1)
-    rvm (>= 0.0.0)
   tree (0.0.1)
     apt (>= 0.0.0)
   vagrant (0.2.0)
